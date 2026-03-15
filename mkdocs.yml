@@ -1,0 +1,38 @@
+site_name: Bridge Zhang’s technology website – 张桥的技术网站        # 网站标题
+site_url: https://www.bridgezhang.com/    # 重要：部署后的实际地址
+site_author: Bridge Zhang
+
+theme:
+  name: material                # 使用Material主题
+  language: zh                   # 中文界面
+  features:
+    - navigation.tabs           # 顶部导航标签
+    - navigation.top            # 返回顶部按钮
+    - search.highlight          # 搜索高亮
+  palette:
+    - scheme: default           # 亮色模式
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换至深色模式
+    - scheme: slate              # 深色模式
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换至亮色模式
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+nav:
+  - 首页: index.md
+  # 后续添加更多页面，格式：- 标题: 路径
+  # - 第一章: chapter1.md
+  - mandarin pronunciation training: mandarin-pronunciation-training.md
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences      # 代码块增强
