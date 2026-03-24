@@ -4,18 +4,18 @@ title: Home
 hide:
   - navigation
   - toc
-hero_kicker: Bridge to Mechanics
+# hero_kicker: Bridge to Mechanics 
 hero_title_lines:
   - The bridge between engineers
   - 工程师之间的桥梁
 hero_description: >-
-  Mechanical engineering notes, design insights, and practical methods.
-  Bridging theory and real-world engineering.
+  Building bridges, learning standards, sharing insights.
+  搭建沟通之桥，研习行业标准，分享学习见解。
 primary_button:
-  text: Get Started
+  text: Get Started / 开始
   link: getting-started/
 secondary_button:
-  text: Learn More
+  text: Learn More / 更多
   link: "#home-cards"
 scroll_text: Scroll down
 cards_title: Knowledge Areas
@@ -31,18 +31,18 @@ cards:
 about:
   title: About Site / 关于站点
   description: >-
-    Thank you for visiting this site. If you have any suggestions about content,
-    layout, or site experience, please feel free to contact us. The bridge between engineers.
-  button_text: Learn More
+     - Thank you for visiting our website. As the author's expertise is limited, if you have any suggestions regarding the professional content, layout, or overall user experience of this mechanical engineering site, please feel free to contact us.
+     - 感谢您访问本网站！由于作者水平有限，若您对本站的专业内容、页面布局或使用体验有任何建议，欢迎随时与我们联系。 
+  button_text: Learn More / 更多
   button_link: about/site/
 connect:
-  title: Let's keep in touch
+  title: Let's keep in touch / 保持联系
   links:
-    - icon: fontawesome/brands/twitter
-      text: Follow @bridgezhang on Twitter
-      link: https://twitter.com/@bridgezhang
+    - icon: fontawesome/solid/envelope
+      text: Email / 邮箱
+      link: zhangqiaohdu@outlook.com
     - icon: fontawesome/brands/github
-      text: Follow bridgezhang123 on GitHub
+      text: Follow us on GitHub
       link: https://github.com/bridgezhang123
 ---
 

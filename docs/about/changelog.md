@@ -4,4 +4,7 @@
 
 - 以[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)官方主页为学习对象，借鉴其模板驱动思路（template: home.html + overrides/home.html），并基于本项目内容做了最小化重构。
 
+## [Update number/更新编号：March 24，2026] - 
 
+- 提交docs\modeling\naming-standards.md即建模与制图/命名规范的初稿。
+- 修改home/主页的部分表达。
