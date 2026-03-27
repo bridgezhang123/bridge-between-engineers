@@ -40,7 +40,7 @@ connect:
   links:
     - icon: fontawesome/solid/envelope
       text: Email / 邮箱
-      link: zhangqiaohdu@outlook.com
+      link: mailto:zhangqiaohdu@outlook.com
     - icon: fontawesome/brands/github
       text: Follow us on GitHub
       link: https://github.com/bridgezhang123
