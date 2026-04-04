@@ -138,3 +138,6 @@ extra_javascript:
   - javascripts/mermaid.js
   - javascripts/home.js
   - javascripts/print-button.js
+
+hooks:
+  - hooks/search_worker.py
