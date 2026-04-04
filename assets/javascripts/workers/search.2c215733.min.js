@@ -44,10 +44,6 @@
       .toLowerCase();
   }
 
-  function escapeRegExp(input) {
-    return String(input).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  }
-
   function buildTerms(query) {
     return normalize(query)
       .split(" ")
