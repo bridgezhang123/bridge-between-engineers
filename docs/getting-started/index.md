@@ -1,3 +1,3 @@
-﻿# Getting Started Overview
+# Getting Started / 入门
 
-Welcome to the getting started guide.
+本栏目用于说明本站的阅读方式、学习顺序与基本使用建议，便于第一次访问时更快建立整体认识。

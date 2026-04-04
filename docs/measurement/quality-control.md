@@ -1,3 +1,3 @@
-﻿# Quality Control
+# Quality Control / 质量控制
 
-Quality control principles and practices.
+本页后续将整理质量控制中的基本逻辑、批量检验与问题闭环等主题。

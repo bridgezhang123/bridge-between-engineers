@@ -1,3 +1,3 @@
-﻿# Design Insights Overview
+# Design Insights / 设计见解
 
-Welcome to design insights.
+本栏目用于整理与机械设计相关的思路、判断与案例，重点不在“技巧堆积”，而在于把设计中的取舍逻辑说明白。

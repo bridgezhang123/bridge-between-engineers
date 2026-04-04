@@ -1,3 +1,3 @@
-﻿# Design Cases
+# Design Cases / 设计案例
 
-Case studies in mechanical design.
+本页后续将逐步整理具有复盘价值的设计案例，用于连接思路、规范与实际问题。

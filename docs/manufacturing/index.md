@@ -1,3 +1,3 @@
-﻿# Manufacturing Overview
+# Manufacturing / 制造
 
-Welcome to manufacturing.
+本栏目用于整理机械加工、工艺安排与制造协同中值得长期沉淀的内容。

@@ -97,7 +97,15 @@
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
+         <loc>https://www.bridgezhang.com/modeling/bom-guide/</loc>
+         <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
          <loc>https://www.bridgezhang.com/modeling/cad-modeling/</loc>
+         <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+         <loc>https://www.bridgezhang.com/modeling/configurations/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
@@ -105,11 +113,27 @@
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
-         <loc>https://www.bridgezhang.com/modeling/drawing-standards/</loc>
+         <loc>https://www.bridgezhang.com/modeling/drawing-template/</loc>
+         <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+         <loc>https://www.bridgezhang.com/modeling/exploded-view/</loc>
+         <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+         <loc>https://www.bridgezhang.com/modeling/modeling-method/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
     <url>
          <loc>https://www.bridgezhang.com/modeling/naming-standards/</loc>
+         <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+         <loc>https://www.bridgezhang.com/modeling/parametric-modeling/</loc>
+         <lastmod>2026-04-04</lastmod>
+    </url>
+    <url>
+         <loc>https://www.bridgezhang.com/modeling/revision-control/</loc>
          <lastmod>2026-04-04</lastmod>
     </url>
 </urlset>

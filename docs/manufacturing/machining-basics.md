@@ -1,3 +1,3 @@
-﻿# Machining Basics
+# Machining Basics / 机加工基础
 
-Basic machining processes and principles.
+本页后续将从机械设计的可制造性出发，整理常见加工方式、基本限制与沟通要点。

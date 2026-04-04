@@ -1,4 +1,6 @@
-mkdocs
-mkdocs-material
-mkdocs-git-revision-date-localized-plugin
-mkdocs-git-committers-plugin-2
+# Keep MkDocs on the 1.x line for compatibility with the current theme overrides
+# and plugins. Avoid unbounded upgrades such as `pip install -U`.
+mkdocs>=1.6,<2.0
+mkdocs-material>=9.7,<10.0
+mkdocs-git-revision-date-localized-plugin>=1.5,<2.0
+mkdocs-git-committers-plugin-2>=2.5,<3.0

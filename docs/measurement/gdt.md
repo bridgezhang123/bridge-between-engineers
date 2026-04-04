@@ -1,3 +1,3 @@
-﻿# GD&T Inspection
+# GD&T Inspection / 形位公差检验
 
-Inspecting geometric dimensioning and tolerancing.
+本页后续将围绕形位公差的检验思路、常见误区与图纸落地问题逐步补充内容。

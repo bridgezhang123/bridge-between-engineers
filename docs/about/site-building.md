@@ -350,3 +350,9 @@ PowerShell 对我来说，不只是“命令输入框”，而是 Windows 下很
 回头看，建这个网站的过程并不只是“搭了一个站”，更像是把内容生产、工具使用、版本管理、公开表达这几件原本分散的事情，逐步串成了一条线。
 
 如果这份记录对后来者有一点参考价值，那它就已经超出了“备忘录”的意义。
+
+## Related Pages / 相关页面
+
+- [About This Site / 关于站点](site.md)
+- [Collaboration / 协作说明](collaboration.md)
+- [Changelog / 更新日志](changelog.md)

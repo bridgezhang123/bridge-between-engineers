@@ -1,3 +1,3 @@
-﻿# Design Philosophy
+# Design Philosophy / 设计方法
 
-My design philosophy and principles.
+本页后续将围绕机械设计中的判断逻辑、简化原则与工程取舍展开整理。

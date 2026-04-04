@@ -1,3 +1,3 @@
-﻿# Learning Path
+# Learning Path / 学习路径
 
-Recommended learning path for mechanical engineering.
+本页后续将围绕机械设计、建模、图纸、制造与测量之间的关系，整理更适合长期积累的学习顺序。

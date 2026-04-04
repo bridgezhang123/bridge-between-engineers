@@ -1,20 +1,19 @@
-# Copyright (c) 2026-2026 Bridge Zhang <zhangqiaohdu@outlook.com>
+# Copyright (c) 2026-2026 Bridge Zhang <contact@bridgezhang.com>
 
-# Project information
 site_name: Bridge Between Engineers
 site_url: https://www.bridgezhang.com/
 site_author: Bridge Zhang
+site_description: >-
+  Mechanical engineering notes, design insights, and practical knowledge -
+  bridging theory and real-world engineering.
+  机械工程笔记、设计见解与实践知识，连接理论与真实工程。
+
 repo_url: https://github.com/bridgezhang123/bridge-zhang-technology-website
 repo_name: bridgezhang123/bridge-zhang-technology-website
 edit_uri: edit/main/docs/
-site_description: >-
-  Mechanical engineering notes, design insights, and practical knowledge — bridging theory and real-world engineering.
-  机械工程笔记、设计见解与实践知识 —— 连接理论与真实工程的桥梁。
 
-# Copyright
 copyright: Copyright &copy; 2026-2026 Bridge Zhang
 
-# Configuration
 theme:
   name: material
   custom_dir: overrides
@@ -25,6 +24,7 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.indexes
+    - navigation.footer
     - search.highlight
     - content.action.edit
     - content.action.view
@@ -41,13 +41,13 @@ theme:
       accent: indigo
       toggle:
         icon: material/brightness-7
-        name: 切换至深色模式
+        name: Switch to dark mode / 切换至深色模式
     - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
         icon: material/brightness-4
-        name: 切换至亮色模式
+        name: Switch to light mode / 切换至浅色模式
 
 plugins:
   - search:
@@ -67,47 +67,51 @@ plugins:
       docs_path: docs/
       token: !ENV [GITHUB_TOKEN, ""]
 
-# Page tree
 nav:
   - Home: index.md
-  - Getting Started:
-    - getting-started/index.md
-    - Site Guide: getting-started/site-guide.md
-    - Learning Path: getting-started/learning-path.md
-  - Design Insights/设计见解:
-    - design/index.md
-    - Design Philosophy: design/design-philosophy.md
-    - Design Cases: design/design-cases.md
-  - Modeling & Drawings:
-    - modeling/index.md
-    - CAD Modeling: modeling/cad-modeling.md
-    - Drawing Standards: modeling/drawing-standards.md
-    - Dimensioning: modeling/dimensioning.md
-    - Naming Standards/命名标准: modeling/naming-standards.md
-  - Manufacturing:
-    - manufacturing/index.md
-    - Machining Basics: manufacturing/machining-basics.md
-    - Process Planning: manufacturing/process-planning.md
-    - Surface Finish: manufacturing/surface-finish.md
-  - Measurement:
-    - measurement/index.md
-    - Measurement Tools: measurement/tools.md
-    - GD&T Inspection: measurement/gdt.md
-    - Quality Control: measurement/quality-control.md
-  - About/关于:
-    - about/index.md
-    - About Me/关于作者: about/author.md
-    - About Site/关于站点: about/site.md
-    - Building This Site/建站说明: about/site-building.md
-    - Collaboration/协作说明: about/collaboration.md
-    - Copyright & License/版权与许可: about/copyright-license.md
-    - Acknowledgements/致谢: about/acknowledgements.md
-    - Changelog/更新日志: about/changelog.md
+  - Getting Started / 入门:
+    - Overview / 导览: getting-started/index.md
+    - Site Guide / 站点导览: getting-started/site-guide.md
+    - Learning Path / 学习路径: getting-started/learning-path.md
+  - Design Insights / 设计见解:
+    - Overview / 导览: design/index.md
+    - Design Philosophy / 设计方法: design/design-philosophy.md
+    - Design Cases / 设计案例: design/design-cases.md
+  - Modeling & Drawings / 建模与图纸:
+    - Overview / 导览: modeling/index.md
+    - Naming Standards / 命名标准: modeling/naming-standards.md
+    - Modeling Method / 建模方式: modeling/modeling-method.md
+    - Parametric Modeling / 参数化建模: modeling/parametric-modeling.md
+    - Configurations / 配置功能: modeling/configurations.md
+    - Drawing Template / 图纸模板: modeling/drawing-template.md
+    - Dimensioning Basics / 基本标注: modeling/dimensioning.md
+    - Exploded Views / 爆炸视图: modeling/exploded-view.md
+    - BOM Practice / BOM 表: modeling/bom-guide.md
+    - Revision Control / 版本迭代: modeling/revision-control.md
+  - Manufacturing / 制造:
+    - Overview / 导览: manufacturing/index.md
+    - Machining Basics / 机加工基础: manufacturing/machining-basics.md
+    - Process Planning / 工艺规划: manufacturing/process-planning.md
+    - Surface Finish / 表面处理: manufacturing/surface-finish.md
+  - Measurement / 测量:
+    - Overview / 导览: measurement/index.md
+    - Measurement Tools / 测量工具: measurement/tools.md
+    - GD&T Inspection / 形位公差检验: measurement/gdt.md
+    - Quality Control / 质量控制: measurement/quality-control.md
+  - About / 关于:
+    - Overview / 导览: about/index.md
+    - About Author / 关于作者: about/author.md
+    - About This Site / 关于站点: about/site.md
+    - Building This Site / 建站说明: about/site-building.md
+    - Collaboration / 协作说明: about/collaboration.md
+    - Copyright & License / 版权与许可: about/copyright-license.md
+    - Acknowledgements / 致谢: about/acknowledgements.md
+    - Changelog / 更新日志: about/changelog.md
 
 extra:
   social:
     - icon: fontawesome/solid/envelope
-      link: mailto:zhangqiaohdu@outlook.com
+      link: mailto:contact@bridgezhang.com
 
 markdown_extensions:
   - attr_list

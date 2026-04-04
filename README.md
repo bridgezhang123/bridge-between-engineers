@@ -91,7 +91,7 @@ You can contribute by:
 3. Sending feedback by email
 
 Email:
-`zhangqiaohdu@outlook.com`
+`contact@bridgezhang.com`
 
 For more details, see:
 [docs/about/collaboration.md](docs/about/collaboration.md)

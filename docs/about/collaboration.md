@@ -5,6 +5,10 @@
 !!! tip "先说明一点"
     您不需要一次性做很多，也不需要担心表达是否“足够正式”。哪怕只是指出一个错误、补充一条经验，都是有价值的。
 
+## Participation Overview / 参与概览
+
+这一页主要说明“如何参与”以及“什么样的内容更适合参与”。我希望协作方式尽量简单、清楚，也尽量降低首次参与时的心理负担。
+
 ## Ways to Contribute / 参与方式
 
 您可以通过以下方式参与：
@@ -13,8 +17,7 @@
 2. 在 GitHub 提交 `Pull Request`，直接修改页面内容。
 3. 通过邮件联系，提交建议、材料或投稿意向。
 
-项目仓库：
-[bridgezhang123/bridge-zhang-technology-website](https://github.com/bridgezhang123/bridge-zhang-technology-website)
+项目仓库：[bridgezhang123/bridge-zhang-technology-website](https://github.com/bridgezhang123/bridge-zhang-technology-website)
 
 ## A Simple GitHub Workflow / GitHub 参与的简单流程
 
@@ -35,6 +38,10 @@
 - 对规范、术语、图样表达或流程描述的修正建议。
 - 对页面结构、阅读顺序、命名方式和排版细节的优化建议。
 - 能让内容更严谨、更易懂、更接近实际工作的补充。
+
+## Notes / 补充说明
+
+协作并不意味着一定要直接修改整页内容。很多时候，一条勘误、一条补充说明，或一个来自实际工作的提醒，都很有价值。
 
 ## Related Notes / 相关说明
 

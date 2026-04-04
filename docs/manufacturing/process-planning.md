@@ -1,3 +1,3 @@
-﻿# Process Planning
+# Process Planning / 工艺规划
 
-Manufacturing process planning.
+本页后续将围绕零件加工路线、装夹思路与批量制造中的工艺安排逐步展开。

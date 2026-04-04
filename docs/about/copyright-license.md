@@ -2,6 +2,10 @@
 
 本页用于说明本站代码、配置文件以及图文内容的许可方式，尽量把边界写清楚，避免后续使用时产生误解。
 
+## Overview / 说明概览
+
+这里将代码许可与图文内容许可分开说明，目的是让使用边界更清楚，也便于后续继续调整与补充。
+
 ## Code and Configuration / 代码与配置
 
 本仓库中的代码、样式、脚本与站点配置文件，遵循仓库中的 [MIT License](https://github.com/bridgezhang123/bridge-zhang-technology-website/blob/main/LICENSE)。
@@ -21,9 +25,7 @@
 
 !!! note "关于内容许可的取舍"
     如果目标是开放阅读、保留署名，同时仍希望限制商业使用，可以考虑 `CC BY-NC 4.0`。
-
     如果目标是尽量减少他人改编与二次加工，`CC BY-NC-ND 4.0` 会更保守；但它也与更开放的文稿协作存在一定张力。
-
     因此，在内容许可尚未完全定稿之前，先把代码许可与图文内容分开说明，会更稳妥。
 
 ## Reuse and Citation / 引用与转载
@@ -41,5 +43,9 @@
 ## Contributions / 参与协作的补充说明
 
 若您通过 GitHub 提交代码性质的修改，通常将按照仓库现行代码许可处理。
-
 若您希望贡献较大篇幅的原创文字、图片或图示内容，建议先沟通一下发布方式与署名方式，这样双方都会更安心。
+
+## Related Pages / 相关页面
+
+- [About This Site / 关于站点](site.md)
+- [Collaboration / 协作说明](collaboration.md)

@@ -1,3 +1,3 @@
-﻿# Surface Finish
+# Surface Finish / 表面处理
 
-Surface finish specifications and measurement.
+本页后续将整理表面粗糙度、表面处理与图纸表达之间的关联问题。
