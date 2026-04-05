@@ -28,13 +28,13 @@
       <a class="home-btn home-btn--ghost" href="{{ secondary_button.get("link") }}">{{ secondary_button.get("text") }}</a>
       {% endif %}
     </div>
-    <a class="home-hero__scroll" href="#home-cards">{{ meta.get("scroll_text", "Scroll down") }}</a>
+    <a class="home-hero__scroll" href="#home-cards">{{ meta.get("scroll_text", "向下阅读") }}</a>
   </div>
 </section>
 
 <section class="home-content home-panel" id="home-cards">
   <div class="home-container reveal" data-reveal>
-    <h2>{{ meta.get("cards_title", "Knowledge Areas") }}</h2>
+    <h2>{{ meta.get("cards_title", "主要内容") }}</h2>
     <div class="home-cards" role="list">
       {% for card in cards %}
       <article class="home-card" role="listitem">
@@ -52,7 +52,7 @@
 <section class="home-contact home-panel" id="home-contact">
   <div class="home-container home-contact__grid">
     <div class="home-contact__left reveal" data-reveal>
-      <h2>{{ about.get("title", "About Site") }}</h2>
+      <h2>{{ about.get("title", "关于站点") }}</h2>
       <p>{{ about.get("description", "") }}</p>
       {% if about.get("button_text") and about.get("button_link") %}
       <a class="home-btn home-btn--dark" href="{{ about.get("button_link") }}">{{ about.get("button_text") }}</a>
@@ -60,7 +60,7 @@
     </div>
 
     <div class="home-contact__right reveal" data-reveal>
-      <h3>{{ connect.get("title", "Let's keep in touch") }}</h3>
+      <h3>{{ connect.get("title", "保持联系") }}</h3>
       <ul>
         {% for item in connect_links %}
         <li>
