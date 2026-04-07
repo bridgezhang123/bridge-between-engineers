@@ -11,8 +11,8 @@ hero_description: >-
   Building bridges, learning standards, sharing insights.
   搭建沟通之桥，研习行业标准，分享学习见解。
 primary_button:
-  text: 开始阅读
-  link: getting-started/
+  text: 开始
+  link: design/
 secondary_button:
   text: 了解更多
   link: "#home-cards"
@@ -36,7 +36,7 @@ cards:
 about:
   title: 关于站点
   description: >-
-     感谢您的来访。本站内容仍在持续整理与打磨之中；若您对专业内容、结构安排或阅读体验有建议，欢迎提出。
+    感谢您的来访。本站内容仍在持续整理与打磨之中；若您对专业内容、结构安排或阅读体验有建议，欢迎提出。
   button_text: 进一步了解
   button_link: about/site/
 connect:

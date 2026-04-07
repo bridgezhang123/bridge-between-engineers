@@ -2,12 +2,23 @@
 
 本页用于记录本站较重要的内容更新、结构调整与页面优化。
 
+## 2026-04-07
+
+- 从导航中移除 `Getting Started` 栏目及其三个页面入口，但保留对应文件，便于后续视需要继续整理。
+- 将首页“开始”按钮改为直接进入 [设计见解](../design/index.md) 栏目首页。
+- 新增 [普通话沟通与工程表达](../design/mandarin-communication.md) 页面，整理公开仓库 `mandarin-pronunciation-training` 的主要内容与更新日志，并结合机械设计工作中的沟通需求做归纳。
+
+## 2026-04-06
+
+- 在 [致谢](acknowledgements.md) 中补充记录好友王芳佳关于 AI 协作、AI Native、任务拆解与知识沉淀方式的建议与启发。
+
 ## 2026-04-05
 
-- 继续将站内导航、页面标题与首页文案收束为中文为主，减少不必要的信息负担。
+- 继续将站内导航、页面标题与首页文案收束为中文为主，减少不必要的信息负担。(王芳佳建议)
 - 调整 About、Getting Started、Design、Manufacturing、Measurement 与 Modeling 栏目中的页面标题与说明文字，尽量统一全站表达风格。
 - 明确 Vercel 失败邮件的来源为 `gh-pages` 分支触发的预览部署，而非 `main` 分支的正式构建失败。
 - 依据 Vercel 控制台设置，补充 `gh-pages` 分支的跳过预览构建处理，减少无意义的失败提醒邮件。
+- 新增 [AI 协作工作流](../design/ai-workflow.md) 页面，并补充行业资讯提问方法、OpenClaw 日报整理思路、`skill` 蒸馏与知识库沉淀方法。
 
 ## 2026-04-04
 

@@ -67,14 +67,12 @@ plugins:
       token: !ENV [GITHUB_TOKEN, ""]
 
 nav:
-  - 首页: index.md
-  - 入门:
-    - 导览: getting-started/index.md
-    - 站点导览: getting-started/site-guide.md
-    - 学习路径: getting-started/learning-path.md
+  - Home: index.md
   - 设计见解:
     - 导览: design/index.md
     - 设计方法: design/design-philosophy.md
+    - AI 协作工作流: design/ai-workflow.md
+    - 普通话沟通与工程表达: design/mandarin-communication.md
     - 设计案例: design/design-cases.md
   - 建模与图纸:
     - 导览: modeling/index.md
