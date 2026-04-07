@@ -17,7 +17,7 @@
 2. 在 GitHub 提交 `Pull Request`，直接修改页面内容。
 3. 通过邮件联系，提交建议、材料或投稿意向。
 
-项目仓库：[bridgezhang123/bridge-zhang-technology-website](https://github.com/bridgezhang123/bridge-zhang-technology-website)
+项目仓库：[bridgezhang123/bridge-between-engineers](https://github.com/bridgezhang123/bridge-between-engineers)
 
 ## GitHub 的简单流程
 

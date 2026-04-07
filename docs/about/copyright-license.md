@@ -8,7 +8,7 @@
 
 ## 代码与配置
 
-本仓库中的代码、样式、脚本与站点配置文件，遵循仓库中的 [MIT License](https://github.com/bridgezhang123/bridge-zhang-technology-website/blob/main/LICENSE)。
+本仓库中的代码、样式、脚本与站点配置文件，遵循仓库中的 [MIT License](https://github.com/bridgezhang123/bridge-between-engineers/blob/main/LICENSE)。
 
 这通常包括但不限于：
 

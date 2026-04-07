@@ -7,8 +7,8 @@ site_description: >-
   机械工程学习笔记、设计思考与实践经验，
   连接理论与真实工程场景。
 
-repo_url: https://github.com/bridgezhang123/bridge-zhang-technology-website
-repo_name: bridgezhang123/bridge-zhang-technology-website
+repo_url: https://github.com/bridgezhang123/bridge-between-engineers
+repo_name: bridgezhang123/bridge-between-engineers
 edit_uri: edit/main/docs/
 
 copyright: Copyright &copy; 2026-2026 Bridge Zhang
@@ -61,7 +61,7 @@ plugins:
       enable_git_follow: false
   - git-committers:
       enabled: !ENV [ENABLE_GIT_COMMITTERS, true]
-      repository: bridgezhang123/bridge-zhang-technology-website
+      repository: bridgezhang123/bridge-between-engineers
       branch: main
       docs_path: docs/
       token: !ENV [GITHUB_TOKEN, ""]

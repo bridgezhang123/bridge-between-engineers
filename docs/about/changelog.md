@@ -4,9 +4,11 @@
 
 ## 2026-04-07
 
-- 从导航中移除 `Getting Started` 栏目及其三个页面入口，但保留对应文件，便于后续视需要继续整理。
+- 从导航中移除 `Getting Started` 栏目，并删除对应的三个页面文件。
 - 将首页“开始”按钮改为直接进入 [设计见解](../design/index.md) 栏目首页。
 - 新增 [普通话沟通与工程表达](../design/mandarin-communication.md) 页面，整理公开仓库 `mandarin-pronunciation-training` 的主要内容与更新日志，并结合机械设计工作中的沟通需求做归纳。
+- 在 [关于站点](site.md) 中补充站内提及人物的发布授权说明，并为 [普通话沟通与工程表达](../design/mandarin-communication.md) 页面增加轻量提示与表格。
+- 因 GitHub 仓库更名为 `bridge-between-engineers`，同步更新站内仓库链接、仓库元数据配置与本地 `origin` 地址。
 
 ## 2026-04-06
 
