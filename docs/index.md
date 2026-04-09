@@ -1,6 +1,6 @@
 ---
 template: home.html
-title: 首页
+title: Home
 hide:
   - navigation
   - toc
