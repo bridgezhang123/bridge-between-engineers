@@ -1,12 +1,12 @@
-# SolidWorks 建模：从零部件标准化的命名开始
+﻿# SolidWorks 建模：从零部件标准化的命名开始
 
 > 面向个人工作者，或尚未建立成熟 PDM 体系的小团队。标准化往往不是从复杂系统开始，而是先从“名称是否清楚、是否稳定、是否可复用”开始。
 
 !!! quote "一批 80 元螺钉的时间成本"
     在某海洋仪器项目中，同样是一批 `M5x20` 内六角螺钉：
 
-    - 非标准命名：采购前需要重新开模、测量、比对目录，约 20 分钟。
-    - 标准命名：`GB_T-70.1-2000-M5x20-Hex_Socket_Cap_Screw`，采购约 30 秒完成。
+    - 非标准命名：`M5x20 Hex Socket Cap Screw`，采购前需要重新开模、测量、比对目录，约 20 分钟。
+    - 标准命名：`GB-T-70.1-2000_M5x20_Hex-Socket-Cap-Screw`，采购约 30 秒完成。
 
     命名不是只关乎设计，它还与加工、采购、装配和后期维护等一整串工作直接相关。
 
@@ -27,7 +27,7 @@
 - 让文件关系更容易回溯
 - 避免同名文件冲突
 
-!!! Warning "先统一规则，再开始建模"
+!!! warning "先统一规则，再开始建模"
     项目进行中再改命名，通常会触发装配引用丢失、图纸链接断裂与 BOM 映射混乱。
 
 ## 2. 标准引用
@@ -42,27 +42,27 @@
 
 工程化解释：
 
-- Windows 文件名不允许 /，落地时应替换为 _（如 GB/T -> GB_T）。
+- Windows 文件名不允许 `/`，落地时应替换为 `-` 或 `_`（如 `GB/T` -> `GB-T`）。
 - 即使在 Windows 可显示中文，仍建议文件名使用英文与数字，降低 STEP/IGES 与第三方系统乱码风险。
-- O、I 的禁止重点针对流水号、隶属号等易混字段；若产品代号历史上已固化，可在代号字段受控保留。
+- `O`、`I` 的禁止重点针对流水号、隶属号等易混字段；若产品代号历史上已固化，可在代号字段受控保留。
 
 ### 2.2 JB/T 5054.4-2000《产品图样及设计文件 编号原则》
 
 这份标准强调“隶属编号”的思路，即编号应尽量反映结构层级。
 
-"推荐结构："产品代号-一级隶属-二级隶属-流水号
+"推荐结构：" 产品代号_版本_系统_流水号_名称
 
 例如：
 
-- `PIES-S01-SS02-01`
-- `PIES-S01-01`
+- `ADCP_Sen_Ver1_S01_01_Transducer-Head`
+- `ADCP_Sen_Ver1_S02_01_Support-Plate`
 
 其中：
 
-- `PIES` 表示项目或产品代号
-- `S01` 中的 `S` 是 `System` 的简称，`01` 表示系统序号
-- `SS02` 中的 `SS` 是 `Subsystem` 的简称，`02` 表示子系统序号
-- `01` 表示该层级下的流水号
+- `ADCP` 表示产品代号
+- `Sen_Ver1` 表示 Sentinel 版本 1
+- `S01` 表示系统或子系统编号
+- `01` 表示该层级下的零件流水号
 
 ### 2.3 GB/T 1237-2000《紧固件标记方法》
 
@@ -73,8 +73,8 @@
 
 例如：
 
-- `GB_T-70.1-2000-M5x20-Hex_Socket_Cap_Screw`
-- `GB_T-97.1-2002-5-Plain_Washer`
+- `GB-T-70.1-2000_M5x20_Hex-Socket-Cap-Screw`
+- `GB-T-97.1-2002_5_Plain-Washer`
 
 ## 3. 实操与模板
 
@@ -84,63 +84,73 @@
 | --- | --- | --- |
 | 字符集 | 使用 `A-Z`、`0-9`、`-`、`_`、`.` | 兼容主流文件系统与交换格式 |
 | 语言 | 文件名尽量不用中文 | 降低 STEP、IGES 及第三方系统乱码风险 |
-| 分隔符 | 统一使用 `-` 或 `_` | 不建议混用空格 |
+| 分隔符 | 统一使用 `_` 与 `-` | `_` 用于层级字段分隔，`-` 用于字段内部复合描述；避免空格 |
 | 易混字符 | 流水号字段避免 `O`、`I` | 防止与 `0`、`1` 混淆 |
 | 版本表达 | 不在文件名主体写 `v1`、`最终版` | 版本信息更适合放在修订栏、属性或台账 |
 
 ### 3.2 命名模板
 
 === "自制件 / In-house Parts"
-    模板：`<Product/产品代号>-<Level1/一级层级>-<Level2/二级层级>-<Seq/流水号>`
+    模板：`<Product>_<Version>_<System>_<Seq>_<Name>`
 
     示例：
 
-    - `PIES-S01-SS02-01`
-    - `PIES-MK2-S01-01`
+    - `ADCP_Sen_Ver1_S01_01_Transducer-Head`
+    - `ADCP_Sen_Ver1_S02_01_Support-Plate`
 
 === "标准件 / Standard Parts"
-    模板：`<Standard/标准号>-<Spec/规格>-<Type/类型>`
+    模板：`<Standard>_<Spec>_<Type>`
 
     示例：
 
-    - `GB_T-70.1-2000-M5x20-Hex_Socket_Cap_Screw`
-    - `GB_T-97.1-2002-5-Plain_Washer`
+    - `GB-T-70.1-2000_M5x20_Hex-Socket-Cap-Screw`
+    - `GB-T-97.1-2002_5_Plain-Washer`
 
-    建议普通单词采用首字母大写即可，无需全部大写。`PIES` 这类项目代号可按既有写法保留。
+    建议：
+
+    - `_` 用于标准号与规格之间的层次分隔
+    - `-` 用于类型名称内部的多词组合，如 `Hex-Socket-Cap-Screw`
 
 === "外购件 / Commercial Parts"
-    模板：`CP-<Type/类型>-<Vendor/供应商>-<Model/型号>`
+    模板：`CP_<Type>_<Vendor>_<Model>`
 
     示例：
 
-    - `CP-Connector-SubConn-BH3M`
-    - `CP-Transducer-Sonardyne-AT01`
+    - `CP_Connector_SubConn_BH3M`
+    - `CP_Transducer_Sonardyne_AT01`
+
+    建议：
+
+    - `CP_` 固定前缀表示外购件
+    - 供应商与型号之间使用 `_` 连接，保持层级关系清晰
 
 ### 3.3 推荐目录结构
 
-```text
-PIES-ST-TA/
-├── 0_Assembly/
-│   ├── PIES-ST-TA.sldasm
-│   └── PIES-ST-TA-Exploded.sldasm
-├── 1_Subassembly/
-│   ├── PIES-S01-TA/
-│   └── PIES-S02-TA/
-├── 2_Parts/
-│   ├── PIES-ST-01.sldprt
-│   └── PIES-S01-SS02-01.sldprt
-├── 3_StandardParts/
-│   ├── Bolts/
-│   ├── Nuts/
-│   └── Washers/
-├── 4_CommercialProducts/
-│   ├── CP-Connector-SubConn-BH3M/
-│   └── CP-Transducer-Sonardyne-AT01/
-├── 5_Drawings/
-│   ├── SLD/
-│   └── PDF/
-└── README.md
-```
+ADCP 示例
+
+    ```text
+    ADCP/
+    ├── ADCP_Standard-Parts/
+    │   └── GB-T-70.1-2000_M5x20_Hex-Socket-Cap-Screw.sldprt
+    ├── ADCP_Commercial-Products/
+    │   └── CP_Connector_SubConn_BH3M.sldprt
+    ├── ADCP_Sen_Ver1/
+    │   ├── ADCP_Sen_Ver1_S01_Adcp-Instrument/
+    │   │   ├── ADCP_Sen_Ver1_S01_01_Transducer-Head.sldprt
+    │   │   ├── ADCP_Sen_Ver1_S01_02_Housing.sldprt
+    │   │   └── ADCP_Sen_Ver1_S01_03_End-cap.sldprt
+    │   └── ADCP_Sen_Ver1_S02_Instrument-Fixture/
+    │       ├── ADCP_Sen_Ver1_S02_01_Support-Plate.sldprt
+    │       └── ADCP_Sen_Ver1_S02_02_Clamp-Plate.sldprt
+    └── README.md
+    ```
+
+说明：
+
+- 目录层级建议使用 `_` 将产品、版本和分类串联。
+- 部件名称内部使用 `-` 表示词语组合或部位关系。
+- 这样区分后，文件名既能表达结构层级，又保持词义清晰，方便人工识别与自动检索。
+- `README.md` 作为该产品线根目录说明文件，说明目录结构与命名规则。
 
 ### 3.4 发布前核对清单
 
@@ -163,7 +173,7 @@ PIES-ST-TA/
 
 ### 4.2 可执行的规避方式
 
-- 自制件名称必须包含产品代号、层级号和流水号，避免裸名称
+- 自制件名称必须包含产品代号、版本和层级信息，避免裸名称
 - 新产品路线或不可互换的结构变化，应升级产品代号，而不是简单在旧名称后追加 `v2`
 - 版本信息尽量放在修订栏、文件属性或变更台账中，不混入对象身份
 
