@@ -1597,7 +1597,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        建议阅读顺序
+        背景介绍
       
     </span>
   </a>
@@ -1606,6 +1606,17 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        建议阅读顺序
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
         写作原则
@@ -1649,12 +1660,39 @@
 
 
 <h1 id="_1">建模与图纸</h1>
-<p>本栏目面向个人工作者，或尚未建立成熟 PDM 体系的小团队，尝试从建模、出图与版本管理的角度，逐步引发对标准化建模的思考与实践。</p>
 <div class="admonition abstract">
 <p class="admonition-title">系列目标</p>
-<p>这组文章并不假定读者已经拥有完整的信息化管理条件，而是从更现实的起点出发：先把命名、目录、建模方法、图纸表达和版本迭代这些基础环节梳理清楚。</p>
+<ul>
+<li>这组文章并不假定读者已经拥有完整的信息化管理(成熟 PDM 体系)条件，而是从更现实的起点出发：先把命名、目录、建模方法、图纸表达和版本迭代这些基础环节梳理清楚。</li>
+<li>逐步引发对标准化建模的思考与实践；并形成<strong>可复用</strong>的建模、出图、命名和版本管理规范。</li>
+</ul>
 </div>
-<h2 id="_2">建议阅读顺序</h2>
+<p>此系列文章，从构思到完成<strong>资料整理</strong>、撰写，历时一个半月的业余时间，在欣慰之余，也不负老师对自己“诚与尊重”的劝诫。</p>
+<h2 id="_2">背景介绍</h2>
+<p>本系列文章选取 Workhorse II 水下耐压 ADCP 作为案例，属于典型的耐压舱设备，包含舱体、端盖、密封件、紧固件等组件，其装配关系能够充分体现建模规范中的各类典型场景。Workhorse II 主要用于海洋水体流速剖面测量，可部署于船底、浮标、漂流平台或海床。</p>
+<p>常见型号包括 Monitor、Sentinel 和 Mariner：</p>
+<ul>
+<li>Monitor：标准传感器主体，通常依赖外部供电，适合临时或固定安装。</li>
+<li>Sentinel：壳体加长，内置电池包，适合长期自容式部署。</li>
+<li>Mariner：水下传感器 + 甲板单元，适合船载实时测量。</li>
+</ul>
+<p>这些型号在结构上的核心差异主要体现在壳体长度、内部空间与系统接口上。标准版本通常为 200m 聚合物外壳，深海任务可选配 6000m 高压金属外壳。对本系列建模来说，重点关注以下结构细节：</p>
+<ul>
+<li>壳体几何与装配基准：不同型号的壳体长度、端盖和支撑点需分别定义。</li>
+<li>内部组件布局：Sentinel 的电池舱、线束走向与密封接口是关键建模要素。</li>
+<li>系统连接与布线：Mariner 的水下电缆、甲板单元接口和连接器位置影响整体装配图。</li>
+<li>耐压结构与材料：外壳材质、壁厚和密封形式应随深度等级调整。</li>
+</ul>
+<p>此处以官方文档所给出的Workhorse2,300KHZ/600KHZ,Sentinel 为例进行建模，如下图所示。具体外观尺寸见官方文档P150-151(是PDF的页数，而非文档的页数，下同)，由于该系列产品在不断迭代，因此我们描述的官方文档以互联网档案馆留存的为基准。</p>
+<figure>
+  <img alt="Workhorse II Sentinel ADCP 外观" src="../images/docs_modeling/bbe_docs_modeling_index_Workhorse2-Sentinel-ADCP.png" width="720" />
+<br />
+<figcaption>Workhorse II Sentinel ADCP 外观（来自官方文档）</figcaption>
+</figure>
+<p>该设备的官方文档详见公开资料：<a href="https://www.teledynemarine.com/en-us/support/SiteAssets/RDI/Manuals%20and%20Guides/Workhorse%20II/WH2_Operation_Manual.pdf">Operation Manual</a>，另存档于互联网档案馆<a href="http://web.archive.org/web/20260321082212/https:/www.teledynemarine.com/en-us/support/SiteAssets/RDI/Manuals%20and%20Guides/Workhorse%20II/WH2_Operation_Manual.pdf">Operation Manual</a>。</p>
+<p><strong>软件说明</strong></p>
+<p>尽管各种建模软件在建模流程上有较多的一致，但仍有细节上的差异；本文针对具体的建模软件描述，针对的是SolidWorks 2018。</p>
+<h2 id="_3">建议阅读顺序</h2>
 <ol>
 <li><a href="naming-standards/">命名标准</a>：从零部件标准化命名开始，兼顾文件夹命名。</li>
 <li><a href="modeling-method/">建模方式</a>：对比自上而下与自底向上两种思路。</li>
@@ -1662,11 +1700,12 @@
 <li><a href="configurations/">配置功能</a>：讨论配置功能的使用方式与边界。</li>
 <li><a href="drawing-template/">图纸模板</a>：讨论图纸模板的结构与使用重点。</li>
 <li><a href="dimensioning/">基本标注</a>：整理图纸标注中的基本要求。</li>
-<li><a href="exploded-view/">爆炸视图</a>：说明爆炸视图的使用场景与注意点。</li>
+<li><a href="exploded-view/">爆炸视图</a>：说明爆炸视图的使用场景与注意点。
+官方文档所给的爆炸视图在P67中给出。</li>
 <li><a href="bom-guide/">BOM 表</a>：讨论 BOM 表的基本使用方法。</li>
 <li><a href="revision-control/">版本迭代</a>：以文件版本迭代管理收束整个系列。</li>
 </ol>
-<h2 id="_3">写作原则</h2>
+<h2 id="_4">写作原则</h2>
 <p>这组文章尽量采用相近的推进方式：</p>
 <ul>
 <li>先说明问题为何存在。</li>
@@ -1697,7 +1736,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月5日 04:26:48 UTC">2026年4月5日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月21日 13:17:24 UTC">2026年4月21日</span>
   </span>
 
     
