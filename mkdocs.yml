@@ -143,9 +143,12 @@ extra_css:
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascripts/mermaid.js
-  - https://cdn.jsdelivr.net/npm/markmap-lib
+
+  - https://cdn.jsdelivr.net/npm/d3@7
   - https://cdn.jsdelivr.net/npm/markmap-view
+  - https://cdn.jsdelivr.net/npm/markmap-lib
   - javascripts/markmap.js
+
   - javascripts/home.js
   - javascripts/print-button.js
   - javascripts/theme-toggle.js
