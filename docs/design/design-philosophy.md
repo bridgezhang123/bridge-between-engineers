@@ -2,25 +2,40 @@
 
 本页整理一套可学习、可复用的专业思维模式，适用于工程设计、材料选择与复杂问题求解。
 
-```markmap
-# Design Philosophy
-## Core Principles
-### Function First
-### Simplicity
-### Robustness
-## Engineering Thinking
-### Trade-offs
-#### Cost vs Performance
-#### Complexity vs Reliability
-### Constraints Driven Design
-## Methodology
-### Iterative Design
-### Modularization
-### Standardization
-## Practical Reality
-### Manufacturing Limits
-### Maintenance
-### Failure Modes   
+```mermaid
+flowchart LR
+  A["Design Philosophy"]
+
+  A --> B["Core Principles"]
+  B --> B1["Function First"]
+  B --> B2["Simplicity"]
+  B --> B3["Robustness"]
+
+  A --> C["Engineering Thinking"]
+  C --> C1["Trade-offs"]
+  C1 --> C11["Cost vs Performance"]
+  C1 --> C12["Complexity vs Reliability"]
+  C --> C2["Constraints Driven Design"]
+
+  A --> D["Methodology"]
+  D --> D1["Iterative Design"]
+  D --> D2["Modularization"]
+  D --> D3["Standardization"]
+
+  A --> E["Practical Reality"]
+  E --> E1["Manufacturing Limits"]
+  E --> E2["Maintenance"]
+  E --> E3["Failure Modes"]
+
+  classDef core fill:#E3F2FD,stroke:#1565C0,color:#0D47A1;
+  classDef think fill:#E8F5E9,stroke:#2E7D32,color:#1B5E20;
+  classDef method fill:#FFF3E0,stroke:#EF6C00,color:#E65100;
+  classDef reality fill:#F3E5F5,stroke:#6A1B9A,color:#4A148C;
+
+  class B,B1,B2,B3 core;
+  class C,C1,C11,C12,C2 think;
+  class D,D1,D2,D3 method;
+  class E,E1,E2,E3 reality;
 ```
 
 ## 1. 以“知识架构”为基础，而非孤立知识点

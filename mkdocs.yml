@@ -122,10 +122,6 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
-        - name: markmap
-          class: language-markmap
-          format: !!python/name:pymdownx.superfences.fence_code_format
-
   - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true
@@ -143,11 +139,6 @@ extra_css:
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascripts/mermaid.js
-
-  - https://cdn.jsdelivr.net/npm/d3@7
-  - https://cdn.jsdelivr.net/npm/markmap-lib@0.15.4/dist/browser/index.min.js
-  - https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.min.js
-  - javascripts/markmap-render.js
 
   - javascripts/home.js
   - javascripts/print-button.js

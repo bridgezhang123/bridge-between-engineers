@@ -4,7 +4,7 @@
 
 ## 综合类供应商
 
-- [misumi](https://www.misumi.com.cn/)、[怡合达](https://www.yiheda.com/)，提供标准件、自动化模组等产品；分别为日资全球化领先企业与国内上市对标企业，标准化程度很高。
+- [misumi](https://www.misumi.com.cn/)、[怡合达](https://www.yiheda.com/)，提供标准件、自动化模组、非标准件加工等产品/服务；分别为日资全球化领先企业与国内上市对标企业，标准化程度很高。
 
 ## 以国标O形圈举例
 

@@ -2037,11 +2037,13 @@
 | 5.30 | 7.3 | 4.24 | 0.6 | 0.2 |
 | 7.00 | 9.7 | 5.72 | 1.0 | 0.2 |</p>
 <p>注意：圆角半径可在一个范围内波动，此处取中间值。</p>
-<p>为了将上述关系固定下来，建立如下变量与方程式关系(存于<code>equations-for-housing-groove.txt</code>文件)，可有如下作用：
-- 函数关系通过if语句，遍历所有O形圈截面直径对应的参数，沟槽宽度如下："GIF_groove_width_1"= IIF ( "O_ring_sectional_diam_1" = 1.80 , 2.6 , IIF ( "O_ring_sectional_diam_1" = 2.65 , 3.8 , IIF ( "O_ring_sectional_diam_1" = 7.00 , 9.7 , IIF ( "O_ring_sectional_diam_1" = 5.30 , 7.3 , 5.0 ) ) ) )
-- 即输入一个O形圈截面直径，即可联动得到相应的沟槽宽度等。
-- 可不断复用，也可避免手动输入可能导致的出错。
-- O形圈截面直径/O_ring_sectional_diam预设了_1、_2两个变量，同一零件即使有两处不同规格的O形圈沟槽，也可对应配置；若有更多沟槽，相应扩展即可。</p>
+<p>为了将上述关系固定下来，建立如下变量与方程式关系(存于<code>equations-for-housing-groove.txt</code>文件)，可有如下作用：</p>
+<ul>
+<li>函数关系通过if语句，遍历所有O形圈截面直径对应的参数，沟槽宽度如下："GIF_groove_width_1"= IIF ( "O_ring_sectional_diam_1" = 1.80 , 2.6 , IIF ( "O_ring_sectional_diam_1" = 2.65 , 3.8 , IIF ( "O_ring_sectional_diam_1" = 7.00 , 9.7 , IIF ( "O_ring_sectional_diam_1" = 5.30 , 7.3 , 5.0 ) ) ) )</li>
+<li>即输入一个O形圈截面直径，即可联动得到相应的沟槽宽度等。</li>
+<li>可不断复用，也可避免手动输入可能导致的出错。</li>
+<li>O形圈截面直径/O_ring_sectional_diam预设了_1、_2两个变量，同一零件即使有两处不同规格的O形圈沟槽，也可对应配置；若有更多沟槽，相应扩展即可。</li>
+</ul>
 <h3 id="_2">软件操作</h3>
 <ul>
 <li>在零件界面，依次选择 <code>菜单/工具/方程式</code>进入界面。
@@ -2220,14 +2222,6 @@
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
         <script src="../../javascripts/mermaid.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.15.4/dist/browser/index.min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.min.js"></script>
-      
-        <script src="../../javascripts/markmap-render.js"></script>
       
         <script src="../../javascripts/home.js"></script>
       

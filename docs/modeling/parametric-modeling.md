@@ -40,6 +40,7 @@
 注意：圆角半径可在一个范围内波动，此处取中间值。
 
 为了将上述关系固定下来，建立如下变量与方程式关系(存于`equations-for-housing-groove.txt`文件)，可有如下作用：
+
 - 函数关系通过if语句，遍历所有O形圈截面直径对应的参数，沟槽宽度如下："GIF_groove_width_1"= IIF ( "O_ring_sectional_diam_1" = 1.80 , 2.6 , IIF ( "O_ring_sectional_diam_1" = 2.65 , 3.8 , IIF ( "O_ring_sectional_diam_1" = 7.00 , 9.7 , IIF ( "O_ring_sectional_diam_1" = 5.30 , 7.3 , 5.0 ) ) ) )
 - 即输入一个O形圈截面直径，即可联动得到相应的沟槽宽度等。
 - 可不断复用，也可避免手动输入可能导致的出错。

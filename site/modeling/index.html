@@ -1693,12 +1693,13 @@
 <div class="admonition abstract">
 <p class="admonition-title">系列目标</p>
 <ul>
-<li>这组文章并不假定读者已经拥有完整的信息化管理(成熟 PDM 体系)条件，而是从更现实的起点出发：先把命名、目录、建模方法、图纸表达和版本迭代这些基础环节梳理清楚。</li>
+<li>此系列文章并不假定读者已经拥有完整的信息化管理(如成熟 PDM 体系)条件，而是从更现实的起点出发：先把命名、目录、建模方法、图纸表达和版本迭代这些基础环节梳理清楚。</li>
 <li>逐步引发对标准化建模的思考与实践；并形成<strong>可复用</strong>的建模、出图、命名和版本管理规范。</li>
 </ul>
 </div>
 <p>此系列文章，从构思到完成<strong>资料整理</strong>、撰写，历时一个半月的业余时间，在欣慰之余，也不负老师对自己“诚与尊重”的劝诫。</p>
 <h2 id="_2">背景介绍</h2>
+<p>在长期的建模实践中，我们积累了大量模型文件，也遇到了各种各样的困扰。这些问题看似零散，实则背后有着共性的根源——缺乏统一的规范。</p>
 <p>本系列文章选取 Workhorse II 水下耐压 ADCP 作为案例，属于典型的耐压舱设备，包含舱体、端盖、密封件、紧固件等组件，其装配关系能够充分体现建模规范中的各类典型场景。Workhorse II 主要用于海洋水体流速剖面测量，可部署于船底、浮标、漂流平台或海床。</p>
 <p>常见型号包括 Monitor、Sentinel 和 Mariner：</p>
 <ul>
@@ -1706,14 +1707,8 @@
 <li>Sentinel：壳体加长，内置电池包，适合长期自容式部署。</li>
 <li>Mariner：水下传感器 + 甲板单元，适合船载实时测量。</li>
 </ul>
-<p>这些型号在结构上的核心差异主要体现在壳体长度、内部空间与系统接口上。标准版本通常为 200m 聚合物外壳，深海任务可选配 6000m 高压金属外壳。对本系列建模来说，重点关注以下结构细节：</p>
-<ul>
-<li>壳体几何与装配基准：不同型号的壳体长度、端盖和支撑点需分别定义。</li>
-<li>内部组件布局：Sentinel 的电池舱、线束走向与密封接口是关键建模要素。</li>
-<li>系统连接与布线：Mariner 的水下电缆、甲板单元接口和连接器位置影响整体装配图。</li>
-<li>耐压结构与材料：外壳材质、壁厚和密封形式应随深度等级调整。</li>
-</ul>
-<p>此处以官方文档所给出的Workhorse2,300KHZ/600KHZ,Sentinel 为例进行建模，如下图所示。具体外观尺寸见官方文档P150-151(是PDF的页数，而非文档的页数，下同)，由于该系列产品在不断迭代，因此我们描述的官方文档以互联网档案馆留存的为基准。</p>
+<p>这些型号在结构上的核心差异主要体现在壳体长度、内部空间与系统接口上。</p>
+<p>此处以官方文档所给出的Workhorse2，300KHZ/600KHZ，Sentinel 为例进行建模，如下图所示。具体外观尺寸见官方文档P150-151(是PDF的页数，而非文档的页数，下同)，由于该系列产品在不断迭代，因此我们描述的官方文档以互联网档案馆留存的为基准。</p>
 <figure>
   <img alt="Workhorse II Sentinel ADCP 外观" src="../images/docs_modeling/bbe_docs_modeling_index_Workhorse2-Sentinel-ADCP.png" width="720" />
 <br />
@@ -1898,14 +1893,6 @@
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
         <script src="../javascripts/mermaid.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.15.4/dist/browser/index.min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.min.js"></script>
-      
-        <script src="../javascripts/markmap-render.js"></script>
       
         <script src="../javascripts/home.js"></script>
       

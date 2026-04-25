@@ -1925,24 +1925,39 @@
 
 <h1 id="design-philosophy">Design Philosophy / 设计方法</h1>
 <p>本页整理一套可学习、可复用的专业思维模式，适用于工程设计、材料选择与复杂问题求解。</p>
-<pre class="language-markmap"><code># Design Philosophy
-## Core Principles
-### Function First
-### Simplicity
-### Robustness
-## Engineering Thinking
-### Trade-offs
-#### Cost vs Performance
-#### Complexity vs Reliability
-### Constraints Driven Design
-## Methodology
-### Iterative Design
-### Modularization
-### Standardization
-## Practical Reality
-### Manufacturing Limits
-### Maintenance
-### Failure Modes   </code></pre>
+<pre class="mermaid"><code>flowchart TD
+  A["Design Philosophy"]
+
+  A --&gt; B["Core Principles"]
+  B --&gt; B1["Function First"]
+  B --&gt; B2["Simplicity"]
+  B --&gt; B3["Robustness"]
+
+  A --&gt; C["Engineering Thinking"]
+  C --&gt; C1["Trade-offs"]
+  C1 --&gt; C11["Cost vs Performance"]
+  C1 --&gt; C12["Complexity vs Reliability"]
+  C --&gt; C2["Constraints Driven Design"]
+
+  A --&gt; D["Methodology"]
+  D --&gt; D1["Iterative Design"]
+  D --&gt; D2["Modularization"]
+  D --&gt; D3["Standardization"]
+
+  A --&gt; E["Practical Reality"]
+  E --&gt; E1["Manufacturing Limits"]
+  E --&gt; E2["Maintenance"]
+  E --&gt; E3["Failure Modes"]
+
+  classDef core fill:#E3F2FD,stroke:#1565C0,color:#0D47A1;
+  classDef think fill:#E8F5E9,stroke:#2E7D32,color:#1B5E20;
+  classDef method fill:#FFF3E0,stroke:#EF6C00,color:#E65100;
+  classDef reality fill:#F3E5F5,stroke:#6A1B9A,color:#4A148C;
+
+  class B,B1,B2,B3 core;
+  class C,C1,C11,C12,C2 think;
+  class D,D1,D2,D3 method;
+  class E,E1,E2,E3 reality;</code></pre>
 <h2 id="1">1. 以“知识架构”为基础，而非孤立知识点</h2>
 <ul>
 <li>不是把“铝合金”、“耐压计算”、“腐蚀原理”当成无关的碎片。</li>
@@ -2190,14 +2205,6 @@
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
         <script src="../../javascripts/mermaid.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.15.4/dist/browser/index.min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.min.js"></script>
-      
-        <script src="../../javascripts/markmap-render.js"></script>
       
         <script src="../../javascripts/home.js"></script>
       

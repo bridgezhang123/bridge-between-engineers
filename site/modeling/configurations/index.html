@@ -920,7 +920,7 @@
   <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 适用场景
+        3.1. 配置功能的定义
       
     </span>
   </a>
@@ -931,18 +931,7 @@
   <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 不适用场景
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 实操原则
+        3.2. 配置功能的适用性对比
       
     </span>
   </a>
@@ -965,17 +954,6 @@
   
     <nav class="md-nav" aria-label="4. 其余要点">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 配置漂移
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#42" class="md-nav__link">
@@ -1852,7 +1830,7 @@
   <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 适用场景
+        3.1. 配置功能的定义
       
     </span>
   </a>
@@ -1863,18 +1841,7 @@
   <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 不适用场景
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 实操原则
+        3.2. 配置功能的适用性对比
       
     </span>
   </a>
@@ -1897,17 +1864,6 @@
   
     <nav class="md-nav" aria-label="4. 其余要点">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 配置漂移
-      
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#42" class="md-nav__link">
@@ -1996,38 +1952,46 @@
 <p>配置功能很有用，但它解决的是“同一对象的受控变化”，不是所有差异都适合塞进一个文件里。</p>
 </blockquote>
 <h2 id="1">1. 范围与目标</h2>
-<p>本文主要讨论配置功能适合解决什么问题、不适合处理什么差异，以及在实际使用中怎样降低后期维护风险。</p>
-<p>对个人或没有成熟数据管理体系的团队而言，配置功能确实能提高复用效率，但前提是边界清楚。否则，配置越多，后期越难排查。</p>
+<ul>
+<li>本文主要讨论配置功能适合解决什么问题、不适合处理什么差异，以及在实际使用中怎样降低后期维护风险。</li>
+<li>以同一装配体的不同显示状态或爆炸状态为例，说明配置功能的使用方法。</li>
+</ul>
 <h2 id="2">2. 标准引用</h2>
 <p>暂无。</p>
 <h2 id="3">3. 实操与模板</h2>
-<h3 id="31">3.1 适用场景</h3>
-<p>配置功能更适合处理“同一对象的系列化变化”，例如：</p>
-<ul>
-<li>同一零件的不同长度规格</li>
-<li>同一零件的不同状态，如毛坯与机加状态</li>
-<li>同一装配体的不同显示状态或爆炸状态</li>
-</ul>
-<p>这类变化仍然共享同一设计逻辑，因此用配置通常是合适的。</p>
-<h3 id="32">3.2 不适用场景</h3>
-<p>以下情况通常不建议继续依赖配置硬撑：</p>
-<ul>
-<li>结构路线差异明显的方案</li>
-<li>特征树差异过大、难以共用的零件</li>
-<li>实际上已经接近“新零件”的对象</li>
-</ul>
-<p>如果继续强行放在同一个文件中，后期维护成本往往会高于复用收益。</p>
-<h3 id="33">3.3 实操原则</h3>
-<p>一个相对稳妥的判断方式是：</p>
-<ul>
-<li>结构差异小，用配置</li>
-<li>结构差异大，另建文件</li>
-</ul>
-<p>如果还依赖设计表或较多特征状态控制，则更要定期复核各配置是否真正同步，避免出现“以为改了，实际没改全”的情况。</p>
+<h3 id="31">3.1. 配置功能的定义</h3>
+<p>在同一个文件中创建多个变体，每个变体可拥有不同的尺寸、特征状态、属性等。</p>
+<h3 id="32">3.2. 配置功能的适用性对比</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">维度</th>
+<th style="text-align: left;">适用场景</th>
+<th style="text-align: left;">不适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>核心判断</strong></td>
+<td style="text-align: left;">同一对象的系列化变化，共享同一设计逻辑</td>
+<td style="text-align: left;">结构路线差异明显，接近“新零件”的对象</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>典型示例</strong></td>
+<td style="text-align: left;">- 同一零件的不同长度规格<br>- 同一零件的不同状态（如毛坯与机加状态）<br>- 同一装配体的不同显示状态或爆炸状态</td>
+<td style="text-align: left;">- 结构路线差异明显的方案 <br>- 特征树差异过大、难以共用的零件 <br>- 实际上已经接近“新零件”的对象</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>维护成本</strong></td>
+<td style="text-align: left;">较低，变化仍受同一逻辑约束</td>
+<td style="text-align: left;">较高，强行共用反而增加后期维护成本</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>总结</strong>：配置功能适合处理“同一对象的系列化变化”，当变体差异过大时，应果断另存为新零件，而非强行共用。</p>
+</blockquote>
 <h2 id="4">4. 其余要点</h2>
-<h3 id="41">4.1 配置漂移</h3>
-<p>配置功能最常见的问题，不是当下不能用，而是随着修改积累，逐步出现“不同配置之间不再真正一致”的漂移现象。</p>
-<p>这种问题往往不容易第一时间暴露，但一旦进入出图、采购或装配阶段，就会带来额外排查成本。</p>
 <h3 id="42">4.2 与版本管理的关系</h3>
 <p>配置功能解决的是单个文件内部的受控变化，不应替代版本管理本身承担的职责。若对象已经进入明显的版本分叉阶段，通常应交由独立文件和版本管理处理，而不是继续堆在配置里。</p>
 <h2 id="5">5. 边界与风险</h2>
@@ -2199,14 +2163,6 @@
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
         <script src="../../javascripts/mermaid.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.15.4/dist/browser/index.min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.min.js"></script>
-      
-        <script src="../../javascripts/markmap-render.js"></script>
       
         <script src="../../javascripts/home.js"></script>
       
