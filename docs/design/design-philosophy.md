@@ -3,7 +3,6 @@
 本页整理一套可学习、可复用的专业思维模式，适用于工程设计、材料选择与复杂问题求解。
 
 ```markmap 
-
 # Design Philosophy
 ## Core Principles
 ### Function First
@@ -21,8 +20,7 @@
 ## Practical Reality
 ### Manufacturing Limits
 ### Maintenance
-### Failure Modes
-   
+### Failure Modes   
 ```
 
 ## 1. 以“知识架构”为基础，而非孤立知识点
