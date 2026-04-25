@@ -443,6 +443,8 @@
       
         
       
+        
+      
     
     
     
@@ -538,6 +540,34 @@
     
   
     AI 协作工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/supplier-background/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    供应商背景
   
 
     
@@ -845,7 +875,7 @@
   <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 联动建模与参数化建模的区别
+        3.2 关于自上而下
       
     </span>
   </a>
@@ -856,18 +886,7 @@
   <a href="#33" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3 一个更稳妥的经验
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.4 建模步骤
+        3.3 建模步骤
       
     </span>
   </a>
@@ -1833,7 +1852,7 @@
   <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 联动建模与参数化建模的区别
+        3.2 关于自上而下
       
     </span>
   </a>
@@ -1844,18 +1863,7 @@
   <a href="#33" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3 一个更稳妥的经验
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.4 建模步骤
+        3.3 建模步骤
       
     </span>
   </a>
@@ -1966,12 +1974,10 @@
 <p>在很多项目里，建模效率高低并不取决于画图速度，而取决于一开始是否选对了建模方式。</p>
 </blockquote>
 <h2 id="1">1. 范围与目标</h2>
-<p>本文讨论 <code>自底向上/Top-down</code> 与 <code>自上而下/Bottom-up</code> 两种常见建模方式；自上而下的建模属于联动建模里的跨零件联动建模，与此相似的参数化建模属于零件内部的联动建模：</p>
+<p>本文讨论 <code>自底向上/Top-down</code> 与 <code>自上而下(关联设计)/Bottom-up</code> 两种常见建模方式：</p>
 <ul>
-<li>对两种建模方式适用范围的讨论</li>
-<li>对联动建模与参数化建模的区别</li>
-<li>结合ADCP的建模例子进行讨论
-跨零件的联动关系，更多属于top-down建模，也包含转换实体引用。</li>
+<li>对两种建模方式适用范围的讨论，避免偏向于一种建模方式</li>
+<li>结合ADCP的建模例子进行讨论</li>
 </ul>
 <p>贯穿孔，其定位数据可以联动，但打孔还是适合用hole wizard打孔，而后阵列，在标注时能自动生成，能减少犯错的概率。</p>
 <h2 id="2">2. 标准引用</h2>
@@ -2014,41 +2020,93 @@
 </tr>
 </tbody>
 </table>
-<h3 id="32">3.2 联动建模与参数化建模的区别</h3>
-<pre class="mermaid"><code>mindmap
-    root((联动建模与参数化建模的区别))
-        跨零件联动建模
-            自上而下建模
-            转换实体引用
-        零件内部联动建模
-            参数化建模</code></pre>
-<p>改为 Mermaid flowchart，兼容性更好：</p>
-<pre class="mermaid"><code>flowchart TB
-  A[联动建模与参数化建模的区别]
-  A --&gt; B[跨零件联动建模]
-  B --&gt; B1[自上而下建模]
-  B --&gt; B2[转换实体引用]
-  A --&gt; C[零件内部联动建模]
-  C --&gt; C1[参数化建模]</code></pre>
-<h3 id="33">3.3 一个更稳妥的经验</h3>
-<p>对个人或小团队而言，更稳妥的方式通常不是“全 Top-down”或“全 Bottom-up”，而是：</p>
-<ul>
-<li>标准件、外购件尽量 Bottom-up</li>
-<li>核心配合件适度 Top-down</li>
-<li>子装配体内部保持清晰的依附关系</li>
-<li>总装层级尽量避免无节制地下放关联</li>
-</ul>
-<h3 id="34">3.4 建模步骤</h3>
+<h3 id="32">3.2 关于自上而下</h3>
+<p><strong>两种实现方式</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>特点</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>布局草图法</td>
+<td>在装配体中创建草图定义关键尺寸，各零件参考此草图</td>
+<td>顶层设计，核心配合关系；应尽量简化，只包含必要的尺寸和几何关系</td>
+</tr>
+<tr>
+<td>关联特征法</td>
+<td>在装配体中编辑零件，特征参考其他零件的几何体</td>
+<td>单个零件对另一个零件的依赖；如转换实体引用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33">3.3 建模步骤</h3>
 <ol>
 <li>分析模型特点，确定建模方案</li>
-<li>Transducer-Head零件容纳换能器，换能器的个数基本决定了整体的外径尺寸(228 mm)。第一个建模的零件，自底向上方式。</li>
-<li>Housing零件主要在适配Transducer-Head的端面，当然也可能受制于其内部的电路板的尺寸。此处Housing零件选择自上而下建模，链接于Transducer-Head零件的外径。</li>
-<li>End-cap零件主要在适配Housing的另一端面。此处End-cap零件选择自上而下建模，链接于Housing零件的另一外径(203.2 mm)。</li>
-<li>Housing零件的螺钉过孔链接于Transducer-Head零件的螺钉过孔，End-cap零件的螺钉过孔链接于Housing零件的另一侧螺钉过孔。</li>
-<li>标准件替代：以国标O形圈、螺钉等紧固件替换ADCP美标标准件。具体为下表所示：</li>
-<li>Housing零件的O形圈凹槽与配合的O形圈均有系列化的标准，以参数化建模实现，方便配置。
-根据分析结果，创建模型</li>
-<li>逐步调整模型   </li>
+</ol>
+<p>引入cad-modeling.md中关于PDM迭代的命名方式。</p>
+<p>针对ADCP而言，依次传递的联动关系，适合自上而下建模里的关联特征法构建。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">零件名称</th>
+<th style="text-align: left;">功能/作用</th>
+<th style="text-align: left;">建模方式</th>
+<th style="text-align: left;">关键尺寸/联动关系</th>
+<th style="text-align: left;">其他说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Transducer-Head</strong></td>
+<td style="text-align: left;">容纳换能器</td>
+<td style="text-align: left;">自底向上</td>
+<td style="text-align: left;">外径 228 mm（由换能器尺寸、个数决定）</td>
+<td style="text-align: left;">第一个建模的零件</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Housing</strong></td>
+<td style="text-align: left;">适配 Transducer-Head 的端面；内部电路板尺寸可能成为限制因素</td>
+<td style="text-align: left;">自上而下（联动于 Transducer-Head 的外径）</td>
+<td style="text-align: left;">螺钉过孔联动于 Transducer-Head 的螺钉过孔</td>
+<td style="text-align: left;">O形圈凹槽采用参数化建模，方便配置与复用</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>End-Cap</strong></td>
+<td style="text-align: left;">适配 Housing 的另一端面</td>
+<td style="text-align: left;">自上而下（联动于 Housing 的另一外径）</td>
+<td style="text-align: left;">另一外径 203.2 mm；螺钉过孔联动于 Housing 另一侧的螺钉过孔</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vent-Plug</strong></td>
+<td style="text-align: left;">通气塞</td>
+<td style="text-align: left;">自底向上</td>
+<td style="text-align: left;">无联动关系</td>
+<td style="text-align: left;">独立建模</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>全局关联说明</strong><ul>
+<li>尺寸传递链：Transducer-Head (228 mm) → Housing → End-Cap (203.2 mm)</li>
+<li>螺钉过孔联动：Transducer-Head ← Housing → End-Cap</li>
+<li>标准件管理：O形圈凹槽采用参数化建模，方便配置与复用</li>
+</ul>
+</li>
+</ul>
+<p>上述联动关系以Transducer-Head为核心，在ADCP系列产品中，当换能器数量、规格变化后，对Transducer-Head外径的更改，能联动传递给Housing、End-Cap，包括螺钉过孔的位置。以此实现更高效的建模。</p>
+<div class="admonition warning">
+<p class="admonition-title">自上而下建模的利与弊</p>
+<p>对于自上而下的联动关系，应有清晰的文档记录，否则自上而下建模带来的便利在长期缺乏维护的情况下，可能会得不偿失。</p>
+</div>
+<ol>
+<li>要点记录</li>
+<li>结合文档P71 Spare Parts一节，同等外径的Housing零件的ADCP选择的O形圈在Spare Parts中标记为2-260，可知此为英制标准O形圈 AS568 2-260，线径、内径分别为3.53 mm、164.69 mm，最接近的国标型号为GB/T 3452.1-2005 165*3.55。</li>
+<li></li>
 </ol>
 <h2 id="4">4. 其余要点</h2>
 <h3 id="41">4.1 层级意识</h3>
@@ -2089,7 +2147,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月5日 04:26:48 UTC">2026年4月5日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月21日 13:17:24 UTC">2026年4月21日</span>
   </span>
 
     
@@ -2104,29 +2162,6 @@
 
     
     
-    
-      
-  <span class="md-source-file__fact">
-    
-      
-  <span class="md-icon" title="贡献者">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
-  </span>
-  <span>GitHub</span>
-
-    
-    <nav>
-      
-        <a href="https://github.com/bridgezhang123" class="md-author" title="@bridgezhang123">
-          
-          <img src="https://avatars.githubusercontent.com/u/259577464?v=4&size=72" alt="bridgezhang123">
-        </a>
-      
-      
-      
-    </nav>
-  </span>
-
     
   </aside>
 
@@ -2244,6 +2279,14 @@
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
         <script src="../../javascripts/mermaid.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.15.4/dist/browser/index.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.min.js"></script>
+      
+        <script src="../../javascripts/markmap.js"></script>
       
         <script src="../../javascripts/home.js"></script>
       

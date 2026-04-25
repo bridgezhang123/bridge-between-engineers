@@ -2,7 +2,7 @@
 
 本页整理一套可学习、可复用的专业思维模式，适用于工程设计、材料选择与复杂问题求解。
 
-```markmap 
+```markmap
 # Design Philosophy
 ## Core Principles
 ### Function First

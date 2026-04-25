@@ -443,6 +443,8 @@
       
         
       
+        
+      
     
     
     
@@ -538,6 +540,34 @@
     
   
     AI 协作工作流
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/supplier-background/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    供应商背景
   
 
     
@@ -862,7 +892,7 @@
   <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 适用场景
+        3.1 适用场景解析
       
     </span>
   </a>
@@ -873,7 +903,7 @@
   <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 不适用场景
+        3.2 实操
       
     </span>
   </a>
@@ -881,10 +911,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3 实操原则
+        软件操作
       
     </span>
   </a>
@@ -1822,7 +1852,7 @@
   <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 适用场景
+        3.1 适用场景解析
       
     </span>
   </a>
@@ -1833,7 +1863,7 @@
   <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 不适用场景
+        3.2 实操
       
     </span>
   </a>
@@ -1841,10 +1871,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3 实操原则
+        软件操作
       
     </span>
   </a>
@@ -1962,9 +1992,6 @@
 
 
 <h1 id="_1">参数化建模</h1>
-<blockquote>
-<p>参数化建模真正有价值的地方，不在于“把一切都参数化”，而在于让值得联动的尺寸真正联动起来。</p>
-</blockquote>
 <h2 id="1">1. 范围与目标</h2>
 <p>本文希望回答三个问题：</p>
 <ul>
@@ -1975,23 +2002,51 @@
 <h2 id="2">2. 标准引用</h2>
 <p>暂无。</p>
 <h2 id="3">3. 实操与模板</h2>
-<h3 id="31">3.1 适用场景</h3>
+<h3 id="31">3.1 适用场景解析</h3>
+<p><strong>参数化建模的定义</strong>：通过方程式、全局变量、链接尺寸等方式，建立尺寸之间的数学关系，实现“修改一个参数，相关尺寸自动更新”。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">类别</th>
+<th style="text-align: left;">具体内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>适用场景</strong></td>
+<td style="text-align: left;">- 产品系列化明显的零件<br>- 需要频繁调整的关键尺寸<br>- 多个尺寸存在清晰数学关系的结构</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>不适用场景</strong></td>
+<td style="text-align: left;">- 一次性建模的简单零件<br>- 方案尚未稳定的早期阶段<br>- 关系链过长、难以解释的尺寸网络</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>实操原则</strong></td>
+<td style="text-align: left;">- 先明确设计意图，再决定是否建立方程<br>- 核心变量尽量集中管理<br>- 少而稳，通常比多而全更实用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32">3.2 实操</h3>
+<p>对于Housing零件，参考GB/T 3452.3-2005 液压气动用O形橡胶密封圈 沟槽尺寸，可知，轴向密封凹槽/Groove in flange(GIF)的凹槽尺寸由所选O形圈截面直径确定，它们存在清晰数学关系，如下：</p>
+<p>| O形圈截面直径 | 沟槽宽度 | 沟槽深度 | 沟槽底圆角半径 | 沟槽入口圆角半径 |
+| O-ring sectional dia. | Groove width | Groove depth | Bottom corner radius | Entrance corner radius |
+| :---: | :---: | :---: | :---: | :---: |
+| 1.80 | 2.6 | 1.28 | 0.3 | 0.2 |
+| 2.65 | 3.8 | 1.97 | 0.3 | 0.2 |
+| 3.55 | 5.0 | 2.75 | 0.6 | 0.2 |
+| 5.30 | 7.3 | 4.24 | 0.6 | 0.2 |
+| 7.00 | 9.7 | 5.72 | 1.0 | 0.2 |</p>
+<p>注意：圆角半径可在一个范围内波动，此处取中间值。</p>
+<p>为了将上述关系固定下来，建立如下变量与方程式关系(存于<code>equations-for-housing-groove.txt</code>文件)，可有如下作用：
+- 函数关系通过if语句，遍历所有O形圈截面直径对应的参数，沟槽宽度如下："GIF_groove_width_1"= IIF ( "O_ring_sectional_diam_1" = 1.80 , 2.6 , IIF ( "O_ring_sectional_diam_1" = 2.65 , 3.8 , IIF ( "O_ring_sectional_diam_1" = 7.00 , 9.7 , IIF ( "O_ring_sectional_diam_1" = 5.30 , 7.3 , 5.0 ) ) ) )
+- 即输入一个O形圈截面直径，即可联动得到相应的沟槽宽度等。
+- 可不断复用，也可避免手动输入可能导致的出错。
+- O形圈截面直径/O_ring_sectional_diam预设了_1、_2两个变量，同一零件即使有两处不同规格的O形圈沟槽，也可对应配置；若有更多沟槽，相应扩展即可。</p>
+<h3 id="_2">软件操作</h3>
 <ul>
-<li>产品系列化明显的零件</li>
-<li>需要频繁调整的关键尺寸</li>
-<li>多个尺寸存在清晰数学关系的结构</li>
-</ul>
-<h3 id="32">3.2 不适用场景</h3>
-<ul>
-<li>一次性建模的简单零件</li>
-<li>方案尚未稳定的早期阶段</li>
-<li>关系链过长、难以解释的尺寸网络</li>
-</ul>
-<h3 id="33">3.3 实操原则</h3>
-<ul>
-<li>先明确设计意图，再决定是否建立方程</li>
-<li>核心变量尽量集中管理</li>
-<li>少而稳，通常比多而全更实用</li>
+<li>在零件界面，依次选择 <code>菜单/工具/方程式</code>进入界面。
+图片</li>
+<li>点击<code>导入</code>按钮，选择<code>equations-for-housing-groove.txt</code>文件，选择<code>保持与外部文件的联系</code>，即可通过修改<code>equations-for-housing-groove.txt</code>里的O形圈截面直径来联动控制其余参数。</li>
 </ul>
 <h2 id="4">4. 其余要点</h2>
 <h3 id="41">4.1 全局变量</h3>
@@ -2033,7 +2088,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月5日 04:26:48 UTC">2026年4月5日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月25日 01:04:32 UTC">2026年4月25日</span>
   </span>
 
     
@@ -2048,29 +2103,6 @@
 
     
     
-    
-      
-  <span class="md-source-file__fact">
-    
-      
-  <span class="md-icon" title="贡献者">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
-  </span>
-  <span>GitHub</span>
-
-    
-    <nav>
-      
-        <a href="https://github.com/bridgezhang123" class="md-author" title="@bridgezhang123">
-          
-          <img src="https://avatars.githubusercontent.com/u/259577464?v=4&size=72" alt="bridgezhang123">
-        </a>
-      
-      
-      
-    </nav>
-  </span>
-
     
   </aside>
 
@@ -2188,6 +2220,14 @@
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
         <script src="../../javascripts/mermaid.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.15.4/dist/browser/index.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.4/dist/browser/index.min.js"></script>
+      
+        <script src="../../javascripts/markmap.js"></script>
       
         <script src="../../javascripts/home.js"></script>
       
