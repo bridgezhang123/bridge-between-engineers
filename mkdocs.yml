@@ -72,6 +72,7 @@ nav:
     - 导览: design/index.md
     - 设计方法: design/design-philosophy.md
     - AI 协作工作流: design/ai-workflow.md
+    - 供应商背景: design/supplier-background.md
     - 普通话沟通与工程表达: design/mandarin-communication.md
     - 设计案例: design/design-cases.md
   - 建模与图纸:
@@ -120,6 +121,11 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+      - name: markmap
+        class: language-markmap
+        format: !!python/name:pymdownx.superfences.fence_code_format
+
   - pymdownx.details
   - pymdownx.tabbed:
       alternate_style: true
@@ -137,6 +143,9 @@ extra_css:
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascripts/mermaid.js
+  - https://cdn.jsdelivr.net/npm/markmap-lib
+  - https://cdn.jsdelivr.net/npm/markmap-view
+  - javascripts/markmap.js
   - javascripts/home.js
   - javascripts/print-button.js
   - javascripts/theme-toggle.js

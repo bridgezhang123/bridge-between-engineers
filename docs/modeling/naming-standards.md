@@ -1,7 +1,5 @@
 ﻿# SolidWorks 建模：从零部件标准化的命名开始
 
-> 面向个人工作者，或尚未建立成熟 PDM 体系的小团队。标准化往往不是从复杂系统开始，而是先从“名称是否清楚、是否稳定、是否可复用”开始。
-
 !!! quote "一批 80 元螺钉的时间成本"
     在某海洋仪器项目中，同样是一批 `M5x20` 内六角螺钉：
 
@@ -11,15 +9,6 @@
     命名不是只关乎设计，它还与加工、采购、装配和后期维护等一整串工作直接相关。
 
 ## 1. 范围与目标
-
-本文适用于以下对象：
-
-- 零件，自制件、标准件、外购件
-- 装配体与子装配体
-- 工程图与交换文件，如 STEP、IGES
-- 项目文件夹与目录结构
-
-本文希望优先解决以下问题：
 
 - 让名称本身具备基本信息，减少口头解释
 - 让检索与批量管理更容易执行
@@ -54,14 +43,15 @@
 
 例如：
 
-- `ADCP_Sen_Ver1_S01_01_Transducer-Head`
-- `ADCP_Sen_Ver1_S02_01_Support-Plate`
+- `ADCP_Sen_Ver0.1_S01_01_Transducer-Head.sldprt`
+- `ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm `
 
 其中：
 
 - `ADCP` 表示产品代号
-- `Sen_Ver1` 表示 Sentinel 版本 1
+- `Sen_Ver0.1` 表示 Sentinel 版本 0.1
 - `S01` 表示系统或子系统编号
+- `TA(Total Assembly)` 表示当前层级的总装配体
 - `01` 表示该层级下的零件流水号
 
 ### 2.3 GB/T 1237-2000《紧固件标记方法》
@@ -95,8 +85,8 @@
 
     示例：
 
-    - `ADCP_Sen_Ver1_S01_01_Transducer-Head`
-    - `ADCP_Sen_Ver1_S02_01_Support-Plate`
+    - `ADCP_Sen_Ver0.1_S01_01_Transducer-Head`
+    - `ADCP_Sen_Ver0.1_S02_01_Support-Plate`
 
 === "标准件 / Standard Parts"
     模板：`<Standard>_<Spec>_<Type>`
@@ -134,19 +124,27 @@ ADCP 示例
     │   └── GB-T-70.1-2000_M5x20_Hex-Socket-Cap-Screw.sldprt
     ├── ADCP_Commercial-Products/
     │   └── CP_Connector_SubConn_BH3M.sldprt
-    ├── ADCP_Sen_Ver1/
-    │   ├── ADCP_Sen_Ver1_S01_Adcp-Instrument/
-    │   │   ├── ADCP_Sen_Ver1_S01_01_Transducer-Head.sldprt
-    │   │   ├── ADCP_Sen_Ver1_S01_02_Housing.sldprt
-    │   │   └── ADCP_Sen_Ver1_S01_03_End-cap.sldprt
-    │   └── ADCP_Sen_Ver1_S02_Instrument-Fixture/
-    │       ├── ADCP_Sen_Ver1_S02_01_Support-Plate.sldprt
-    │       └── ADCP_Sen_Ver1_S02_02_Clamp-Plate.sldprt
+    ├── ADCP_Sen_Ver0.1/
+    │   ├── ADCP_Sen_S01_Adcp-Instrument/  
+    │   │   ├── ADCP_Sen_Ver0.1_S01_01_Transducer-Head.sldprt
+    │   │   ├── ADCP_Sen_Ver0.1_S01_02_Housing.sldprt
+    │   │   ├── ADCP_Sen_Ver0.1_S01_03_End-cap.sldprt
+    │   │   └── ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm   
+    │   ├── ADCP_Sen_S02_Instrument-Fixture/
+    │   │   ├── ADCP_Sen_Ver0.1_S02_01_Support-Plate.sldprt
+    │   │   ├── ADCP_Sen_Ver0.1_S02_02_Clamp-Plate.sldprt
+    │   │   └── ADCP_Sen_Ver0.1_S02_TA_Instrument-Fixture.sldasm
+    │   ├── ADCP_Sen_TA_Adcp_Sen/
+    │   │   └── ADCP_Sen_Ver0.1_TA_Adcp_Sen.sldasm   
+    ├── ADCP_Sen_Ver0.2/ 
+    ├── ADCP_Sen_Ver1.0/
     └── README.md
     ```
 
 说明：
 
+- 次一级文件夹`ADCP_Sen_S01_Adcp-Instrument/`无需版本编号，由上一级的文件夹承担编号。
+- 此处的目录结构，符合[版本迭代](revision-control.md)的要求，Ver0.1即迭代版本0.1。
 - 目录层级建议使用 `_` 将产品、版本和分类串联。
 - 部件名称内部使用 `-` 表示词语组合或部位关系。
 - 这样区分后，文件名既能表达结构层级，又保持词义清晰，方便人工识别与自动检索。
@@ -170,12 +168,6 @@ ADCP 示例
 你从某项目复制了一个名为“端盖”的零件到新项目，修改后继续使用。某天再打开旧装配体时，端盖形状异常。常见根因是：多路径下存在同名文件，而当前会话又已经加载了其中一个，最终导致引用解析混淆。
 
 <!-- 可在此插入 SolidWorks 同名文件冲突示例截图 -->
-
-### 4.2 可执行的规避方式
-
-- 自制件名称必须包含产品代号、版本和层级信息，避免裸名称
-- 新产品路线或不可互换的结构变化，应升级产品代号，而不是简单在旧名称后追加 `v2`
-- 版本信息尽量放在修订栏、文件属性或变更台账中，不混入对象身份
 
 ## 5. 边界与风险
 

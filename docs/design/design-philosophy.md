@@ -2,6 +2,29 @@
 
 本页整理一套可学习、可复用的专业思维模式，适用于工程设计、材料选择与复杂问题求解。
 
+```markmap 
+
+# Design Philosophy
+## Core Principles
+### Function First
+### Simplicity
+### Robustness
+## Engineering Thinking
+### Trade-offs
+#### Cost vs Performance
+#### Complexity vs Reliability
+### Constraints Driven Design
+## Methodology
+### Iterative Design
+### Modularization
+### Standardization
+## Practical Reality
+### Manufacturing Limits
+### Maintenance
+### Failure Modes
+   
+```
+
 ## 1. 以“知识架构”为基础，而非孤立知识点
 
 - 不是把“铝合金”、“耐压计算”、“腐蚀原理”当成无关的碎片。
