@@ -71,6 +71,7 @@ nav:
   - 设计见解:
     - 导览: design/index.md
     - 设计方法: design/design-philosophy.md
+    - DFMEA: design/dfmea.md
     - AI 协作工作流: design/ai-workflow.md
     - 供应商背景: design/supplier-background.md
     - 普通话沟通与工程表达: design/mandarin-communication.md
@@ -91,6 +92,7 @@ nav:
     - 机加工基础: manufacturing/machining-basics.md
     - 工艺规划: manufacturing/process-planning.md
     - 表面处理: manufacturing/surface-finish.md
+    - 热处理: manufacturing/heat-treatment.md
   - 测量:
     - 导览: measurement/index.md
     - 测量工具: measurement/tools.md
