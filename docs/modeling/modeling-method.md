@@ -35,7 +35,7 @@
 
 ### 3.3 建模步骤
 
-1. 分析模型特点，确定建模方案
+#### 3.3.1 分析模型特点，确定建模方案
 
 针对ADCP而言，依次传递的联动关系，适合自上而下建模里的关联特征法构建。
 
@@ -61,9 +61,48 @@
 
 2. 要点记录
 - 结合文档P71 Spare Parts一节，同等外径的Housing零件的ADCP选择的O形圈在Spare Parts中标记为2-260，可知此为英制标准O形圈 AS568 2-260，线径、内径分别为3.53 mm、164.69 mm，最接近的国标型号为GB/T 3452.1-2005 165*3.55。
-3. 
 
+#### 3.3.2 建模实现
 
+建立第1个`ADCP_Sen_Ver0.1_S01_01_Transducer-Head.sldprt`零件，以该零件为基础建立装配体`ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm`。如下图所示：
+注意：在装配体中才能运用自上而下建模。
+
+<figure markdown="span">
+  ![Building-Adcp-Instrument](../images/docs_modeling/bbe_docs_modeling_modeling-method_Building-Adcp-Instrument.sldasm.png){ width="720" }
+  <figcaption>Building-Adcp-Instrument </figcaption>
+</figure>
+
+自上而下建模建立第2个`ADCP_Sen_Ver0.1_S01_02_Housing.sldprt`零件：
+
+- 选择`工具栏/插入零部件/新零件/gb_part 模板`，弹出`请选择放置新零件的面或基准面`时，选择`Transducer-Head`零件的下端面，而后如下图所示；左上角的返回箭头、蓝色显示的`零件1`，均意味着我们在`ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm`装配体层级编辑`零件1`。
+
+<figure markdown="span">
+  ![Building-Housing.sldprt](../images/docs_modeling/bbe_docs_modeling_modeling-method_Building-Housing.sldprt.png){ width="720" }
+  <figcaption>Building-Housing.sldprt </figcaption>
+</figure>
+
+- 草图画出同心圆，并标注依附于`Transducer-Head`外径的关联尺寸，如下图所示。因此，当我们修改`Transducer-Head`的外径时，`Housing`的尺寸也会随之变化。
+
+<figure markdown="span">
+  ![Building-Associated-Dimensions](../images/docs_modeling/bbe_docs_modeling_modeling-method_Building-Associated-Dimensions.png){ width="720" }
+  <figcaption>Building-Associated-Dimensions </figcaption>
+</figure>
+
+- 拉伸上述草图292 mm生成凸台轮廓，鼠标右击重命名为  `ADCP_Sen_Ver0.1_S01_02_Housing.sldprt`，保存，弹出如下对话框，选择`(外部保存(指定路径))`，点击确定；鼠标右击`Housing`零件，选择`保存文件(在外部文件中)`，弹出如下对话框，选择`与装配体相同`。即自动在`ADCP_Sen_S01_Adcp-Instrument`文件夹下生成`ADCP_Sen_Ver0.1_S01_02_Housing.sldprt`。
+
+<figure markdown="span">
+  ![Save-Housing.sldprt-1](../images/docs_modeling/bbe_docs_modeling_modeling-method_Save-Housing.sldprt-1.png){ width="720" }
+  <figcaption>Save-Housing.sldprt-1 </figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Save-Housing.sldprt-2](../images/docs_modeling/bbe_docs_modeling_modeling-method_Save-Housing.sldprt-2.png){ width="720" }
+  <figcaption>Save-Housing.sldprt-2 </figcaption>
+</figure>
+
+- 此时，可测试修改`Transducer-Head`的外径时，`Housing`的尺寸也会随之变化。
+
+12
 
 ## 4. 其余要点
 

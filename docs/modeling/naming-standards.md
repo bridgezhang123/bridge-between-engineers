@@ -134,7 +134,7 @@ ADCP 示例
     │   │   ├── ADCP_Sen_Ver0.1_S02_01_Support-Plate.sldprt
     │   │   ├── ADCP_Sen_Ver0.1_S02_02_Clamp-Plate.sldprt
     │   │   └── ADCP_Sen_Ver0.1_S02_TA_Instrument-Fixture.sldasm
-    │   ├── ADCP_Sen_TA_Adcp_Sen/
+    │   ├── ADCP_Sen_TA/
     │   │   └── ADCP_Sen_Ver0.1_TA_Adcp_Sen.sldasm   
     ├── ADCP_Sen_Ver0.2/ 
     ├── ADCP_Sen_Ver1.0/
