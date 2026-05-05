@@ -705,8 +705,6 @@
       
         
       
-        
-      
     
     
     
@@ -894,7 +892,7 @@
   <a href="#31-vs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 自底向上 vs 自上而下
+        3.1 自下而上 vs 自上而下
       
     </span>
   </a>
@@ -939,7 +937,18 @@
   <a href="#332" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3.2 建模实现
+        3.3.2 软件设置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3 建模实现
       
     </span>
   </a>
@@ -972,18 +981,7 @@
   <a href="#41" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1 层级意识
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        可参考的技巧
+        4.1 可参考的技巧
       
     </span>
   </a>
@@ -992,17 +990,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        - 零件建模、装配时，尽量保证零件关于三个基准面对称，对于修改零件和装配都大有益处。具体而言，如零件拉伸时，选择方向/结束条件/中面。 来自好友黄玉琳(机械设计工程师)。
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1175,34 +1162,6 @@
     
   
     爆炸视图
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bom-guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    BOM 表
   
 
     
@@ -1951,7 +1910,7 @@
   <a href="#31-vs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 自底向上 vs 自上而下
+        3.1 自下而上 vs 自上而下
       
     </span>
   </a>
@@ -1996,7 +1955,18 @@
   <a href="#332" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3.2 建模实现
+        3.3.2 软件设置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3 建模实现
       
     </span>
   </a>
@@ -2029,18 +1999,7 @@
   <a href="#41" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.1 层级意识
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        可参考的技巧
+        4.1 可参考的技巧
       
     </span>
   </a>
@@ -2049,17 +2008,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        - 零件建模、装配时，尽量保证零件关于三个基准面对称，对于修改零件和装配都大有益处。具体而言，如零件拉伸时，选择方向/结束条件/中面。 来自好友黄玉琳(机械设计工程师)。
-      
-    </span>
-  </a>
   
 </li>
       
@@ -2129,9 +2077,9 @@
   
 
 
-<h1 id="top-down-vs-bottom-up">建模方式对比：自底向上/Top-down vs 自上而下/Bottom-up</h1>
+<h1 id="top-down-vs-bottom-up">建模方式对比：自下而上/Top-down vs 自上而下/Bottom-up</h1>
 <h2 id="1">1. 范围与目标</h2>
-<p>本文讨论 <code>自底向上/Top-down</code> 与 <code>自上而下(关联设计)/Bottom-up</code> 两种常见建模方式：</p>
+<p>本文讨论 <code>自下而上/Top-down</code> 与 <code>自上而下(关联设计)/Bottom-up</code> 两种常见建模方式：</p>
 <ul>
 <li>对两种建模方式适用范围的讨论，避免偏向于一种建模方式</li>
 <li>结合ADCP的建模例子进行讨论</li>
@@ -2139,12 +2087,12 @@
 <h2 id="2">2. 标准引用</h2>
 <p>暂无。</p>
 <h2 id="3">3. 实操与模板</h2>
-<h3 id="31-vs">3.1 自底向上 vs 自上而下</h3>
+<h3 id="31-vs">3.1 自下而上 vs 自上而下</h3>
 <table>
 <thead>
 <tr>
 <th>对比项</th>
-<th>自底向上</th>
+<th>自下而上</th>
 <th>自上而下</th>
 </tr>
 </thead>
@@ -2195,7 +2143,7 @@
 <tr>
 <td>关联特征法</td>
 <td>在装配体中编辑零件，特征参考其他零件的几何体</td>
-<td>单个零件对另一个零件的依赖；如转换实体引用</td>
+<td>单个零件对另一个零件的依赖关系</td>
 </tr>
 </tbody>
 </table>
@@ -2216,7 +2164,7 @@
 <tr>
 <td style="text-align: left;"><strong>Transducer-Head</strong></td>
 <td style="text-align: left;">容纳换能器</td>
-<td style="text-align: left;">自底向上</td>
+<td style="text-align: left;">自下而上</td>
 <td style="text-align: left;">外径 228 mm（由换能器尺寸、个数决定）</td>
 <td style="text-align: left;">第一个建模的零件</td>
 </tr>
@@ -2237,86 +2185,198 @@
 <tr>
 <td style="text-align: left;"><strong>Vent-Plug</strong></td>
 <td style="text-align: left;">通气塞</td>
-<td style="text-align: left;">自底向上</td>
+<td style="text-align: left;">自下而上</td>
 <td style="text-align: left;">无联动关系</td>
 <td style="text-align: left;">独立建模</td>
 </tr>
 </tbody>
 </table>
+<p>此外，<code>Housing</code>零件的轮廓使用了参数化建模，可灵活调整尺寸，包括壁厚等参数。
+上述联动关系以Transducer-Head为核心，在ADCP系列产品中，当换能器数量、规格变化后，对Transducer-Head外径的更改，能联动传递给Housing、End-Cap，包括螺钉过孔的位置。以此实现：</p>
 <ul>
-<li><strong>全局关联说明</strong><ul>
-<li>尺寸传递链：Transducer-Head (228 mm) → Housing → End-Cap (203.2 mm)</li>
-<li>螺钉过孔联动：Transducer-Head ← Housing → End-Cap</li>
-<li>O形圈凹槽采用参数化建模，方便配置与复用</li>
+<li>自上而下的联动关系，带来更高效的建模。</li>
+<li>联动关系的更大作用，体现在对整个系列的建模进行规划。</li>
 </ul>
-</li>
+<h4 id="332">3.3.2 软件设置</h4>
+<ul>
+<li>启用<code>选项/系统选项/Feature Manager/允许通过Feature Manager 设计树重命名零部件文件</code>，以方便在Feature Manager中重命名零件。</li>
+<li>启用<code>视图菜单/隐藏-显示/尺寸名称</code>，在重命名尺寸名称后可增强可读性，便于创建全局变量和方程式。</li>
 </ul>
-<p>上述联动关系以Transducer-Head为核心，在ADCP系列产品中，当换能器数量、规格变化后，对Transducer-Head外径的更改，能联动传递给Housing、End-Cap，包括螺钉过孔的位置。以此实现更高效的建模。</p>
-<div class="admonition warning">
-<p class="admonition-title">自上而下建模的利与弊</p>
-<p>对于自上而下的联动关系，应有清晰的文档记录，否则自上而下建模带来的便利在长期缺乏维护的情况下，可能会得不偿失。</p>
-</div>
+<h4 id="333">3.3.3 建模实现</h4>
 <ol>
-<li>要点记录</li>
-<li>结合文档P71 Spare Parts一节，同等外径的Housing零件的ADCP选择的O形圈在Spare Parts中标记为2-260，可知此为英制标准O形圈 AS568 2-260，线径、内径分别为3.53 mm、164.69 mm，最接近的国标型号为GB/T 3452.1-2005 165*3.55。</li>
-</ol>
-<h4 id="332">3.3.2 建模实现</h4>
-<p>建立第1个<code>ADCP_Sen_Ver0.1_S01_01_Transducer-Head.sldprt</code>零件，以该零件为基础建立装配体<code>ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm</code>。如下图所示：
-注意：在装配体中才能运用自上而下建模。</p>
-<figure>
-  <img alt="Building-Adcp-Instrument" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_Building-Adcp-Instrument.sldasm.png" width="720" />
-<br />
-<figcaption>Building-Adcp-Instrument </figcaption>
-</figure>
-<p>自上而下建模建立第2个<code>ADCP_Sen_Ver0.1_S01_02_Housing.sldprt</code>零件：</p>
+<li>
+<p>自下而上建立第1个<code>ADCP_Sen_Ver0.1_S01_01_Transducer-Head.sldprt</code>零件：</p>
 <ul>
-<li>选择<code>工具栏/插入零部件/新零件/gb_part 模板</code>，弹出<code>请选择放置新零件的面或基准面</code>时，选择<code>Transducer-Head</code>零件的下端面，而后如下图所示；左上角的返回箭头、蓝色显示的<code>零件1</code>，均意味着我们在<code>ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm</code>装配体层级编辑<code>零件1</code>。</li>
+<li>在创建<code>Transducer-Head</code>与<code>Housing</code>零件连接的螺钉过孔时，首先在草图中设置定位位置，并且该位置与<code>Transducer-Head</code>零件外径关联，当<code>Transducer-Head</code>零件外径发生变化时，该位置也会跟着发生变化。如下图所示：</li>
 </ul>
-<figure>
+<p><figure markdown="span">
+  <img alt="M8-Screw-Through-Hole-Positioning" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_M8-Screw-Through-Hole-Positioning.png" width="720" />
+  <figcaption>M8-Screw-Through-Hole-Positioning </figcaption>
+</figure></p>
+<ul>
+<li>其次，对于M8的螺钉过孔(Solidwork称之为间隙孔),利用<code>异形孔向导</code>生成。如下图所示：</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="M8-Screw-Through-Hole-Setting" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_M8-Screw-Through-Hole-Setting.png" width="720" />
+  <figcaption>M8-Screw-Through-Hole-Setting </figcaption>
+</figure></p>
+<div class="admonition note">
+<p class="admonition-title">关于异形孔向导</p>
+<ul>
+<li>利用<code>异形孔向导</code>而非手动创建圆拉伸切除，是利用Solidwork内置的符合国标(GB)的孔数据，可以大大提高建模效率；并减少手动输入的可能错误。</li>
+<li>对于所有的螺纹孔、螺钉过孔等,均可在<code>异形孔向导</code>中进行设置、使用。</li>
+<li><code>异形孔向导</code>，选择<code>类型/孔</code>，而后选择<code>GB、螺钉间隙 孔、M8 大小、套合状态：正常</code>。</li>
+<li>关于<code>套合状态</code>，紧密、正常、松弛分别对应孔直径为8.4 mm、9 mm、10 mm，可根据自身情况选择或是自定义。</li>
+<li><code>利用异形孔向导</code>，孔的位置，点击<code>位置</code>后，可直接在3D模型上选择点位。</li>
+</ul>
+</div>
+<ul>
+<li>以该零件为基础建立装配体<code>ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm</code>。如下图所示。注意：在装配体中才能运用自上而下建模。</li>
+</ul>
+<p><figure markdown="span">
+ <img alt="Building-Adcp-Instrument.sldasm" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_Building-Adcp-Instrument.sldasm.png" width="720" />
+ <figcaption>Building-Adcp-Instrument.sldasm </figcaption>
+</figure></p>
+</li>
+<li>
+<p>自上而下建立第2个<code>ADCP_Sen_Ver0.1_S01_02_Housing.sldprt</code>零件：</p>
+<ul>
+<li>选择<code>工具栏/插入零部件/新零件/gb_part 模板</code>，弹出<code>请选择放置新零件的面或基准面</code>时，选择<code>Transducer-Head</code>零件的下端面，而后如下图所示；右上角的返回箭头、蓝色显示的<code>零件1</code>，均意味着我们在<code>ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm</code>装配体层级编辑<code>零件1</code>。</li>
+</ul>
+<p><figure markdown="span">
   <img alt="Building-Housing.sldprt" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_Building-Housing.sldprt.png" width="720" />
-<br />
-<figcaption>Building-Housing.sldprt </figcaption>
-</figure>
+  <figcaption>Building-Housing.sldprt </figcaption>
+</figure></p>
 <ul>
 <li>草图画出同心圆，并标注依附于<code>Transducer-Head</code>外径的关联尺寸，如下图所示。因此，当我们修改<code>Transducer-Head</code>的外径时，<code>Housing</code>的尺寸也会随之变化。</li>
 </ul>
-<figure>
+<p><figure markdown="span">
   <img alt="Building-Associated-Dimensions" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_Building-Associated-Dimensions.png" width="720" />
-<br />
-<figcaption>Building-Associated-Dimensions </figcaption>
-</figure>
+  <figcaption>Building-Associated-Dimensions </figcaption>
+</figure></p>
 <ul>
 <li>拉伸上述草图292 mm生成凸台轮廓，鼠标右击重命名为  <code>ADCP_Sen_Ver0.1_S01_02_Housing.sldprt</code>，保存，弹出如下对话框，选择<code>(外部保存(指定路径))</code>，点击确定；鼠标右击<code>Housing</code>零件，选择<code>保存文件(在外部文件中)</code>，弹出如下对话框，选择<code>与装配体相同</code>。即自动在<code>ADCP_Sen_S01_Adcp-Instrument</code>文件夹下生成<code>ADCP_Sen_Ver0.1_S01_02_Housing.sldprt</code>。</li>
 </ul>
-<figure>
+<p><figure markdown="span">
   <img alt="Save-Housing.sldprt-1" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_Save-Housing.sldprt-1.png" width="720" />
-<br />
-<figcaption>Save-Housing.sldprt-1 </figcaption>
-</figure>
-<figure>
+  <figcaption>Save-Housing.sldprt-1 </figcaption>
+</figure></p>
+<p><figure markdown="span">
   <img alt="Save-Housing.sldprt-2" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_Save-Housing.sldprt-2.png" width="720" />
-<br />
-<figcaption>Save-Housing.sldprt-2 </figcaption>
-</figure>
+  <figcaption>Save-Housing.sldprt-2 </figcaption>
+</figure></p>
 <ul>
-<li>此时，可测试修改<code>Transducer-Head</code>的外径时，<code>Housing</code>的尺寸也会随之变化。</li>
+<li>此时，可测试修改<code>Transducer-Head</code>的外径，<code>Housing</code>的尺寸也会随之变化。</li>
 </ul>
-<p>12</p>
+</li>
+<li>
+<p><code>Housing</code>零件轮廓控制：</p>
+<ul>
+<li>大口外径为基准，其小口外径、螺钉过孔所占宽度、壁厚，均依附于<code>Housing</code>零件大口外径，创建<code>切除-旋转</code>特征，实现尺寸联动，并将特征重命名为<code>切除-旋转1(housing零件轮廓控制)</code>，增强可读性。如下图所示。
+注：此处的尺寸关联，局限于<code>Housing</code>零件内部，属于参数化建模的范围。</li>
+</ul>
+<p><figure markdown="span">
+ <img alt="Housing-Part-Contour-Definition" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_Housing-Part-Contour-Definition.png" width="720" />
+ <figcaption>Housing-Part-Contour-Definition </figcaption>
+</figure></p>
+</li>
+<li>
+<p><code>Housing</code>零件螺钉过孔：</p>
+<ul>
+<li>大口端面，其螺钉过孔联动于<code>Transducer-Head</code>的螺钉过孔，在定位草图中，创建一个<code>圆(构造线)</code>，而后创建与<code>Transducer-Head</code>的螺钉过孔的<code>同心</code>关系(<code>草图/显示-删除几何关系/添加几何关系/同心</code>)，以此实现螺钉过孔的尺寸联动。如下图所示:</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="Concentric-Link-Relationship" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_Concentric-Link-Relationship.png" width="720" />
+  <figcaption>Concentric-Link-Relationship </figcaption>
+</figure></p>
+<div class="admonition warning">
+<p class="admonition-title">注意</p>
+<p>此处没有直接使用<code>转换实体引用</code>方法确定<code>Housing</code>零件的螺钉过孔，此方法在定位直径改变时，会导致螺钉过孔的尺寸联动失效。</p>
+</div>
+<ul>
+<li>小口端面，类似方法创建M6的螺钉过孔。</li>
+</ul>
+</li>
+<li>
+<p>自上而下建立第3个<code>ADCP_Sen_Ver0.1_S01_03_End-Cap.sldprt</code>零件：</p>
+<ul>
+<li>其外径联动于<code>Housing</code>零件的另一外径，螺钉过孔联动于<code>Housing</code>零件另一侧的螺钉过孔。</li>
+<li>创建4周及中部凹槽、Vent-Plug零件的端面及配套螺纹孔、水密接插件的螺纹过孔。</li>
+<li>标印字体，添加必要的倒角圆。</li>
+</ul>
+</li>
+<li>
+<p>整体完善：</p>
+<ul>
+<li>为<code>Transducer-Head</code>零件添加换能器凹槽(及走线的过孔)、必要的倒角。</li>
+<li>为<code>Housing</code>零件添加必要的倒角。</li>
+<li>紧固件、O形圈等在P67、P71有提及规格型号，建立同尺寸的<code>Transducer</code>替换模型。</li>
+<li>水密连接件线缆在P14提及为MCIL-8-F(供应商暂定选择SubConn)，配套插座型号MCBHRA-8-M，堵头型号为MCDC-8-F，详情可访问<a href="https://www.macartney.com/connectivity/subconn/">官网</a>，模型下载自官网。</li>
+<li>将它们添加进文件<code>ADCP_Commercial-Products</code>、<code>ADCP_Standard-Parts</code>。</li>
+</ul>
+</li>
+<li>
+<p>ADCP装配：</p>
+<ul>
+<li>注意：装入<code>O形圈</code>之前，请参阅<a href="../parametric-modeling/">参数化建模</a>中的内容，将<code>O形圈</code>凹槽创建完成。</li>
+<li>将上述所有零件插入<code>ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm</code>装配体中。</li>
+<li>注意：在插入水密插座后，其配套的弹平垫、螺母在添加配合关系时，以插座为基础，选择<code>多配合模式/生成多配合文件夹</code>的<code>同心</code>关系，有助于装配模型的简洁性。其余有多配合模式的地方，均可类似操作。如下图所示：</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="Multiple-Part-Fit-Modes" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_Multiple-Part-Fit-Modes.png" width="720" />
+  <figcaption>Multiple-Part-Fit-Modes </figcaption>
+</figure></p>
+<ul>
+<li>装配完成后，在<code>Feature Manager</code>中将<code>水密接插件相关</code>零部件统一放入一个文件夹，有助于装配模型的简洁性，如下图所示：</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="Folders-In-Feature-Manager" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_Folders-In-Feature-Manager.png" width="720" />
+  <figcaption>Folders-In-Feature-Manager </figcaption>
+</figure></p>
+</li>
+<li>
+<p>创建夹持零件及相应装配体：</p>
+<ul>
+<li>根据官方文档  P36，<code>Mounting the Instrument</code>的要求，创建夹持零件及相应装配体，如下图所示：</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="Create-Instrument-Fixture-Assembly" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_Create-Instrument-Fixture-Assembly.png" width="720" />
+  <figcaption>Create-Instrument-Fixture-Assembly </figcaption>
+</figure></p>
+</li>
+<li>
+<p>整体装配及赋予材料：</p>
+<ul>
+<li>将上述子装配体添加到<code>ADCP_Sen_TA.sldasm</code>中，添加必要的紧固件，完成整体装配。</li>
+<li>参考官方文档，将所有紧固件赋予钛合金(最可能为Ti-6Al-4V)材质，此处选中所有的紧固件，然后<code>鼠标右击/材料/编辑材料</code>，方便统一赋予材质，如下图所示。无法确认材质的零部件，暂时不赋予材质。完成后，如下图所示：</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="Assign-Material-To-Parts" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_Assign-Material-To-Parts.png" width="720" />
+  <figcaption>Assign-Material-To-Parts </figcaption>
+</figure></p>
+<p><figure markdown="span">
+  <img alt="ADCP_Sen_Total-Assembly" src="../../images/docs_modeling/bbe_docs_modeling_modeling-method_ADCP_Sen_Total-Assembly.png" width="720" />
+  <figcaption>ADCP_Sen_Total-Assembly </figcaption>
+</figure></p>
+</li>
+</ol>
 <h2 id="4">4. 其余要点</h2>
-<h3 id="41">4.1 层级意识</h3>
-<p>在装配体中编辑时，应始终留意当前处于哪个层级，是总装、子装配体，还是单个零件。层级判断错误时，外部参考与位置关系往往最容易混乱。</p>
-<h3 id="_1">可参考的技巧</h3>
-<h2 id="-">- 零件建模、装配时，尽量保证零件关于三个基准面对称，对于修改零件和装配都大有益处。具体而言，如零件拉伸时，选择<code>方向/结束条件/中面</code>。  来自好友黄玉琳(机械设计工程师)。</h2>
+<h3 id="41">4.1 可参考的技巧</h3>
+<ul>
+<li>零件建模、装配时，尽量保证零件关于三个基准面对称，对于修改零件和装配都大有益处。具体而言，如零件拉伸时，选择<code>方向/终止条件/两侧对称</code>。  来自好友黄玉琳(机械设计工程师)。</li>
+<li>12</li>
+</ul>
 <h2 id="5">5. 边界与风险</h2>
 <ul>
-<li>子装配体中的零件若直接依赖总装层级，后续调整时容易发生引用混乱</li>
+<li>对于自上而下的联动关系，应有清晰的文档记录，否则自上而下建模带来的便利在长期缺乏维护的情况下，可能会得不偿失。</li>
+<li>在装配体中编辑时，应始终留意当前处于哪个层级，是总装、子装配体，还是单个零件。层级判断错误时，外部参考与位置关系往往最容易混乱。</li>
+<li>子装配体中的零件若直接依赖总装层级，后续调整时容易发生引用混乱。</li>
 </ul>
 <h2 id="6">6. 小结</h2>
 <p>建模方式没有绝对优劣，关键在于是否与对象类型、层级关系和修改频率相匹配。对个人或小团队来说，通常是适度混用，而不是坚持单一方法。</p>
 <h2 id="7">7. 参考来源</h2>
 <ul>
-<li>SolidWorks Help</li>
-<li>本站参考资料整理</li>
+<li><a href="https://help.solidworks.com/2018/chinese-simplified/SolidWorks/sldworks/c_Design_Methods.htm?id=5.2">SolidWorks Help 设计方法（自下而上设计和自上而下设计）</a>，另存档于互联网档案馆，<a href="https://web.archive.org/web/20260501121115/https://help.solidworks.com/2018/chinese-simplified/SolidWorks/sldworks/c_Design_Methods.htm?id=5.2">详见</a>。</li>
 </ul>
 
 
@@ -2340,7 +2400,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月25日 03:03:43 UTC">2026年4月25日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月30日 13:24:36 UTC">2026年4月30日</span>
   </span>
 
     

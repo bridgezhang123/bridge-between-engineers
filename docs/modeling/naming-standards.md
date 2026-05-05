@@ -128,14 +128,14 @@ ADCP 示例
     │   ├── ADCP_Sen_S01_Adcp-Instrument/  
     │   │   ├── ADCP_Sen_Ver0.1_S01_01_Transducer-Head.sldprt
     │   │   ├── ADCP_Sen_Ver0.1_S01_02_Housing.sldprt
-    │   │   ├── ADCP_Sen_Ver0.1_S01_03_End-cap.sldprt
+    │   │   ├── ADCP_Sen_Ver0.1_S01_03_End-Cap.sldprt
     │   │   └── ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm   
     │   ├── ADCP_Sen_S02_Instrument-Fixture/
     │   │   ├── ADCP_Sen_Ver0.1_S02_01_Support-Plate.sldprt
     │   │   ├── ADCP_Sen_Ver0.1_S02_02_Clamp-Plate.sldprt
     │   │   └── ADCP_Sen_Ver0.1_S02_TA_Instrument-Fixture.sldasm
     │   ├── ADCP_Sen_TA/
-    │   │   └── ADCP_Sen_Ver0.1_TA_Adcp_Sen.sldasm   
+    │   │   └── ADCP_Sen_Ver0.1_TA.sldasm   
     ├── ADCP_Sen_Ver0.2/ 
     ├── ADCP_Sen_Ver1.0/
     └── README.md
@@ -165,9 +165,13 @@ ADCP 示例
 
 ### 4.1 同名文件冲突
 
-你从某项目复制了一个名为“端盖”的零件到新项目，修改后继续使用。某天再打开旧装配体时，端盖形状异常。常见根因是：多路径下存在同名文件，而当前会话又已经加载了其中一个，最终导致引用解析混淆。
+- 你从某项目复制了一个名为“端盖”的零件到新项目，修改后继续使用。某天再打开旧装配体时，端盖形状异常。
+- 常见根因是：多路径下存在同名文件，而当前会话又已经加载了其中一个，最终导致引用解析混淆。会有`是否解除链接关系`的询问，如下图片的提示：
 
-<!-- 可在此插入 SolidWorks 同名文件冲突示例截图 -->
+<figure markdown="span">
+    ![File-Name-Conflict](../images/docs_modeling/bbe_docs_modeling_naming-standards_File-Name-Conflict.png){ width="720" }
+    <figcaption>File-Name-Conflict </figcaption>
+</figure>
 
 ## 5. 边界与风险
 
@@ -182,5 +186,4 @@ ADCP 示例
 ## 7. 参考来源
 
 - 国家标准信息公共服务平台：<https://std.samr.gov.cn/>
-- 国家标准全文公开系统：<https://openstd.samr.gov.cn/bzgk/std/newGbInfo>
-- SolidWorks Help：<https://help.solidworks.com/2025/English/SolidWorks/sldworks/HIDD_OPTIONS_EXTERNAL_REFS.htm>
+- 机械制图相关标准

@@ -32,7 +32,7 @@
 
 ## 3. 实操与模板
 
-### 3.3 基本修订/迭代策略
+### 3.1 基本修订/迭代策略
 
 判断是否升级版本代号
 - 同一对象的小改动，优先走修改单说明的思路。
@@ -40,47 +40,64 @@
 
 参考主流PDM的“修订版-迭代”概念：
 
-- **修订版（Revision）**：重大设计变更，对外发布，如V1.0 → V2.0
-- **迭代（Iteration）**：小修改和优化，内部存档，如V1.0 → V1.1
+- **修订版（Revision）**：重大设计变更等场景，如Ver0.1 → Ver1.0
+- **迭代（Iteration）**：方案探索等用途，内部存档，如Ver0.1 → Ver0.2
 
-**推荐文件夹结构**：
-项目X/
-├── Released/ # 已发布版本（归档，只读）
-│ ├── V1.0/
-│ └── V2.0/
-├── Working/ # 开发中版本（可读写）
-│ ├── V1.1/ # 迭代开发中
-│ └── V2.1/
-└── Common/ # 公共资源库
-├── Fasteners/ # 紧固件
-├── StandardParts/ # 通用件
-└── Libraries/ # 设计库、成形工具等
+!!! Warning "版本应慎重"
+    - 版本修订涉及模型、制图、加工、采购、装配等一系列过程，不是一个简单的文件名改动，要慎重。
+    - 不是重大设计变更，不进行版本修订。
+    - 版本修订，应用清晰的文档记录。
 
+### 3.2 软件操作
 
-**版本命名规范**：
+为了演示版本修订的过程而进行版本修订，并无重大设计变更，特此说明。
 
-| 版本类型 | 命名格式 | 示例 | 说明 |
-|---------|---------|------|------|
-| 正式发布版 | V主版本.次版本 | V2.0 | 通过评审，对外交付 |
-| 开发迭代版 | V主版本.次版本 | V2.1 | 在正式版基础上的修改 |
-| 实验性分支 | V主版本.次版本_分支标识 | V2.1_alt | 方案探索，可能被废弃 |
+1. 错误示范：
 
-### 软件操作
-- 新建版本时，优先使用`打包/pack and go`功能，能维持原有装配体内的联动/链接关系，即维持模型与对应图纸的关系。
-    - **路径**：文件 → 打包
-    - **关键选项**：可添加前缀或后缀，可预览所有引用关系，可选择打包哪些文件
-    - **适用场景**：项目复制、版本分支、跨项目迁移
-- 直接在资源管理器中硬复制、硬改名，会破坏上述关系
+    - 直接复制`ADCP_Sen_Ver0.1`文件夹并重命名为`ADCP_Sen_Ver1.0`。
+    - 将`ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument`装配体重命名为`ADCP_Sen_Ver1.0_S01_TA_Adcp-Instrument`并打开。
+    - 尝试将`ADCP_Sen_Ver0.1_S01_01_Transducer-Head`零件的直径扩大一些，可以看到`Housing`零件的直径并没有随之变化，而且`Housing`零件的凸台拉伸等有联动关系的特征均出现了`问号`，因此我们创建的自上而下的建模联动关系被破坏，如下图所示:
+
+    <figure markdown="span">
+      ![Incorrect-Iteration-Demonstration](../images/docs_modeling/bbe_docs_modeling_revision-control_Incorrect-Iteration-Demonstration.png){ width="720" }
+      <figcaption>Incorrect-Iteration-Demonstration </figcaption>
+    </figure>
+
+2. 使用使用`打包/pack and go`功能进行版本修订:
+
+    - 此法能确保链接关系的完整性。
+    - 创建`ADCP_Sen_Ver1.0`文件夹及内部的子文件夹(如ADCP_Sen_S01_Adcp-Instrument)，子文件夹为空文件夹。
+    - 复制`ADCP_Sen_Ver0.1_TA.sldasm`总装配体文件到`ADCP_Sen_Ver1.0/ADCP_Sen_TA`文件夹下，并重命名为`ADCP_Sen_Ver1.0_TA.sldasm`。
+    - 打开`ADCP_Sen_Ver1.0_TA.sldasm`，在Feature Manager中鼠标右击`ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm`，选择`打开子装配体`，选择`文件 菜单/pack and go`。
+    - 勾选`包括工程图`、将Ver0.1相关的装配体、零件、图纸统一更名为Ver1.0，保存到文件夹路径修改到Ver1.0的文件夹，显然CP开头的外购商用件和GB标准件在专用文件夹，无需操作。如下图所示：
+
+    <figure markdown="span">
+      ![Pack-And-Go-Function](../images/docs_modeling/bbe_docs_modeling_revision-control_Pack-And-Go-Function.png){ width="720" }
+      <figcaption>Pack-And-Go-Function </figcaption>
+    </figure>
+
+3. 在Feature Manager中，对`ADCP_Sen_Ver1.0_S02_TA_Instrument-Fixture.sldasm`执行类似的操作。
+
+4. 替换装配体：
+
+    - 回到`ADCP_Sen_Ver1.0_TA.sldasm`装配体，鼠标右击`ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm`，选择`替换零部件`，浏览到对应文件夹下的`ADCP_Sen_Ver1.0_S01_TA_Adcp-Instrument.sldasm`，进行替换，如下图所示：
+
+    <figure markdown="span">
+      ![Replace-Assembly](../images/docs_modeling/bbe_docs_modeling_revision-control_Replace-Assembly.png){ width="720" }
+      <figcaption>Replace-Assembly </figcaption>
+    </figure>
+
+    - 对`ADCP_Sen_Ver1.0_S02_TA_Instrument-Fixture.sldasm`执行类似的操作。
+    - 保存`ADCP_Sen_Ver1.0_TA.sldasm`装配体，即得到了链接关系正常、名称修订完整的`ADCP_Sen_Ver1.0_TA.sldasm`文件，如下图所示：
+
+    <figure markdown="span">
+      ![Situation-After-Completion](../images/docs_modeling/bbe_docs_modeling_revision-control_Situation-After-Completion.png){ width="720" }
+      <figcaption>Situation-After-Completion </figcaption>
+    </figure>
 
 ## 4. 其余要点
 
-### 4.1 装配体、零件与图纸
-
-版本管理不是只改一个文件名，而是要同时考虑装配体、零件和图纸之间的关联关系是否仍然清楚。
-
-### 4.2 另存与直接复制
-
-在 SolidWorks 体系里，直接复制文件夹和在软件内 `Save As` 的后果并不相同。前者更容易留下引用关系混乱的问题。
+暂无。
 
 ## 5. 边界与风险
 
@@ -94,5 +111,6 @@
 
 ## 7. 参考来源
 
-- SolidWorks Help
-- 相关国家标准摘要与工程实践经验
+- 机械制图相关国家标准
+
+

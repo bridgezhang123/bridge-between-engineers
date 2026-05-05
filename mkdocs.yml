@@ -85,7 +85,6 @@ nav:
     - 图纸模板: modeling/drawing-template.md
     - 基本标注: modeling/dimensioning.md
     - 爆炸视图: modeling/exploded-view.md
-    - BOM 表: modeling/bom-guide.md
     - 版本迭代: modeling/revision-control.md
   - 制造:
     - 导览: manufacturing/index.md

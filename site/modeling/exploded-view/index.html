@@ -18,7 +18,7 @@
         <link rel="prev" href="../dimensioning/">
       
       
-        <link rel="next" href="../bom-guide/">
+        <link rel="next" href="../revision-control/">
       
       
         
@@ -705,8 +705,6 @@
       
         
       
-        
-      
     
     
     
@@ -1045,18 +1043,7 @@
   <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 实操原则
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 常见流程
+        3.2 建模实现
       
     </span>
   </a>
@@ -1076,34 +1063,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4. 其余要点">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 步骤顺序很重要
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-bom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 与 BOM 的关系
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1144,34 +1103,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bom-guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    BOM 表
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1923,18 +1854,7 @@
   <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 实操原则
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 常见流程
+        3.2 建模实现
       
     </span>
   </a>
@@ -1954,34 +1874,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4. 其余要点">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 步骤顺序很重要
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-bom" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 与 BOM 的关系
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2052,15 +1944,11 @@
 
 
 <h1 id="-">图纸规范--爆炸视图的使用</h1>
-<blockquote>
-<p>爆炸视图不是为了“看起来更复杂”，而是为了更清楚地表达装配关系、顺序与层级。</p>
-</blockquote>
 <h2 id="1">1. 范围与目标</h2>
 <p>本文讨论：</p>
 <ul>
 <li>爆炸视图适合用在什么场景</li>
-<li>配置、步骤与二维图纸如何配合</li>
-<li>如何避免为了“炫”而增加无效工作</li>
+<li>配置与二维图纸如何配合</li>
 </ul>
 <h2 id="2">2. 标准引用</h2>
 <p>暂无。</p>
@@ -2071,35 +1959,49 @@
 <li>维修说明</li>
 <li>带序号的总装图</li>
 </ul>
-<h3 id="32">3.2 实操原则</h3>
+<h3 id="32">3.2 建模实现</h3>
+<ol>
+<li>
+<p>创建<code>ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm</code>装配体对应的工程图：</p>
 <ul>
-<li>先建立专门的爆炸视图配置</li>
-<li>爆炸步骤尽量按真实装配逻辑组织</li>
-<li>与序号标注和 BOM 保持一致</li>
+<li>从<code>视图调色板</code>拖入当前视图(默认的轴测图不一定能很好显示各部件的相互关系)，鼠标右击拖入的<code>工程图视图1/编辑特征/选择创建的</code>ADCP-Exploded-View<code>配置</code>，并勾选<code>在爆炸或模型断开状态下显示</code>，如下图所示:</li>
 </ul>
-<h3 id="33">3.3 常见流程</h3>
+<p><figure markdown="span">
+  <img alt="Link-To-Explosion-Configuration" src="../../images/docs_modeling/bbe_docs_modeling_exploded-view_Link-To-Explosion-Configuration.png" width="720" />
+  <figcaption>Link-To-Explosion-Configuration </figcaption>
+</figure></p>
 <ul>
-<li>先建立配置</li>
-<li>再创建 exploded steps</li>
-<li>最后在二维图纸中调用相应视图</li>
+<li>为各零部件添加名称等操作，完成后呈现的状态如下图所示：</li>
 </ul>
+<p><figure markdown="span">
+  <img alt="Exploded-View-Example" src="../../images/docs_modeling/bbe_docs_modeling_exploded-view_Exploded-View-Example.png" width="720" />
+  <figcaption>Exploded-View-Example </figcaption>
+</figure></p>
+</li>
+<li>
+<p>生成爆炸步骤演示视频：</p>
+<ul>
+<li>回到<code>ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm</code>装配体，<code>鼠标右击爆炸视图/动画解除爆炸</code>，可用于生成爆炸步骤演示视频，<a href="https://www.bilibili.com/video/BV1M3ReBLEq7"><img alt="演示视频" src="https://img.shields.io/badge/视频-观看-blue" /></a>。操作如下图所示：</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="Explosion-Step-Demonstration-Video" src="../../images/docs_modeling/bbe_docs_modeling_exploded-view_Explosion-Step-Demonstration-Video.png" width="720" />
+  <figcaption>Explosion-Step-Demonstration-Video </figcaption>
+</figure></p>
+</li>
+</ol>
 <h2 id="4">4. 其余要点</h2>
-<h3 id="41">4.1 步骤顺序很重要</h3>
-<p>爆炸视图若不按装配逻辑组织，即使看起来“炸开了”，阅读价值也不高。</p>
-<h3 id="42-bom">4.2 与 BOM 的关系</h3>
-<p>若一张总装图既带爆炸视图，又带序号和 BOM，那么三者的顺序与名称最好保持一致。</p>
+<p>暂无。</p>
 <h2 id="5">5. 边界与风险</h2>
 <ul>
 <li>爆炸方向若缺乏层次，会降低可读性</li>
 <li>为爆炸而爆炸，会增加维护成本</li>
-<li>若配置管理不清，爆炸视图容易与正常装配状态混淆</li>
 </ul>
 <h2 id="6">6. 小结</h2>
-<p>好的爆炸视图不在于动作多，而在于结构清楚、顺序合理、能和序号及 BOM 自然配合。能帮助阅读的爆炸视图，才值得保留。</p>
-<h2 id="7">7. 参考来源</h2>
 <ul>
-<li>SolidWorks Help</li>
+<li>爆炸视图与爆炸步骤演示视频的配合能更好地支持阅读者的理解。</li>
 </ul>
+<h2 id="7">7. 参考来源</h2>
+<p>暂无。</p>
 
 
 
@@ -2209,13 +2111,13 @@
         
         
           
-          <a href="../bom-guide/" class="md-footer__link md-footer__link--next" aria-label="下一页: BOM 表">
+          <a href="../revision-control/" class="md-footer__link md-footer__link--next" aria-label="下一页: 版本迭代">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                BOM 表
+                版本迭代
               </div>
             </div>
             <div class="md-footer__button md-icon">

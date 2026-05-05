@@ -1,7 +1,5 @@
 # 配置功能
 
-> 配置功能很有用，但它解决的是“同一对象的受控变化”，不是所有差异都适合塞进一个文件里。
-
 ## 1. 范围与目标
 
 - 本文主要讨论配置功能适合解决什么问题、不适合处理什么差异，以及在实际使用中怎样降低后期维护风险。
@@ -27,26 +25,50 @@
 
 > **总结**：配置功能适合处理“同一对象的系列化变化”，当变体差异过大时，应果断另存为新零件，而非强行共用。
 
+### 3.3. 建模实现
+
+1. 创建`ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm`装配体的`新配置`。
+
+    - 此文的示例配置用于生成`ADCP`装配体的爆炸视图。
+    - 打开装配体，点击`Configuration Manager/鼠标右击配置/添加配置`，配置名称可具体为`ADCP-Exploded-View`。
+    - 激活`ADCP-Exploded-View`配置，`鼠标右击该配置/新爆炸视图`，如下图所示：
+
+    <figure markdown="span">
+      ![Create-Exploded-View](../images/docs_modeling/bbe_docs_modeling_configurations_Create-Exploded-View.png){ width="720" }
+      <figcaption>Create-Exploded-View </figcaption>
+    </figure>
+
+2. 创建`爆炸步骤`：
+
+    - 在爆炸界面，`设定区选择End-Cap及相关的零部件/拖动竖直向上的箭头/形成爆炸步骤1`，同样的操作可创建更多的`爆炸步骤`，如下图所示：
+
+    <figure markdown="span">
+      ![Create-Exploded-Steps](../images/docs_modeling/bbe_docs_modeling_configurations_Create-Exploded-Steps.png){ width="720" }
+      <figcaption>Create-Exploded-Steps </figcaption>
+    </figure>
+
+3. 创建`爆炸完成`步骤：
+
+    - 整体爆炸完成后，双击不同的配置，可以激活相应的配置，如下图所示：
+
+    <figure markdown="span">
+      ![Switch-Between-Different-Configurations](../images/docs_modeling/bbe_docs_modeling_configurations_Switch-Between-Different-Configurations.png){ width="720" }
+      <figcaption>Switch-Between-Different-Configurations </figcaption>
+    </figure>
+
 ## 4. 其余要点
 
-### 4.2 与版本管理的关系
 
-配置功能解决的是单个文件内部的受控变化，不应替代版本管理本身承担的职责。若对象已经进入明显的版本分叉阶段，通常应交由独立文件和版本管理处理，而不是继续堆在配置里。
+配置功能另一个比较重要的运用场合是系列化零件的变体，尤其是类似紧固件的不同长度、直径等规格的控制。
 
 ## 5. 边界与风险
 
-- 一个配置中改动特征，未必会自动覆盖到其他配置
-- 配置越多，复核成本越高
-- 配置文件不宜承担本该由版本管理承接的职责
-- 若命名混乱，配置本身也会变得难以理解和复用
+- 对系列化零件的变体而言，配置越多，复核成本越高。
 
 ## 6. 小结
 
-配置功能适合处理受控、可复用、结构差异较小的变化；一旦对象已经接近新零件或新方案，就应及时拆分，不必勉强继续留在同一个文件里。
-
-配置不是越多越好，关键在于边界是否清楚、后期是否可维护。
+配置功能对于实现同一装配体的不同形态，进而生成爆炸视图比较有利，详情可参考[爆炸视图的使用](../modeling/exploded-view.md)。
 
 ## 7. 参考来源
 
-- SolidWorks Help
-- 本站参考资料整理
+暂无。

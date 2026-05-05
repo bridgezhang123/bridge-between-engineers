@@ -6,7 +6,7 @@ hide:
   - toc
 hero_title_lines:
   - The bridge between engineers
-  - 工程师之间的桥梁
+  - 机械工程师之桥
 hero_description: >-
   Building bridges, learning standards, sharing insights.
   搭建沟通之桥，研习行业标准，分享学习见解。
