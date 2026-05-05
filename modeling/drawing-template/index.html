@@ -705,8 +705,6 @@
       
         
       
-        
-      
     
     
     
@@ -960,47 +958,14 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="2. 标准引用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
         3. 实操与模板
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 实操与模板">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 建议固定的内容
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 模板策略
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 模板应承载什么
       
     </span>
   </a>
@@ -1020,34 +985,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4. 其余要点">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 标题栏与未注公差区
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 识别信息应适度
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1136,34 +1073,6 @@
     
   
     爆炸视图
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bom-guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    BOM 表
   
 
     
@@ -1894,47 +1803,14 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="2. 标准引用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
         3. 实操与模板
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. 实操与模板">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.1 建议固定的内容
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.2 模板策略
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 模板应承载什么
       
     </span>
   </a>
@@ -1954,34 +1830,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4. 其余要点">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 标题栏与未注公差区
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 识别信息应适度
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2052,30 +1900,38 @@
 
 
 <h1 id="-">图纸规范--模板解析</h1>
-<blockquote>
-<p>图纸模板不是装饰层，它决定了标题栏、字体、未注公差栏和页幅策略是否能长期统一。</p>
-</blockquote>
 <h2 id="1">1. 范围与目标</h2>
 <p>本文主要讨论图纸模板应当固定哪些基础信息，以及个人或尚未形成成熟体系的小团队，如何先搭出一套可长期复用的模板基础。</p>
 <p>重点不在于一次性做得很复杂，而在于先把标题栏、页幅、字体、未注公差与基本识别信息稳定下来，减少后续每次出图时的重复设置。</p>
 <h2 id="2">2. 标准引用</h2>
+<p>以A4竖版的图纸模板举例，可以包含如下信息，如下图所示：</p>
+<figure>
+  <img alt="Drawing-Template" src="../../images/docs_modeling/bbe_docs_modeling_drawing-template_Drawing-Template.png" width="720" />
+<br />
+<figcaption>Drawing-Template </figcaption>
+</figure>
+<p>关于字体、字号的标准引用如下：</p>
 <ul>
-<li>机械制图相关国家标准</li>
-<li>企业或团队内部图纸模板约定</li>
-<li>SolidWorks 工程图模板与属性链接说明</li>
+<li>GB/T 14691-1993 技术制图 字体，规定汉字为长仿宋，常用字号3.5、5。</li>
 </ul>
-<h2 id="3">3. 实操与模板</h2>
-<h3 id="31">3.1 建议固定的内容</h3>
-<p>一套稳定的图纸模板，通常建议优先固定以下内容：</p>
+<p>关于未注公差的标准引用如下：</p>
 <ul>
-<li>标题栏基础字段</li>
-<li>常用页幅</li>
-<li>字体与字号</li>
-<li>未注公差说明</li>
-<li>Logo、名称与网址等识别信息</li>
+<li>GB/T 1804-2000 一般公差 未注公差的线性和角度尺寸的公差，标准按精度从高到低分为四级：f（精密级）、m（中等级）、c（粗糙级）、v（最粗级）。m级是机械加工中最常用的默认等级，大致相当于IT14级精度。</li>
+<li>GB/T 1184-1996 形状和位置公差 未注公差值，公差等级K级。形位公差的未注精度等级分为三级：H（高）、K（中）、L（低）。k级代表中等精度，是应用最广泛的通用等级。</li>
+<li>不同机械领域可能有不同的标准，上述GB的适用范围最广。如中国航空行业标准，HB 5800-2021 一般公差，在内容上涵盖了线性与角度尺寸公差以及未注形位公差，它作为一个综合性标准，将多个GB标准中关于未注公差的要求整合在了一起。</li>
 </ul>
-<p>这些内容一旦固定，后续不同图纸之间的阅读体验会更一致，也更方便后续统一维护。</p>
 <div class="admonition warning">
+<p class="admonition-title">关于未注公差</p>
+<p>必要性举例：仅给定尺寸公差（如长度、直径），而未规定形位公差（如直线度），理论上意味着零件轴线可以是任意形状。因此，即便加工商加工成显著的“香蕉形”或“C”形，只要其局部尺寸合格，从图纸要求来看，仍无法判定为不合格。</p>
+</div>
+<p>关于表面粗糙度的标准引用如下：</p>
+<ul>
+<li>GB/T 131-2006 产品几何技术规范(GPS) 技术产品文件中表面结构的表示法。</li>
+<li>标注 “不去材料” 符号意味着不进行切削加工，成本通常较低。</li>
+<li>标注 “去材料” 符号意味着必须进行切削加工，会产生切屑，成本通常相应增加。</li>
+</ul>
+<p>关于图纸审核流程的讨论如下：</p>
+<div class="admonition note">
 <p class="admonition-title">工程图纸审核流程</p>
 <ul>
 <li>“设计、审核、工艺审查、标准化、批准”的流程，是质量体系认证（如ISO 9001）和产品安全责任追溯的基本要求。</li>
@@ -2084,38 +1940,46 @@
 <li>没有这个流程，产品质量完全依赖于绘图者个人的水平和责任心，容易沦为“赌博式生产”。</li>
 </ul>
 </div>
-<h3 id="32">3.2 模板策略</h3>
-<p>对于个人或小团队，建议先从最常用的模板开始，而不是一开始维护很多套版本。通常可先固定：</p>
+<p>关于投影法的标准引用如下：</p>
 <ul>
-<li><code>A4</code> 竖版模板</li>
-<li><code>A3</code> 横版模板</li>
+<li>GB/T 14692-2008 技术制图 投影法，明确规定技术图样应采用正投影法绘制，并优先采用第一角画法。此外，第一角画法，ISO标准优先采用，欧洲主流。</li>
+<li>必要时也可选用第三角画法(北美、日本主流，国际同等认可)，但在同一张图样上不得混合使用两种画法，且必须在标题栏中用规定的识别符号加以标明。</li>
 </ul>
-<p>先把高频场景跑顺，再考虑是否扩展到其他页幅或特殊模板，会更现实。</p>
-<h3 id="33">3.3 模板应承载什么</h3>
-<p>模板负责统一基础表达，但不替代具体设计判断。比如：</p>
+<p>关于剖面线的标准引用如下：</p>
 <ul>
-<li>标题栏负责承载项目、图号、版本等基础信息</li>
-<li>未注公差栏负责承载默认规则</li>
-<li>Logo、名称和网址可作为来源识别与适度引流入口</li>
+<li>GB/T 17453-2005 技术制图 图样画法 剖面区域的表示法，规定了不同材质的零件的剖面线形式。</li>
 </ul>
-<p>如果模板承担了过多本该由设计者逐项确认的内容，后续反而容易出错。</p>
+<p>关于技术要求/说明的讨论：</p>
+<ul>
+<li>序号尽量采用自动化序号方案，确保序号正确并方便增减。</li>
+</ul>
+<h3 id="3">3. 实操与模板</h3>
+<ol>
+<li>
+<p>SolidWorks模板：</p>
+<ul>
+<li>模板通常存放于<code>C:\ProgramData\SolidWorks\SOLIDWORKS</code>，扩展名为<code>.drwdot</code> ，可根据自身需要创建自定义模板。</li>
+<li>可以对某些零件的属性与图纸模板进行链接，一边自动更新，以零件的材质举例，<code>双击材质字符/链接到属性/此处发现的模型/属性名称选择 material</code>，其余属性可酌情添加，如下图所示:</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="Link-To-Model-Properties" src="../../images/docs_modeling/bbe_docs_modeling_drawing-template_Link-To-Model-Properties.png" width="720" />
+  <figcaption>Link-To-Model-Properties </figcaption>
+</figure></p>
+</li>
+<li>
+<p>引用模板：</p>
+<ul>
+<li>在创建工程图时，选择创建的相应模板即可。</li>
+</ul>
+</li>
+</ol>
 <h2 id="4">4. 其余要点</h2>
-<h3 id="41">4.1 标题栏与未注公差区</h3>
-<p>图纸模板里最值得认真设计的，不只是外观，而是标题栏和未注公差区的表达顺序。它们决定了读图者能否快速找到关键信息。</p>
-<p>如果后续补图，我建议您在这里插入一张模板截图，重点标出：</p>
-<ul>
-<li>标题栏主要字段</li>
-<li>未注公差位置</li>
-<li>Logo、名称与网址的放置区域</li>
-</ul>
-<h3 id="42">4.2 识别信息应适度</h3>
-<p>模板中加入 Logo、名称和网址是可以的，但应保持克制。它们应当起到识别与来源说明作用，而不应盖过图纸主体信息。</p>
+<p>暂无。</p>
 <h2 id="5">5. 边界与风险</h2>
 <ul>
-<li>模板字段过多，会增加维护成本</li>
-<li>未注公差栏不应成为省略关键尺寸要求的理由</li>
-<li>Logo、名称或网址引流过于抢眼，会干扰读图</li>
-<li>模板统一并不等于所有图纸都能不加判断地直接套用</li>
+<li>模板字段过多，会增加维护成本。</li>
+<li>未注公差栏不应成为省略关键尺寸要求的理由。</li>
+<li>模板统一并不等于所有图纸都能不加判断地直接套用。</li>
 </ul>
 <h2 id="6">6. 小结</h2>
 <p>图纸模板的价值，不在于“做得多漂亮”，而在于它是否让标题栏、页幅、字体和未注公差这些基础表达长期稳定下来。</p>
@@ -2123,12 +1987,7 @@
 <h2 id="7">7. 参考来源</h2>
 <ul>
 <li>机械制图相关国家标准</li>
-<li>SolidWorks Help</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Image Suggestion / 图片建议</p>
-<p>这一页很适合插入一张图纸模板截图，重点展示标题栏、未注公差区、Logo 与网址的布局关系。</p>
-</div>
 
 
 
@@ -2151,7 +2010,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月25日 03:03:43 UTC">2026年4月25日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年5月5日 00:40:10 UTC">2026年5月5日</span>
   </span>
 
     

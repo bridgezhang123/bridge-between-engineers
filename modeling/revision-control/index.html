@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://www.bridgezhang.com/modeling/revision-control/">
       
       
-        <link rel="prev" href="../bom-guide/">
+        <link rel="prev" href="../exploded-view/">
       
       
         <link rel="next" href="../../manufacturing/">
@@ -705,8 +705,6 @@
       
         
       
-        
-      
     
     
     
@@ -962,34 +960,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../bom-guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    BOM 表
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1104,10 +1074,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
+  <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3 基本修订/迭代策略
+        3.1 基本修订/迭代策略
       
     </span>
   </a>
@@ -1115,10 +1085,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        软件操作
+        3.2 软件操作
       
     </span>
   </a>
@@ -1138,34 +1108,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4. 其余要点">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 装配体、零件与图纸
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 另存与直接复制
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1932,10 +1874,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
+  <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3 基本修订/迭代策略
+        3.1 基本修订/迭代策略
       
     </span>
   </a>
@@ -1943,10 +1885,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        软件操作
+        3.2 软件操作
       
     </span>
   </a>
@@ -1966,34 +1908,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4. 其余要点">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.1 装配体、零件与图纸
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 另存与直接复制
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2094,73 +2008,76 @@
 <li>降低装配引用断裂与跨部门误用风险</li>
 </ul>
 <h2 id="3">3. 实操与模板</h2>
-<h3 id="33">3.3 基本修订/迭代策略</h3>
+<h3 id="31">3.1 基本修订/迭代策略</h3>
 <p>判断是否升级版本代号
 - 同一对象的小改动，优先走修改单说明的思路。
 - 不可互换的结构变化，再考虑升级版本代号。</p>
 <p>参考主流PDM的“修订版-迭代”概念：</p>
 <ul>
-<li><strong>修订版（Revision）</strong>：重大设计变更，对外发布，如V1.0 → V2.0</li>
-<li><strong>迭代（Iteration）</strong>：小修改和优化，内部存档，如V1.0 → V1.1</li>
+<li><strong>修订版（Revision）</strong>：重大设计变更等场景，如Ver0.1 → Ver1.0</li>
+<li><strong>迭代（Iteration）</strong>：方案探索等用途，内部存档，如Ver0.1 → Ver0.2</li>
 </ul>
-<p><strong>推荐文件夹结构</strong>：
-项目X/
-├── Released/ # 已发布版本（归档，只读）
-│ ├── V1.0/
-│ └── V2.0/
-├── Working/ # 开发中版本（可读写）
-│ ├── V1.1/ # 迭代开发中
-│ └── V2.1/
-└── Common/ # 公共资源库
-├── Fasteners/ # 紧固件
-├── StandardParts/ # 通用件
-└── Libraries/ # 设计库、成形工具等</p>
-<p><strong>版本命名规范</strong>：</p>
-<table>
-<thead>
-<tr>
-<th>版本类型</th>
-<th>命名格式</th>
-<th>示例</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>正式发布版</td>
-<td>V主版本.次版本</td>
-<td>V2.0</td>
-<td>通过评审，对外交付</td>
-</tr>
-<tr>
-<td>开发迭代版</td>
-<td>V主版本.次版本</td>
-<td>V2.1</td>
-<td>在正式版基础上的修改</td>
-</tr>
-<tr>
-<td>实验性分支</td>
-<td>V主版本.次版本_分支标识</td>
-<td>V2.1_alt</td>
-<td>方案探索，可能被废弃</td>
-</tr>
-</tbody>
-</table>
-<h3 id="_1">软件操作</h3>
+<div class="admonition warning">
+<p class="admonition-title">版本应慎重</p>
 <ul>
-<li>新建版本时，优先使用<code>打包/pack and go</code>功能，能维持原有装配体内的联动/链接关系，即维持模型与对应图纸的关系。<ul>
-<li><strong>路径</strong>：文件 → 打包</li>
-<li><strong>关键选项</strong>：可添加前缀或后缀，可预览所有引用关系，可选择打包哪些文件</li>
-<li><strong>适用场景</strong>：项目复制、版本分支、跨项目迁移</li>
+<li>版本修订涉及模型、制图、加工、采购、装配等一系列过程，不是一个简单的文件名改动，要慎重。</li>
+<li>不是重大设计变更，不进行版本修订。</li>
+<li>版本修订，应用清晰的文档记录。</li>
 </ul>
+</div>
+<h3 id="32">3.2 软件操作</h3>
+<p>为了演示版本修订的过程而进行版本修订，并无重大设计变更，特此说明。</p>
+<ol>
+<li>
+<p>错误示范：</p>
+<ul>
+<li>直接复制<code>ADCP_Sen_Ver0.1</code>文件夹并重命名为<code>ADCP_Sen_Ver1.0</code>。</li>
+<li>将<code>ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument</code>装配体重命名为<code>ADCP_Sen_Ver1.0_S01_TA_Adcp-Instrument</code>并打开。</li>
+<li>尝试将<code>ADCP_Sen_Ver0.1_S01_01_Transducer-Head</code>零件的直径扩大一些，可以看到<code>Housing</code>零件的直径并没有随之变化，而且<code>Housing</code>零件的凸台拉伸等有联动关系的特征均出现了<code>问号</code>，因此我们创建的自上而下的建模联动关系被破坏，如下图所示:</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="Incorrect-Iteration-Demonstration" src="../../images/docs_modeling/bbe_docs_modeling_revision-control_Incorrect-Iteration-Demonstration.png" width="720" />
+  <figcaption>Incorrect-Iteration-Demonstration </figcaption>
+</figure></p>
 </li>
-<li>直接在资源管理器中硬复制、硬改名，会破坏上述关系</li>
+<li>
+<p>使用使用<code>打包/pack and go</code>功能进行版本修订:</p>
+<ul>
+<li>此法能确保链接关系的完整性。</li>
+<li>创建<code>ADCP_Sen_Ver1.0</code>文件夹及内部的子文件夹(如ADCP_Sen_S01_Adcp-Instrument)，子文件夹为空文件夹。</li>
+<li>复制<code>ADCP_Sen_Ver0.1_TA.sldasm</code>总装配体文件到<code>ADCP_Sen_Ver1.0/ADCP_Sen_TA</code>文件夹下，并重命名为<code>ADCP_Sen_Ver1.0_TA.sldasm</code>。</li>
+<li>打开<code>ADCP_Sen_Ver1.0_TA.sldasm</code>，在Feature Manager中鼠标右击<code>ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm</code>，选择<code>打开子装配体</code>，选择<code>文件 菜单/pack and go</code>。</li>
+<li>勾选<code>包括工程图</code>、将Ver0.1相关的装配体、零件、图纸统一更名为Ver1.0，保存到文件夹路径修改到Ver1.0的文件夹，显然CP开头的外购商用件和GB标准件在专用文件夹，无需操作。如下图所示：</li>
 </ul>
+<p><figure markdown="span">
+  <img alt="Pack-And-Go-Function" src="../../images/docs_modeling/bbe_docs_modeling_revision-control_Pack-And-Go-Function.png" width="720" />
+  <figcaption>Pack-And-Go-Function </figcaption>
+</figure></p>
+</li>
+<li>
+<p>在Feature Manager中，对<code>ADCP_Sen_Ver1.0_S02_TA_Instrument-Fixture.sldasm</code>执行类似的操作。</p>
+</li>
+<li>
+<p>替换装配体：</p>
+<ul>
+<li>回到<code>ADCP_Sen_Ver1.0_TA.sldasm</code>装配体，鼠标右击<code>ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm</code>，选择<code>替换零部件</code>，浏览到对应文件夹下的<code>ADCP_Sen_Ver1.0_S01_TA_Adcp-Instrument.sldasm</code>，进行替换，如下图所示：</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="Replace-Assembly" src="../../images/docs_modeling/bbe_docs_modeling_revision-control_Replace-Assembly.png" width="720" />
+  <figcaption>Replace-Assembly </figcaption>
+</figure></p>
+<ul>
+<li>对<code>ADCP_Sen_Ver1.0_S02_TA_Instrument-Fixture.sldasm</code>执行类似的操作。</li>
+<li>保存<code>ADCP_Sen_Ver1.0_TA.sldasm</code>装配体，即得到了链接关系正常、名称修订完整的<code>ADCP_Sen_Ver1.0_TA.sldasm</code>文件，如下图所示：</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="Situation-After-Completion" src="../../images/docs_modeling/bbe_docs_modeling_revision-control_Situation-After-Completion.png" width="720" />
+  <figcaption>Situation-After-Completion </figcaption>
+</figure></p>
+</li>
+</ol>
 <h2 id="4">4. 其余要点</h2>
-<h3 id="41">4.1 装配体、零件与图纸</h3>
-<p>版本管理不是只改一个文件名，而是要同时考虑装配体、零件和图纸之间的关联关系是否仍然清楚。</p>
-<h3 id="42">4.2 另存与直接复制</h3>
-<p>在 SolidWorks 体系里，直接复制文件夹和在软件内 <code>Save As</code> 的后果并不相同。前者更容易留下引用关系混乱的问题。</p>
+<p>暂无。</p>
 <h2 id="5">5. 边界与风险</h2>
 <ul>
 <li>同名文件冲突会直接干扰版本判断</li>
@@ -2171,8 +2088,7 @@
 <p>版本迭代的重点不在于“改名得像不像版本号”，而在于对象身份、修订状态和引用关系是否仍然可控。越是没有 PDM，越要把基本规则想清楚。</p>
 <h2 id="7">7. 参考来源</h2>
 <ul>
-<li>SolidWorks Help</li>
-<li>相关国家标准摘要与工程实践经验</li>
+<li>机械制图相关国家标准</li>
 </ul>
 
 
@@ -2196,7 +2112,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月25日 03:03:43 UTC">2026年4月25日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年5月5日 00:40:10 UTC">2026年5月5日</span>
   </span>
 
     
@@ -2266,7 +2182,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../bom-guide/" class="md-footer__link md-footer__link--prev" aria-label="上一页: BOM 表">
+          <a href="../exploded-view/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 爆炸视图">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2276,7 +2192,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                BOM 表
+                爆炸视图
               </div>
             </div>
           </a>

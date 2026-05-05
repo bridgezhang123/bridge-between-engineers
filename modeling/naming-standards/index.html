@@ -705,8 +705,6 @@
       
         
       
-        
-      
     
     
     
@@ -1175,34 +1173,6 @@
     
   
     爆炸视图
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bom-guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    BOM 表
   
 
     
@@ -2280,14 +2250,14 @@ ADCP/
 │   ├── ADCP_Sen_S01_Adcp-Instrument/  
 │   │   ├── ADCP_Sen_Ver0.1_S01_01_Transducer-Head.sldprt
 │   │   ├── ADCP_Sen_Ver0.1_S01_02_Housing.sldprt
-│   │   ├── ADCP_Sen_Ver0.1_S01_03_End-cap.sldprt
+│   │   ├── ADCP_Sen_Ver0.1_S01_03_End-Cap.sldprt
 │   │   └── ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm   
 │   ├── ADCP_Sen_S02_Instrument-Fixture/
 │   │   ├── ADCP_Sen_Ver0.1_S02_01_Support-Plate.sldprt
 │   │   ├── ADCP_Sen_Ver0.1_S02_02_Clamp-Plate.sldprt
 │   │   └── ADCP_Sen_Ver0.1_S02_TA_Instrument-Fixture.sldasm
 │   ├── ADCP_Sen_TA/
-│   │   └── ADCP_Sen_Ver0.1_TA_Adcp_Sen.sldasm   
+│   │   └── ADCP_Sen_Ver0.1_TA.sldasm   
 ├── ADCP_Sen_Ver0.2/ 
 ├── ADCP_Sen_Ver1.0/
 └── README.md
@@ -2315,9 +2285,14 @@ ADCP/
 </ul>
 <h2 id="4">4. 其余要点</h2>
 <h3 id="41">4.1 同名文件冲突</h3>
-<p>你从某项目复制了一个名为“端盖”的零件到新项目，修改后继续使用。某天再打开旧装配体时，端盖形状异常。常见根因是：多路径下存在同名文件，而当前会话又已经加载了其中一个，最终导致引用解析混淆。</p>
-<!-- 可在此插入 SolidWorks 同名文件冲突示例截图 -->
-
+<ul>
+<li>你从某项目复制了一个名为“端盖”的零件到新项目，修改后继续使用。某天再打开旧装配体时，端盖形状异常。</li>
+<li>常见根因是：多路径下存在同名文件，而当前会话又已经加载了其中一个，最终导致引用解析混淆。会有<code>是否解除链接关系</code>的询问，如下图片的提示：</li>
+</ul>
+<figure>
+    <img alt="File-Name-Conflict" src="../../images/docs_modeling/bbe_docs_modeling_naming-standards_File-Name-Conflict.png" width="720" />
+    <figcaption>File-Name-Conflict </figcaption>
+</figure>
 <h2 id="5">5. 边界与风险</h2>
 <ul>
 <li>文件名写得过长，会降低日常使用体验</li>
@@ -2329,8 +2304,7 @@ ADCP/
 <h2 id="7">7. 参考来源</h2>
 <ul>
 <li>国家标准信息公共服务平台：<a href="https://std.samr.gov.cn/">https://std.samr.gov.cn/</a></li>
-<li>国家标准全文公开系统：<a href="https://openstd.samr.gov.cn/bzgk/std/newGbInfo">https://openstd.samr.gov.cn/bzgk/std/newGbInfo</a></li>
-<li>SolidWorks Help：<a href="https://help.solidworks.com/2025/English/SolidWorks/sldworks/HIDD_OPTIONS_EXTERNAL_REFS.htm">https://help.solidworks.com/2025/English/SolidWorks/sldworks/HIDD_OPTIONS_EXTERNAL_REFS.htm</a></li>
+<li>机械制图相关标准</li>
 </ul>
 
 
@@ -2354,7 +2328,7 @@ ADCP/
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月30日 13:24:36 UTC">2026年4月30日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年5月5日 00:40:10 UTC">2026年5月5日</span>
   </span>
 
     

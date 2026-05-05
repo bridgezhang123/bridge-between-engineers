@@ -705,8 +705,6 @@
       
         
       
-        
-      
     
     
     
@@ -968,6 +966,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. 建模实现
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -981,23 +990,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4. 其余要点">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 与版本管理的关系
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1114,34 +1106,6 @@
     
   
     爆炸视图
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../bom-guide/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    BOM 表
   
 
     
@@ -1908,6 +1872,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. 建模实现
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1921,23 +1896,6 @@
       
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="4. 其余要点">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#42" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4.2 与版本管理的关系
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2008,9 +1966,6 @@
 
 
 <h1 id="_1">配置功能</h1>
-<blockquote>
-<p>配置功能很有用，但它解决的是“同一对象的受控变化”，不是所有差异都适合塞进一个文件里。</p>
-</blockquote>
 <h2 id="1">1. 范围与目标</h2>
 <ul>
 <li>本文主要讨论配置功能适合解决什么问题、不适合处理什么差异，以及在实际使用中怎样降低后期维护风险。</li>
@@ -2051,24 +2006,51 @@
 <blockquote>
 <p><strong>总结</strong>：配置功能适合处理“同一对象的系列化变化”，当变体差异过大时，应果断另存为新零件，而非强行共用。</p>
 </blockquote>
+<h3 id="33">3.3. 建模实现</h3>
+<ol>
+<li>
+<p>创建<code>ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm</code>装配体的<code>新配置</code>。</p>
+<ul>
+<li>此文的示例配置用于生成<code>ADCP</code>装配体的爆炸视图。</li>
+<li>打开装配体，点击<code>Configuration Manager/鼠标右击配置/添加配置</code>，配置名称可具体为<code>ADCP-Exploded-View</code>。</li>
+<li>激活<code>ADCP-Exploded-View</code>配置，<code>鼠标右击该配置/新爆炸视图</code>，如下图所示：</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="Create-Exploded-View" src="../../images/docs_modeling/bbe_docs_modeling_configurations_Create-Exploded-View.png" width="720" />
+  <figcaption>Create-Exploded-View </figcaption>
+</figure></p>
+</li>
+<li>
+<p>创建<code>爆炸步骤</code>：</p>
+<ul>
+<li>在爆炸界面，<code>设定区选择End-Cap及相关的零部件/拖动竖直向上的箭头/形成爆炸步骤1</code>，同样的操作可创建更多的<code>爆炸步骤</code>，如下图所示：</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="Create-Exploded-Steps" src="../../images/docs_modeling/bbe_docs_modeling_configurations_Create-Exploded-Steps.png" width="720" />
+  <figcaption>Create-Exploded-Steps </figcaption>
+</figure></p>
+</li>
+<li>
+<p>创建<code>爆炸完成</code>步骤：</p>
+<ul>
+<li>整体爆炸完成后，双击不同的配置，可以激活相应的配置，如下图所示：</li>
+</ul>
+<p><figure markdown="span">
+  <img alt="Switch-Between-Different-Configurations" src="../../images/docs_modeling/bbe_docs_modeling_configurations_Switch-Between-Different-Configurations.png" width="720" />
+  <figcaption>Switch-Between-Different-Configurations </figcaption>
+</figure></p>
+</li>
+</ol>
 <h2 id="4">4. 其余要点</h2>
-<h3 id="42">4.2 与版本管理的关系</h3>
-<p>配置功能解决的是单个文件内部的受控变化，不应替代版本管理本身承担的职责。若对象已经进入明显的版本分叉阶段，通常应交由独立文件和版本管理处理，而不是继续堆在配置里。</p>
+<p>配置功能另一个比较重要的运用场合是系列化零件的变体，尤其是类似紧固件的不同长度、直径等规格的控制。</p>
 <h2 id="5">5. 边界与风险</h2>
 <ul>
-<li>一个配置中改动特征，未必会自动覆盖到其他配置</li>
-<li>配置越多，复核成本越高</li>
-<li>配置文件不宜承担本该由版本管理承接的职责</li>
-<li>若命名混乱，配置本身也会变得难以理解和复用</li>
+<li>对系列化零件的变体而言，配置越多，复核成本越高。</li>
 </ul>
 <h2 id="6">6. 小结</h2>
-<p>配置功能适合处理受控、可复用、结构差异较小的变化；一旦对象已经接近新零件或新方案，就应及时拆分，不必勉强继续留在同一个文件里。</p>
-<p>配置不是越多越好，关键在于边界是否清楚、后期是否可维护。</p>
+<p>配置功能对于实现同一装配体的不同形态，进而生成爆炸视图比较有利，详情可参考<a href="../exploded-view/">爆炸视图的使用</a>。</p>
 <h2 id="7">7. 参考来源</h2>
-<ul>
-<li>SolidWorks Help</li>
-<li>本站参考资料整理</li>
-</ul>
+<p>暂无。</p>
 
 
 
@@ -2091,7 +2073,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年4月25日 03:03:43 UTC">2026年4月25日</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="2026年5月5日 00:40:10 UTC">2026年5月5日</span>
   </span>
 
     
