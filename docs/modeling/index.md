@@ -35,7 +35,7 @@
 **软件说明**
 
 - 本文对具体的建模软件描述，针对的是SolidWorks premium 2018。尽管各种建模软件在建模流程上有所差异，但对如`参数化`建模等思想的理解是一样的，也可作为参考。
-- Solidworks的官方帮助文档，可作为重要参考：[SolidWorks Help](hhttps://help.solidworks.com/2018/chinese-simplified/solidworks/sldworks/r_help.htm)。
+- Solidworks的官方帮助文档，可作为重要参考：[SolidWorks Help](https://help.solidworks.com/2018/chinese-simplified/solidworks/sldworks/r_help.htm)。
 - 建模与图纸系列文章的示例文件，可点击[ADCP 示例文件 2026.05.05](https://share.weiyun.com/N8L2xdVE)下载。
 
 ## 建议阅读顺序
