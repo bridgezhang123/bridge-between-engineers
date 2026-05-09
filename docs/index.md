@@ -48,6 +48,12 @@ connect:
     - icon: fontawesome/brands/github
       text: GitHub
       link: https://github.com/bridgezhang123
+    - icon: fontawesome/brands/weixin
+      text: 微信公众号
+      link: about/author/#wechat
+    - icon: fontawesome/brands/zhihu
+      text: 知乎
+      link: https://www.zhihu.com/people/zhang-qiao-88-68
 ---
 
 欢迎来到本站。

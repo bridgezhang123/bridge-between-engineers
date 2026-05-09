@@ -111,6 +111,12 @@ extra:
   social:
     - icon: fontawesome/solid/envelope
       link: mailto:contact@bridgezhang.com
+    - icon: fontawesome/brands/github
+      link: https://github.com/bridgezhang123
+    - icon: fontawesome/brands/weixin
+      link: https://www.bridgezhang.com/about/author/#wechat
+    - icon: fontawesome/brands/zhihu
+      link: https://www.zhihu.com/people/zhang-qiao-88-68
 
 markdown_extensions:
   - attr_list

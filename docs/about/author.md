@@ -14,7 +14,18 @@
 
 ## 交流方式
 
-如果您在站内内容中发现疏漏，或对机械设计、加工、测量、检验及相关工作流有自己的见解，欢迎通过 GitHub 或邮件与我交流。
+如果您在站内内容中发现疏漏，或对机械设计、加工、测量、检验及相关工作流有自己的见解，欢迎通过 GitHub、邮件、微信公众号或知乎与我交流。
 
 无论是勘误、补充，还是经验分享，都会对本站的持续完善有所帮助。联系邮箱：`contact@bridgezhang.com`。
 
+## 微信公众号 { #wechat }
+
+公众号名称：机械工程师之桥  
+公众号 ID：`gh_2ad9a9d1c8b0`
+
+![微信公众号：机械工程师之桥](../images/WeChat-Official-Account-QR-Code%20Image.jpg){ .contact-qr }
+
+## 知乎 { #zhihu }
+
+知乎显示名：机械工程师之桥  
+个人主页：[https://www.zhihu.com/people/zhang-qiao-88-68](https://www.zhihu.com/people/zhang-qiao-88-68)
