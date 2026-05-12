@@ -379,6 +379,14 @@
   }
 }
 
+/* Contact */
+.contact-qr {
+  width: min(16rem, 100%);
+  height: auto;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 0.5rem;
+}
+
 @media print {
   .site-print-button,
   .md-header,

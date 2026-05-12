@@ -5,6 +5,8 @@
 ## DFM
 
 - Design for Manufacturability(DFM，面向制造的设计)，目标不是能不能做出来，而是能不能稳定、低成本、大批量地做出来。
+- DFX(DFM  DFS(service) DFP(物料控制；供应商可替代性))，
+- DFMA（Design for Manufacturing and Assembly）
 
 ## 加工商
 

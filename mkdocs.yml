@@ -86,6 +86,8 @@ nav:
     - 基本标注: modeling/dimensioning.md
     - 爆炸视图: modeling/exploded-view.md
     - 版本迭代: modeling/revision-control.md
+    - 模型检查(补充-1): modeling/model-checking.md
+    - 提升效率(补充-2): modeling/improve-efficiency.md
   - 制造:
     - 导览: manufacturing/index.md
     - 机加工基础: manufacturing/machining-basics.md
