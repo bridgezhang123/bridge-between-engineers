@@ -1,5 +1,16 @@
 {
   "installCommand": "python -m venv .venv && .venv/bin/python -m pip install --upgrade pip && .venv/bin/python -m pip install -r requirements.txt",
   "buildCommand": "rm -rf site && .venv/bin/python -m mkdocs build",
-  "outputDirectory": "site"
+  "outputDirectory": "site",
+  "headers": [
+    {
+      "source": "/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, must-revalidate"
+        }
+      ]
+    }
+  ]
 }
