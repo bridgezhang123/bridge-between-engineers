@@ -56,9 +56,9 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       type: date
-      fallback_to_build_date: true
+      fallback_to_build_date: false
       enable_parallel_processing: false
-      enable_git_follow: false
+      enable_git_follow: true
   - git-committers:
       enabled: !ENV [ENABLE_GIT_COMMITTERS, true]
       repository: bridgezhang123/bridge-between-engineers
@@ -119,6 +119,8 @@ extra:
       link: https://www.bridgezhang.com/about/author/#wechat
     - icon: fontawesome/brands/zhihu
       link: https://www.zhihu.com/people/zhang-qiao-88-68
+    - icon: fontawesome/brands/bilibili
+      link: https://b23.tv/aGETkde
 
 markdown_extensions:
   - attr_list
@@ -152,6 +154,7 @@ extra_javascript:
   - javascripts/home.js
   - javascripts/print-button.js
   - javascripts/theme-toggle.js
+  - javascripts/footer-link.js
 
 hooks:
   - hooks/search_worker.py
