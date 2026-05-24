@@ -1,8 +1,58 @@
+import os
+import subprocess
 from pathlib import Path
 
 from git import Repo
 
 from mkdocs_git_revision_date_localized_plugin.util import Util
+
+
+def _run_git(repo_root, *args):
+    return subprocess.run(
+        ["git", *args],
+        cwd=repo_root,
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+
+
+def _is_shallow_repository(repo_root):
+    result = _run_git(repo_root, "rev-parse", "--is-shallow-repository")
+    return result.returncode == 0 and result.stdout.strip().lower() == "true"
+
+
+def _ensure_full_history(repo_root):
+    is_vercel = os.environ.get("VERCEL") == "1"
+    is_shallow = _is_shallow_repository(repo_root)
+
+    if not is_vercel and not is_shallow:
+        return
+
+    remote = _run_git(repo_root, "remote", "get-url", "origin")
+    if remote.returncode != 0:
+        print("[git-history] No origin remote found; using available Git history.")
+        return
+
+    fetch_ref = "+refs/heads/main:refs/remotes/origin/main"
+
+    if is_shallow:
+        unshallow = _run_git(repo_root, "fetch", "--unshallow", "--tags", "--force", "origin", fetch_ref)
+        if unshallow.returncode == 0:
+            print("[git-history] Expanded shallow clone to full history.")
+            return
+
+    full_fetch = _run_git(repo_root, "fetch", "--tags", "--force", "origin", fetch_ref)
+    if full_fetch.returncode == 0:
+        print("[git-history] Refreshed full origin/main history for page dates.")
+        return
+
+    deepen = _run_git(repo_root, "fetch", "--deepen=1000000", "--tags", "--force", "origin", fetch_ref)
+    if deepen.returncode == 0:
+        print("[git-history] Deepened Git history for page dates.")
+        return
+
+    print("[git-history] Could not fetch full history; page creation dates may use the available clone history.")
 
 
 def _resolve_locale(page, config):
@@ -34,6 +84,12 @@ def _get_creation_timestamp(abs_src_path, repo_root):
     if not values:
         return None
     return min(values)
+
+
+def on_config(config, **kwargs):
+    repo_root = Path(__file__).resolve().parent.parent
+    _ensure_full_history(repo_root)
+    return config
 
 
 def on_page_markdown(markdown, page, config, files, **kwargs):
