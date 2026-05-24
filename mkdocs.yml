@@ -158,3 +158,4 @@ extra_javascript:
 
 hooks:
   - hooks/search_worker.py
+  - hooks/git_creation_date_fix.py
