@@ -17,7 +17,7 @@
 
 - 专门用于批量处理重复性任务，无需逐个打开文件操作，以批量将工程图文件(.slddrw)转换为PDF举例，也可转换为DWG等格式。
 - 运行：Windows 开始菜单/ SOLIDWORKS Task Scheduler 20xx。
-- 选择 输出文件，控制 输出文件类型，添加文件/文件夹(遍历并选中该文件夹内所有的.SLDDRW) ，控制 输出位置， 点击 完成。如下图(图形进行了裁剪)所示：
+- 选择 输出文件，控制 输出文件类型，添加文件/文件夹(遍历并选中该文件夹内所有的.SLDDRW) ，控制 输出位置， 点击 完成。如下图所示：
 
     <figure markdown="span">
       ![Solidworks-Task-Scheduler](../images/docs_modeling/bbe_docs_modeling_improve-efficiency_Solidworks-Task-Scheduler.png){ width="720" }

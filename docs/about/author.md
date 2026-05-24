@@ -25,7 +25,3 @@
 
 ![微信公众号：机械工程师之桥](../images/WeChat-Official-Account-QR-Code%20Image.jpg){ .contact-qr }
 
-## 知乎 { #zhihu }
-
-知乎显示名：机械工程师之桥  
-个人主页：[https://www.zhihu.com/people/zhang-qiao-88-68](https://www.zhihu.com/people/zhang-qiao-88-68)

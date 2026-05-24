@@ -387,6 +387,27 @@
   border-radius: 0.5rem;
 }
 
+/* Embedded markmap */
+.markmap-wrapper {
+  --markmap-height: clamp(32rem, 72vw, 48rem);
+  margin: 1rem 0;
+}
+
+.markmap-container {
+  display: block;
+  width: 100%;
+  height: var(--markmap-height);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  .markmap-wrapper {
+    --markmap-height: 28rem;
+  }
+}
+
 @media print {
   .site-print-button,
   .md-header,
@@ -407,29 +428,59 @@
     max-width: none !important;
   }
 
-/* Markmap container styling */
-.markmap-wrapper {
-  margin: 1rem 0;
+  .md-grid {
+    max-width: none !important;
+  }
 }
-.markmap-container {
-  width: 100%;
-  height: 48vh;
-  max-height: 600px;
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  border-radius: 6px;
-  overflow: hidden;
-}
-.markmap-container svg {
-  width: 100%;
-  height: 100%;
+
+/* Restore default footer layout so pagination stays on its own line */
+.md-footer {
   display: block;
 }
 
-@media screen and (max-width: 600px) {
-  .markmap-container { height: 40vh; }
+.site-footer-copyright-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.95;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
 }
 
-  .md-grid {
-    max-width: none !important;
+.site-footer-copyright-link:hover {
+  text-decoration: underline;
+}
+
+.site-footer-copyright-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  font-size: 0.95em;
+  line-height: 1;
+}
+
+.site-footer-copyright-text {
+  line-height: 1;
+}
+
+/* Keep prev/next pagination on its own line above other footer content */
+.md-footer .md-pagination,
+.md-footer .md-footer-nav,
+.md-footer .md-prev,
+.md-footer .md-next,
+.md-footer .md-nav {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+
+@media screen and (max-width: 640px) {
+  .md-footer {
+    display: block;
   }
 }

@@ -23,7 +23,7 @@
 ### 3.2 剖面视图--检查是否含有不合理的薄壁特征，是否有干涉
 
 - 在建模阶段可能更多关注功能的实现，在特征增多、模型复杂后，此步骤是对可能的薄壁特征、可能的干涉情况进行**建模层面**的纠偏。
-- 下图展示了换能器凹槽处的壁厚情况。
+- 下图(图形进行了裁剪)展示了换能器凹槽处的壁厚情况。
 
     <figure markdown="span">
       ![Section-View](../images/docs_modeling/bbe_docs_modeling_model-checking_Section-View.png){ width="720" }

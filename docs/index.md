@@ -54,6 +54,10 @@ connect:
     - icon: fontawesome/brands/zhihu
       text: 知乎
       link: https://www.zhihu.com/people/zhang-qiao-88-68
+    - icon: fontawesome/brands/bilibili
+      text: 哔哩哔哩
+      link: https://b23.tv/aGETkde
+
 ---
 
 欢迎来到本站。
