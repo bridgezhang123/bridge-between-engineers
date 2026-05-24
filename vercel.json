@@ -1,6 +1,6 @@
 {
   "installCommand": "python -m venv .venv && .venv/bin/python -m pip install --upgrade pip && .venv/bin/python -m pip install -r requirements.txt",
-  "buildCommand": "if [ \"$(git rev-parse --is-shallow-repository)\" = \"true\" ]; then git fetch --unshallow --tags --force origin +refs/heads/main:refs/remotes/origin/main; else git fetch --tags --force origin +refs/heads/main:refs/remotes/origin/main; fi; rm -rf site && .venv/bin/python -m mkdocs build",
+  "buildCommand": "bash scripts/vercel-build.sh",
   "outputDirectory": "site",
   "headers": [
     {
