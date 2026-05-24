@@ -1,0 +1,218 @@
+{
+  "docs/about/acknowledgements.md": {
+    "created": 1774682351,
+    "created_hash": "1bd4fdd28bc4aef1e273dad73735e1440be81e17",
+    "updated": 1777294586,
+    "updated_hash": "22e0d3113bf953a6d09d51dced53498ba804fead"
+  },
+  "docs/about/author.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1779613971,
+    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+  },
+  "docs/about/changelog.md": {
+    "created": 1774174891,
+    "created_hash": "8be4cb86fa876b696fef92ab7cc491eb0aa3ab6b",
+    "updated": 1779609130,
+    "updated_hash": "5f2ad22bdc8ac06df71db02fe2b4e6a1ced3655a"
+  },
+  "docs/about/collaboration.md": {
+    "created": 1774682351,
+    "created_hash": "1bd4fdd28bc4aef1e273dad73735e1440be81e17",
+    "updated": 1775561073,
+    "updated_hash": "ed64750634d6217ea864708b967556f83ac87e57"
+  },
+  "docs/about/copyright-license.md": {
+    "created": 1774682351,
+    "created_hash": "1bd4fdd28bc4aef1e273dad73735e1440be81e17",
+    "updated": 1775561073,
+    "updated_hash": "ed64750634d6217ea864708b967556f83ac87e57"
+  },
+  "docs/about/index.md": {
+    "created": 1774174891,
+    "created_hash": "8be4cb86fa876b696fef92ab7cc491eb0aa3ab6b",
+    "updated": 1775363208,
+    "updated_hash": "610255723531414bc5f4f3f4c132503b5714c22b"
+  },
+  "docs/about/site-building.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1775363208,
+    "updated_hash": "610255723531414bc5f4f3f4c132503b5714c22b"
+  },
+  "docs/about/site.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1775559911,
+    "updated_hash": "740d184938244ef0c01d8d136b1a94675515e13c"
+  },
+  "docs/design/ai-workflow.md": {
+    "created": 1775559911,
+    "created_hash": "740d184938244ef0c01d8d136b1a94675515e13c",
+    "updated": 1775876361,
+    "updated_hash": "e9b3e440b4268409d12c1268609c015ba4945cc7"
+  },
+  "docs/design/design-cases.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1779613971,
+    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+  },
+  "docs/design/design-philosophy.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1779613971,
+    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+  },
+  "docs/design/dfmea.md": {
+    "created": 1777294586,
+    "created_hash": "22e0d3113bf953a6d09d51dced53498ba804fead",
+    "updated": 1778593347,
+    "updated_hash": "e0f7526cb1051574323ff07a115f50971844460c"
+  },
+  "docs/design/index.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1775559911,
+    "updated_hash": "740d184938244ef0c01d8d136b1a94675515e13c"
+  },
+  "docs/design/mandarin-communication.md": {
+    "created": 1775559911,
+    "created_hash": "740d184938244ef0c01d8d136b1a94675515e13c",
+    "updated": 1775559911,
+    "updated_hash": "740d184938244ef0c01d8d136b1a94675515e13c"
+  },
+  "docs/design/supplier-background.md": {
+    "created": 1777079072,
+    "created_hash": "81c70ada71ab6bf6b39c4bc461a934d3cc3c82cf",
+    "updated": 1777086223,
+    "updated_hash": "8428bdd288e7bcac2ef6c3c74b6733a95b2387e7"
+  },
+  "docs/index.md": {
+    "created": 1773549045,
+    "created_hash": "22bd35bb751b336c66962312b52297dfc534b2e3",
+    "updated": 1779613971,
+    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+  },
+  "docs/manufacturing/heat-treatment.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1777294586,
+    "updated_hash": "22e0d3113bf953a6d09d51dced53498ba804fead"
+  },
+  "docs/manufacturing/index.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1775363208,
+    "updated_hash": "610255723531414bc5f4f3f4c132503b5714c22b"
+  },
+  "docs/manufacturing/machining-basics.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1778593347,
+    "updated_hash": "e0f7526cb1051574323ff07a115f50971844460c"
+  },
+  "docs/manufacturing/process-planning.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1775363208,
+    "updated_hash": "610255723531414bc5f4f3f4c132503b5714c22b"
+  },
+  "docs/manufacturing/surface-finish.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1779613971,
+    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+  },
+  "docs/measurement/gdt.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1775363208,
+    "updated_hash": "610255723531414bc5f4f3f4c132503b5714c22b"
+  },
+  "docs/measurement/index.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1775363208,
+    "updated_hash": "610255723531414bc5f4f3f4c132503b5714c22b"
+  },
+  "docs/measurement/quality-control.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1775363208,
+    "updated_hash": "610255723531414bc5f4f3f4c132503b5714c22b"
+  },
+  "docs/measurement/tools.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1775363208,
+    "updated_hash": "610255723531414bc5f4f3f4c132503b5714c22b"
+  },
+  "docs/modeling/configurations.md": {
+    "created": 1775303720,
+    "created_hash": "52679080dc39226c91bad8d3fb10fe42d80bf861",
+    "updated": 1777941610,
+    "updated_hash": "ff89994469594cabb1586207ff0c6b25f3972e51"
+  },
+  "docs/modeling/dimensioning.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1777941610,
+    "updated_hash": "ff89994469594cabb1586207ff0c6b25f3972e51"
+  },
+  "docs/modeling/drawing-template.md": {
+    "created": 1775303720,
+    "created_hash": "52679080dc39226c91bad8d3fb10fe42d80bf861",
+    "updated": 1779613971,
+    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+  },
+  "docs/modeling/exploded-view.md": {
+    "created": 1775303720,
+    "created_hash": "52679080dc39226c91bad8d3fb10fe42d80bf861",
+    "updated": 1777941610,
+    "updated_hash": "ff89994469594cabb1586207ff0c6b25f3972e51"
+  },
+  "docs/modeling/improve-efficiency.md": {
+    "created": 1778593347,
+    "created_hash": "e0f7526cb1051574323ff07a115f50971844460c",
+    "updated": 1779613971,
+    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+  },
+  "docs/modeling/index.md": {
+    "created": 1773749768,
+    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
+    "updated": 1779613971,
+    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+  },
+  "docs/modeling/model-checking.md": {
+    "created": 1778593347,
+    "created_hash": "e0f7526cb1051574323ff07a115f50971844460c",
+    "updated": 1779613971,
+    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+  },
+  "docs/modeling/modeling-method.md": {
+    "created": 1775303720,
+    "created_hash": "52679080dc39226c91bad8d3fb10fe42d80bf861",
+    "updated": 1778593347,
+    "updated_hash": "e0f7526cb1051574323ff07a115f50971844460c"
+  },
+  "docs/modeling/naming-standards.md": {
+    "created": 1774360657,
+    "created_hash": "c0d861a52389a5e0e3f16164e9b340a9b8904113",
+    "updated": 1777941610,
+    "updated_hash": "ff89994469594cabb1586207ff0c6b25f3972e51"
+  },
+  "docs/modeling/parametric-modeling.md": {
+    "created": 1775303720,
+    "created_hash": "52679080dc39226c91bad8d3fb10fe42d80bf861",
+    "updated": 1779613971,
+    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+  },
+  "docs/modeling/revision-control.md": {
+    "created": 1775303720,
+    "created_hash": "52679080dc39226c91bad8d3fb10fe42d80bf861",
+    "updated": 1777941610,
+    "updated_hash": "ff89994469594cabb1586207ff0c6b25f3972e51"
+  }
+}

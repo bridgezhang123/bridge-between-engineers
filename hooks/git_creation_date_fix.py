@@ -1,10 +1,29 @@
 import os
+import json
 import subprocess
 from pathlib import Path
 
 from git import Repo
 
 from mkdocs_git_revision_date_localized_plugin.util import Util
+
+
+_PAGE_DATES = None
+
+
+def _load_page_dates(repo_root):
+    global _PAGE_DATES
+
+    if _PAGE_DATES is not None:
+        return _PAGE_DATES
+
+    path = Path(repo_root) / "hooks" / "page_dates.json"
+    if not path.exists():
+        _PAGE_DATES = {}
+        return _PAGE_DATES
+
+    _PAGE_DATES = json.loads(path.read_text(encoding="utf-8"))
+    return _PAGE_DATES
 
 
 def _run_git(repo_root, *args):
@@ -86,22 +105,49 @@ def _get_creation_timestamp(abs_src_path, repo_root):
     return min(values)
 
 
-def on_config(config, **kwargs):
-    repo_root = Path(__file__).resolve().parent.parent
-    _ensure_full_history(repo_root)
-    return config
+def _get_repo_relative_path(abs_src_path, repo_root):
+    repo_root = Path(repo_root).resolve()
+    source_path = Path(abs_src_path).resolve()
+    try:
+        return source_path.relative_to(repo_root).as_posix()
+    except ValueError:
+        return None
 
 
-def on_page_markdown(markdown, page, config, files, **kwargs):
-    if not getattr(page.file, "abs_src_path", None):
-        return markdown
+def _get_git_page_dates(abs_src_path, repo_root):
+    repo = Repo(repo_root, search_parent_directories=True)
+    rel_path = _get_repo_relative_path(abs_src_path, repo_root)
+    if rel_path is None:
+        return None
 
-    repo_root = Path(__file__).resolve().parent.parent
-    timestamp = _get_creation_timestamp(page.file.abs_src_path, repo_root)
-    if timestamp is None:
-        return markdown
+    result = repo.git.log(
+        "--follow",
+        "--date=unix",
+        "--format=%at%x09%H",
+        "--",
+        rel_path,
+    )
+    revisions = []
+    for line in result.splitlines():
+        if not line.strip():
+            continue
+        timestamp, commit_hash = line.split("\t", 1)
+        revisions.append((int(timestamp), commit_hash))
 
-    locale = _resolve_locale(page, config)
+    if not revisions:
+        return None
+
+    created_timestamp, created_hash = min(revisions, key=lambda item: item[0])
+    updated_timestamp, updated_hash = max(revisions, key=lambda item: item[0])
+    return {
+        "created": created_timestamp,
+        "created_hash": created_hash,
+        "updated": updated_timestamp,
+        "updated_hash": updated_hash,
+    }
+
+
+def _format_dates(timestamp, locale, repo_root):
     util = Util(
         config={
             "type": "date",
@@ -115,11 +161,54 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
         },
         mkdocs_dir=str(repo_root),
     )
+    return (
+        util.get_date_formats_for_timestamp(timestamp, locale=locale, add_spans=True),
+        util.get_date_formats_for_timestamp(timestamp, locale=locale, add_spans=False),
+    )
 
-    creation_dates = util.get_date_formats_for_timestamp(timestamp, locale=locale, add_spans=True)
-    page.meta["git_creation_date_localized"] = creation_dates["date"]
-    creation_dates_raw = util.get_date_formats_for_timestamp(timestamp, locale=locale, add_spans=False)
-    for date_type, date_string in creation_dates_raw.items():
-        page.meta[f"git_creation_date_localized_raw_{date_type}"] = date_string
+
+def _apply_date_meta(page, key, timestamp, commit_hash, locale, repo_root):
+    formatted, raw = _format_dates(timestamp, locale, repo_root)
+    page.meta[f"git_{key}_date_localized"] = formatted["date"]
+    page.meta[f"git_{key}_date_localized_hash"] = commit_hash
+    page.meta[f"git_{key}_date_localized_tag"] = None
+    for date_type, date_string in raw.items():
+        page.meta[f"git_{key}_date_localized_raw_{date_type}"] = date_string
+
+
+def on_config(config, **kwargs):
+    repo_root = Path(__file__).resolve().parent.parent
+    _ensure_full_history(repo_root)
+    return config
+
+
+def on_page_markdown(markdown, page, config, files, **kwargs):
+    if not getattr(page.file, "abs_src_path", None):
+        return markdown
+
+    repo_root = Path(__file__).resolve().parent.parent
+    rel_path = _get_repo_relative_path(page.file.abs_src_path, repo_root)
+    manifest_dates = _load_page_dates(repo_root).get(rel_path) if rel_path else None
+    dates = manifest_dates or _get_git_page_dates(page.file.abs_src_path, repo_root)
+    if not dates:
+        return markdown
+
+    locale = _resolve_locale(page, config)
+    _apply_date_meta(
+        page,
+        "creation",
+        dates["created"],
+        dates.get("created_hash"),
+        locale,
+        repo_root,
+    )
+    _apply_date_meta(
+        page,
+        "revision",
+        dates["updated"],
+        dates.get("updated_hash"),
+        locale,
+        repo_root,
+    )
 
     return markdown
