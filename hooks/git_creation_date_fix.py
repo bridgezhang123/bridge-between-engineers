@@ -17,13 +17,18 @@ def _resolve_locale(page, config):
 
 def _get_creation_timestamp(abs_src_path, repo_root):
     repo = Repo(repo_root, search_parent_directories=True)
+    repo_root = Path(repo_root).resolve()
+    source_path = Path(abs_src_path).resolve()
+    try:
+        rel_path = source_path.relative_to(repo_root)
+    except ValueError:
+        return None
+
     result = repo.git.log(
         "--follow",
-        "--reverse",
         "--date=unix",
         "--format=%at",
-        "--diff-filter=A",
-        str(Path(abs_src_path).resolve()),
+        str(rel_path),
     )
     values = [int(value) for value in result.splitlines() if value.strip()]
     if not values:
