@@ -92,7 +92,8 @@ nav:
     - 导览: manufacturing/index.md
     - 机加工基础: manufacturing/machining-basics.md
     - 工艺规划: manufacturing/process-planning.md
-    - 表面处理: manufacturing/surface-finish.md
+    - 表面处理(总览): manufacturing/surface-finish.md
+    - 表面处理(铝合金阳极氧化): manufacturing/anodic-coatings-for-aluminum-and-aluminum-alloy.md
     - 热处理: manufacturing/heat-treatment.md
   - 测量:
     - 导览: measurement/index.md
