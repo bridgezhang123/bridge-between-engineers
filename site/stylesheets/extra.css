@@ -438,7 +438,7 @@
   display: block;
 }
 
-.site-footer-copyright-link {
+.site-footer-extra-link {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -450,11 +450,19 @@
   white-space: nowrap;
 }
 
-.site-footer-copyright-link:hover {
+.md-copyright > .site-footer-filing-link {
+  display: block;
+  width: max-content;
+  margin: 0.12rem 0;
+  font-size: 0.64rem;
+  line-height: 1.4;
+}
+
+.site-footer-extra-link:hover {
   text-decoration: underline;
 }
 
-.site-footer-copyright-icon {
+.site-footer-extra-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -464,7 +472,7 @@
   line-height: 1;
 }
 
-.site-footer-copyright-text {
+.site-footer-extra-text {
   line-height: 1;
 }
 
