@@ -56,8 +56,8 @@
   "docs/design/design-cases.md": {
     "created": 1773749768,
     "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
-    "updated": 1779613971,
-    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+    "updated": 1779712272,
+    "updated_hash": "16e5eb91d7eec28ff70918e8429cb7bfb8c94856"
   },
   "docs/design/design-philosophy.md": {
     "created": 1773749768,
@@ -95,11 +95,17 @@
     "updated": 1779613971,
     "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
   },
+  "docs/manufacturing/anodic-coatings-for-aluminum-and-aluminum-alloy.md": {
+    "created": 1779712272,
+    "created_hash": "16e5eb91d7eec28ff70918e8429cb7bfb8c94856",
+    "updated": 1779712272,
+    "updated_hash": "16e5eb91d7eec28ff70918e8429cb7bfb8c94856"
+  },
   "docs/manufacturing/heat-treatment.md": {
     "created": 1773749768,
     "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
-    "updated": 1777294586,
-    "updated_hash": "22e0d3113bf953a6d09d51dced53498ba804fead"
+    "updated": 1779712272,
+    "updated_hash": "16e5eb91d7eec28ff70918e8429cb7bfb8c94856"
   },
   "docs/manufacturing/index.md": {
     "created": 1773749768,
@@ -122,8 +128,8 @@
   "docs/manufacturing/surface-finish.md": {
     "created": 1773749768,
     "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
-    "updated": 1779613971,
-    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+    "updated": 1779712272,
+    "updated_hash": "16e5eb91d7eec28ff70918e8429cb7bfb8c94856"
   },
   "docs/measurement/gdt.md": {
     "created": 1773749768,
@@ -158,8 +164,8 @@
   "docs/modeling/dimensioning.md": {
     "created": 1773749768,
     "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
-    "updated": 1777941610,
-    "updated_hash": "ff89994469594cabb1586207ff0c6b25f3972e51"
+    "updated": 1779712272,
+    "updated_hash": "16e5eb91d7eec28ff70918e8429cb7bfb8c94856"
   },
   "docs/modeling/drawing-template.md": {
     "created": 1775303720,
