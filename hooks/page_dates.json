@@ -182,20 +182,20 @@
   "docs/modeling/improve-efficiency.md": {
     "created": 1778593347,
     "created_hash": "e0f7526cb1051574323ff07a115f50971844460c",
-    "updated": 1779613971,
-    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+    "updated": 1780797063,
+    "updated_hash": "e2010eaad8fa2ad0fb6bc9bd221a9c074163c8ac"
   },
   "docs/modeling/index.md": {
     "created": 1773749768,
     "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
-    "updated": 1779613971,
-    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+    "updated": 1780797063,
+    "updated_hash": "e2010eaad8fa2ad0fb6bc9bd221a9c074163c8ac"
   },
   "docs/modeling/model-checking.md": {
     "created": 1778593347,
     "created_hash": "e0f7526cb1051574323ff07a115f50971844460c",
-    "updated": 1779613971,
-    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
+    "updated": 1780797063,
+    "updated_hash": "e2010eaad8fa2ad0fb6bc9bd221a9c074163c8ac"
   },
   "docs/modeling/modeling-method.md": {
     "created": 1775303720,
@@ -220,5 +220,11 @@
     "created_hash": "52679080dc39226c91bad8d3fb10fe42d80bf861",
     "updated": 1777941610,
     "updated_hash": "ff89994469594cabb1586207ff0c6b25f3972e51"
+  },
+  "docs/modeling/software-copyright.md": {
+    "created": 1780797063,
+    "created_hash": "e2010eaad8fa2ad0fb6bc9bd221a9c074163c8ac",
+    "updated": 1780797063,
+    "updated_hash": "e2010eaad8fa2ad0fb6bc9bd221a9c074163c8ac"
   }
 }
