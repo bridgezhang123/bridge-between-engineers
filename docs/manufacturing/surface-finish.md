@@ -1,4 +1,4 @@
-# 表面处理知识框架
+# 制造专题--表面处理概述
 
 ## 1. 范围与目标
 
@@ -27,7 +27,6 @@
 ### 3.1 背景简述
 
 - 由第二节可知，表面处理有完善的国家标准和行业标准，这些标准的范围和目标可能有所不同。
-- 材料基础：钢、铝合金、铜合金等不同材料在表面处理与热处理中的行为不同。
 - 目标层次：
     - 防腐、防锈、装饰、耐磨、耐疲劳等属于“表面处理”范畴；
     - 强度、硬度、韧性、残余应力等属于“热处理”范畴。
@@ -99,10 +98,26 @@ flowchart LR
 - 渗氮
     - 通过氮扩散形成硬化层和氮化物层，显著提高耐磨、抗疲劳能力。
 
+此处提供一张常见材料、常见表面处理的样卡，供参考。图片由[Misumi 机加工服务](https://meviy.misumi.com.cn/zh_cn-cn/)的工程师提供，表示感谢。注：logo挡住的地方，原图的字符仍很模糊，此处不额外说明；另提供一张更清晰的常见表面处理的样卡渲染图([来源](https://info-meviy.misumi.com.cn/details/3361/))。
+
+说明：此处的两张图片，应Misumi工程师的要求，仅限于此文章中使用，未经许可不用于其他地方或商业用途。
+
+<figure markdown="span">
+  ![Surface-Finish-Sample-Card](../images/docs_manufacturing/bbe_docs_manufacturing_Surface-Finish-Sample-Card-watermarked.jpeg){ width="720" }
+  <figcaption>Surface-Finish-Sample-Card</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Surface-Finish-Sample-Card-2](../images/docs_manufacturing/bbe_docs_manufacturing_Surface-Finish-Sample-Card-2.png){ width="720" }
+  <figcaption>Surface-Finish-Sample-Card-2</figcaption>
+</figure>
+
 ## 4. 其余要点
 
 - 我们无法就所有表面处理的国家标准进行详细阐述，只能在作者接触到的表面处理工艺中进行阐述。
+- 国家标准的理解宜以够用为准，视项目具体情况而决定对相关标准的理解深度。
 - 关于铝合金阳极氧化的工艺，可参考[表面处理(铝合金阳极氧化)](anodic-coatings-for-aluminum-and-aluminum-alloy.md)一文。
+- 表面处理工艺，某种程度上取决于供应商/制造商的工艺水平及执行的标准。
 
 ## 5. 边界与风险
 
