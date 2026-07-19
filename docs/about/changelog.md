@@ -2,6 +2,37 @@
 
 本页用于记录本站较重要的内容更新、结构调整与页面优化。
 
+## 2026-07-11
+
+- 重写并扩展[热处理知识框架](../manufacturing/heat-treatment.md)，补充热处理标准线索、工艺分类、图纸表达示例与设计风险提示。
+- 新增[热处理基础](../manufacturing/heat-treatment-foundations.md) 页面，整理铁碳相图、相变、TTT 曲线、A2-70 / A4-70 与沉淀硬化不锈钢等基础概念，作为热处理专题的补充说明。
+- 更新[表面处理概述](../manufacturing/surface-finish.md)，加入常见表面处理样卡图片、授权使用说明与参考来源。
+- 新增 `scripts/add_watermark.py` 图片水印脚本，并补充 Pillow 依赖，用于对站内图片素材做更统一的标识处理。
+
+## 2026-06-16
+
+- 继续修订[基本标注](../modeling/dimensioning.md)，将尺寸标注从“设计表达”进一步收束到加工、检验和可读性复核。
+- 局部调整[热处理知识框架](../manufacturing/heat-treatment.md) 与[表面处理概述](../manufacturing/surface-finish.md)，为后续制造专题的细分页面做铺垫。
+
+## 2026-06-07
+
+- 新增[软件版权](../modeling/software-copyright.md) 页面，作为 SolidWorks 建模与图纸系列的补充文章，讨论专业软件授权、工程协作环境与职业边界。
+- 同步调整[建模与图纸](../modeling/index.md) 系列目录，将软件版权、模型检查与效率提升三篇补充文章重新编号并纳入导航。
+- 对[模型检查](../modeling/model-checking.md) 与[提升效率](../modeling/improve-efficiency.md) 的标题编号做一致化处理。
+
+## 2026-05-31
+
+- 在[关于站点](site.md) 中补充“关于备案”说明，记录本站当前 GitHub Actions、Vercel、Cloudflare 与自定义域名之间的部署关系。
+- 记录微信外部链接访问警告与申诉恢复过程，并补充审核结果截图，方便日后回看站点公开访问链路中的实际问题。
+- 调整页脚脚本与样式，在底部增加“关于备案”入口，并继续保留“版权与许可”链接。
+- 修正[基本标注](../modeling/dimensioning.md) 中部分文字表述。
+
+## 2026-05-25
+
+- 新增[表面处理(铝合金阳极氧化)](../manufacturing/anodic-coatings-for-aluminum-and-aluminum-alloy.md) 页面，整理铝合金阳极氧化、硬质阳极氧化、海水浸泡掉色案例与供应商沟通要点。
+- 调整制造栏目导航，将表面处理总览与铝合金阳极氧化专题拆分展示。
+- 补充[设计案例](../design/design-cases.md)、[热处理知识框架](../manufacturing/heat-treatment.md)、[表面处理概述](../manufacturing/surface-finish.md) 与[基本标注](../modeling/dimensioning.md) 中的部分内容。
+
 ## 2026-05-24
 
 - 修正站点底部“最后更新 / 创建日期”的数据来源，取消构建日期兜底，改为优先使用 Git 历史，避免 Vercel 部署时间误覆盖页面真实更新时间。

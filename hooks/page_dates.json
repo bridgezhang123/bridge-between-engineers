@@ -101,11 +101,17 @@
     "updated": 1779712272,
     "updated_hash": "16e5eb91d7eec28ff70918e8429cb7bfb8c94856"
   },
+  "docs/manufacturing/heat-treatment-foundations.md": {
+    "created": 1783767243,
+    "created_hash": "12d1bfbe2ac6ecdd0418dba6449bc32e4f127af3",
+    "updated": 1783767243,
+    "updated_hash": "12d1bfbe2ac6ecdd0418dba6449bc32e4f127af3"
+  },
   "docs/manufacturing/heat-treatment.md": {
     "created": 1773749768,
     "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
-    "updated": 1781609534,
-    "updated_hash": "39cf602429502a4bdaa41c5bb8db42957cec5bba"
+    "updated": 1783767243,
+    "updated_hash": "12d1bfbe2ac6ecdd0418dba6449bc32e4f127af3"
   },
   "docs/manufacturing/index.md": {
     "created": 1773749768,
@@ -128,8 +134,8 @@
   "docs/manufacturing/surface-finish.md": {
     "created": 1773749768,
     "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
-    "updated": 1781609534,
-    "updated_hash": "39cf602429502a4bdaa41c5bb8db42957cec5bba"
+    "updated": 1783767243,
+    "updated_hash": "12d1bfbe2ac6ecdd0418dba6449bc32e4f127af3"
   },
   "docs/measurement/gdt.md": {
     "created": 1773749768,
