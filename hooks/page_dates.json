@@ -14,8 +14,8 @@
   "docs/about/changelog.md": {
     "created": 1774174891,
     "created_hash": "8be4cb86fa876b696fef92ab7cc491eb0aa3ab6b",
-    "updated": 1779609130,
-    "updated_hash": "5f2ad22bdc8ac06df71db02fe2b4e6a1ced3655a"
+    "updated": 1784473559,
+    "updated_hash": "dcfb165556f1f9b3d768696e3b238d1375b61d48"
   },
   "docs/about/collaboration.md": {
     "created": 1774682351,
@@ -82,6 +82,12 @@
     "created_hash": "740d184938244ef0c01d8d136b1a94675515e13c",
     "updated": 1775559911,
     "updated_hash": "740d184938244ef0c01d8d136b1a94675515e13c"
+  },
+  "docs/design/o_rings-for-fluid-power-systems.md": {
+    "created": 1784473559,
+    "created_hash": "dcfb165556f1f9b3d768696e3b238d1375b61d48",
+    "updated": 1784473559,
+    "updated_hash": "dcfb165556f1f9b3d768696e3b238d1375b61d48"
   },
   "docs/design/supplier-background.md": {
     "created": 1777079072,

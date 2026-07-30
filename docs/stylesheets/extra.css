@@ -458,6 +458,11 @@
   line-height: 1.4;
 }
 
+.site-footer-copyright-link {
+  font-size: 0.64rem;
+  line-height: 1.4;
+}
+
 .site-footer-extra-link:hover {
   text-decoration: underline;
 }

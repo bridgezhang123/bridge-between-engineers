@@ -100,6 +100,7 @@ nav:
     - 热处理基础: manufacturing/heat-treatment-foundations.md
   - 测量:
     - 导览: measurement/index.md
+    - 引言: measurement/introductions.md
     - 测量工具: measurement/tools.md
     - 形位公差检验: measurement/gdt.md
     - 质量控制: measurement/quality-control.md
