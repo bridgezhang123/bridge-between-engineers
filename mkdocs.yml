@@ -104,6 +104,8 @@ nav:
     - 测量工具: measurement/tools.md
     - 形位公差检验: measurement/gdt.md
     - 质量控制: measurement/quality-control.md
+  - 机械资讯:
+    - 导览: mechanical-news/index.md
   - 关于:
     - 导览: about/index.md
     - 关于作者: about/author.md
@@ -160,6 +162,7 @@ extra_javascript:
   - javascripts/print-button.js
   - javascripts/theme-toggle.js
   - javascripts/footer-link.js
+  - javascripts/pageviews.js
 
 hooks:
   - hooks/search_worker.py

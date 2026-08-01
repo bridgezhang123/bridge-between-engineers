@@ -463,6 +463,19 @@
   line-height: 1.4;
 }
 
+.site-footer-pageviews {
+  display: none;
+  width: max-content;
+  margin: 0.12rem 0;
+  font-size: 0.64rem;
+  line-height: 1.4;
+  opacity: 0.95;
+}
+
+.site-footer-pageviews.is-visible {
+  display: block;
+}
+
 .site-footer-extra-link:hover {
   text-decoration: underline;
 }
