@@ -173,11 +173,17 @@
     "updated": 1775363208,
     "updated_hash": "610255723531414bc5f4f3f4c132503b5714c22b"
   },
+  "docs/mechanical-news/index.md": {
+    "created": 1785550882,
+    "created_hash": "bc6606afa4e015da01d765dfdcac5422d68f18af",
+    "updated": 1785550882,
+    "updated_hash": "bc6606afa4e015da01d765dfdcac5422d68f18af"
+  },
   "docs/modeling/configurations.md": {
     "created": 1775303720,
     "created_hash": "52679080dc39226c91bad8d3fb10fe42d80bf861",
-    "updated": 1785422336,
-    "updated_hash": "49f60b581e1d691cf51c107949aaf41790eb4e9b"
+    "updated": 1785550882,
+    "updated_hash": "bc6606afa4e015da01d765dfdcac5422d68f18af"
   },
   "docs/modeling/dimensioning.md": {
     "created": 1773749768,
