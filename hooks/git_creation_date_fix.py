@@ -147,6 +147,34 @@ def _get_git_page_dates(abs_src_path, repo_root):
     }
 
 
+def _pick_earliest(*dates):
+    values = [date for date in dates if date]
+    if not values:
+        return None
+    return min(values, key=lambda date: date["created"])
+
+
+def _pick_latest(*dates):
+    values = [date for date in dates if date]
+    if not values:
+        return None
+    return max(values, key=lambda date: date["updated"])
+
+
+def _merge_page_dates(manifest_dates, git_dates):
+    created_source = _pick_earliest(manifest_dates, git_dates)
+    updated_source = _pick_latest(manifest_dates, git_dates)
+    if not created_source or not updated_source:
+        return None
+
+    return {
+        "created": created_source["created"],
+        "created_hash": created_source.get("created_hash"),
+        "updated": updated_source["updated"],
+        "updated_hash": updated_source.get("updated_hash"),
+    }
+
+
 def _format_dates(timestamp, locale, repo_root):
     util = Util(
         config={
@@ -189,7 +217,8 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
     repo_root = Path(__file__).resolve().parent.parent
     rel_path = _get_repo_relative_path(page.file.abs_src_path, repo_root)
     manifest_dates = _load_page_dates(repo_root).get(rel_path) if rel_path else None
-    dates = manifest_dates or _get_git_page_dates(page.file.abs_src_path, repo_root)
+    git_dates = _get_git_page_dates(page.file.abs_src_path, repo_root)
+    dates = _merge_page_dates(manifest_dates, git_dates)
     if not dates:
         return markdown
 
