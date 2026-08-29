@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (copyright && copyrightHighlight) {
       var filingLink = document.createElement('a');
-      filingLink.href = '/about/site/#filing';
+      filingLink.href = '/about/#filing';
       filingLink.setAttribute('aria-label', '关于备案');
       filingLink.className = 'site-footer-extra-link site-footer-filing-link';
       filingLink.textContent = '关于备案';
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
       return link;
     }
 
-    var copyrightLink = createFooterLink('/about/copyright-license/', '版权与许可', '©', 'site-footer-copyright-link');
+    var copyrightLink = createFooterLink('/about/collaboration/#copyright-license', '版权与许可', '©', 'site-footer-copyright-link');
 
     if (bilibiliLink) {
       bilibiliLink.insertAdjacentElement('afterend', copyrightLink);
