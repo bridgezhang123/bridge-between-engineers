@@ -1,0 +1,12 @@
+name = "bridge-between-engineers-pageviews"
+main = "worker.js"
+compatibility_date = "2026-08-29"
+
+routes = [
+  { pattern = "www.bridgezhang.com/api/pageview*", zone_name = "bridgezhang.com" },
+]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bridge-between-engineers-pageviews"
+database_id = "fb3496d4-23ab-47d2-926a-8b2ab9268f92"

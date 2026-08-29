@@ -38,8 +38,8 @@
   "docs/about/site-building.md": {
     "created": 1773749768,
     "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
-    "updated": 1775363208,
-    "updated_hash": "610255723531414bc5f4f3f4c132503b5714c22b"
+    "updated": 1785553178,
+    "updated_hash": "d86d4ae0a1928dbcb0530088f189059714b4269f"
   },
   "docs/about/site.md": {
     "created": 1773749768,
@@ -74,12 +74,6 @@
   "docs/design/index.md": {
     "created": 1773749768,
     "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
-    "updated": 1775559911,
-    "updated_hash": "740d184938244ef0c01d8d136b1a94675515e13c"
-  },
-  "docs/design/mandarin-communication.md": {
-    "created": 1775559911,
-    "created_hash": "740d184938244ef0c01d8d136b1a94675515e13c",
     "updated": 1775559911,
     "updated_hash": "740d184938244ef0c01d8d136b1a94675515e13c"
   },
