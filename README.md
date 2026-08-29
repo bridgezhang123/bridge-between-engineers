@@ -101,10 +101,10 @@ For more details, see:
 Code and configuration in this repository are licensed under the MIT License.
 
 Text, images, and other content are described separately in the site documentation:
-[docs/about/copyright-license.md](docs/about/copyright-license.md)
+[docs/about/collaboration.md](docs/about/collaboration.md)
 
 ## Related Pages
 
-- [About This Site](docs/about/site.md)
+- [About This Site](docs/about/index.md)
 - [Building This Site](docs/about/site-building.md)
 - [Changelog](docs/about/changelog.md)

@@ -38,7 +38,7 @@ about:
   description: >-
     感谢您的来访。本站内容仍在持续整理与打磨之中；若您对专业内容、结构安排或阅读体验有建议，欢迎提出。
   button_text: 进一步了解
-  button_link: about/site/
+  button_link: about/
 connect:
   title: 保持联系
   links:
@@ -50,7 +50,7 @@ connect:
       link: https://github.com/bridgezhang123
     - icon: fontawesome/brands/weixin
       text: 微信公众号
-      link: about/author/#wechat
+      link: about/#wechat
     - icon: fontawesome/brands/zhihu
       text: 知乎
       link: https://www.zhihu.com/people/zhang-qiao-88-68

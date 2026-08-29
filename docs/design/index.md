@@ -13,7 +13,6 @@
 
 1. [设计方法](design-philosophy.md)
 2. [AI 协作工作流](ai-workflow.md)
-3. [普通话沟通与工程表达](mandarin-communication.md)
-4. [设计案例](design-cases.md)
+3. [设计案例](design-cases.md)
 
-如果您希望先看与 AI 协作相关的内容，可从 [AI 协作工作流](ai-workflow.md) 开始；如果您更关心机械工作中的口头沟通与表达基础，可继续阅读 [普通话沟通与工程表达](mandarin-communication.md)。
+如果您希望先看与 AI 协作相关的内容，可从 [AI 协作工作流](ai-workflow.md) 开始。

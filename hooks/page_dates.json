@@ -5,12 +5,6 @@
     "updated": 1777294586,
     "updated_hash": "22e0d3113bf953a6d09d51dced53498ba804fead"
   },
-  "docs/about/author.md": {
-    "created": 1773749768,
-    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
-    "updated": 1779613971,
-    "updated_hash": "24530359ce4ea453f5a0ad09b09fec81e324aa79"
-  },
   "docs/about/changelog.md": {
     "created": 1774174891,
     "created_hash": "8be4cb86fa876b696fef92ab7cc491eb0aa3ab6b",
@@ -18,12 +12,6 @@
     "updated_hash": "dcfb165556f1f9b3d768696e3b238d1375b61d48"
   },
   "docs/about/collaboration.md": {
-    "created": 1774682351,
-    "created_hash": "1bd4fdd28bc4aef1e273dad73735e1440be81e17",
-    "updated": 1775561073,
-    "updated_hash": "ed64750634d6217ea864708b967556f83ac87e57"
-  },
-  "docs/about/copyright-license.md": {
     "created": 1774682351,
     "created_hash": "1bd4fdd28bc4aef1e273dad73735e1440be81e17",
     "updated": 1775561073,
@@ -40,12 +28,6 @@
     "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
     "updated": 1785553178,
     "updated_hash": "d86d4ae0a1928dbcb0530088f189059714b4269f"
-  },
-  "docs/about/site.md": {
-    "created": 1773749768,
-    "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
-    "updated": 1780199811,
-    "updated_hash": "fd864e44d40730821ae15dba6e6f684d65215396"
   },
   "docs/design/ai-workflow.md": {
     "created": 1775559911,
@@ -176,8 +158,8 @@
   "docs/modeling/configurations.md": {
     "created": 1775303720,
     "created_hash": "52679080dc39226c91bad8d3fb10fe42d80bf861",
-    "updated": 1785550882,
-    "updated_hash": "bc6606afa4e015da01d765dfdcac5422d68f18af"
+    "updated": 1787964308,
+    "updated_hash": "cb06f3057e47651eac84d8ea360191b85c36fada"
   },
   "docs/modeling/dimensioning.md": {
     "created": 1773749768,

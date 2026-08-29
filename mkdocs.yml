@@ -74,7 +74,6 @@ nav:
     - DFMEA: design/dfmea.md
     - AI 协作工作流: design/ai-workflow.md
     - 供应商背景: design/supplier-background.md
-    - 普通话沟通与工程表达: design/mandarin-communication.md
     - 设计案例: design/design-cases.md
     - 液压气动用O形橡胶密封圈: design/o_rings-for-fluid-power-systems.md
   - 建模与图纸:
@@ -108,11 +107,8 @@ nav:
     - 导览: mechanical-news/index.md
   - 关于:
     - 导览: about/index.md
-    - 关于作者: about/author.md
-    - 关于站点: about/site.md
     - 建站说明: about/site-building.md
     - 协作说明: about/collaboration.md
-    - 版权与许可: about/copyright-license.md
     - 致谢: about/acknowledgements.md
     - 更新日志: about/changelog.md
 
@@ -123,7 +119,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/bridgezhang123
     - icon: fontawesome/brands/weixin
-      link: https://www.bridgezhang.com/about/author/#wechat
+      link: https://www.bridgezhang.com/about/#wechat
     - icon: fontawesome/brands/zhihu
       link: https://www.zhihu.com/people/zhang-qiao-88-68
     - icon: fontawesome/brands/bilibili
