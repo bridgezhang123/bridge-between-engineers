@@ -37,6 +37,11 @@
 
 也正因为网站没有 ICP 备案，在微信内打开本站时，曾出现过外部链接访问警告。该提示并不代表网站内容本身存在违规问题，但会影响读者从微信环境直接访问本站。
 
+<figure markdown="span">
+  ![Wechat webpage restoration request](../images/docs_about/bbe_docs_about_site_Wechat-webpage-caution.png){ width="720" }
+  <figcaption>微信外部链接访问警告</figcaption>
+</figure>
+
 后续我向腾讯公司微信团队提交了申诉。经审核，微信团队确认链接 `http://bridgezhang.com` 不含违规内容，外部链接在微信内的直接访问已恢复。
 
 <figure markdown="span">
