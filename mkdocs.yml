@@ -4,8 +4,8 @@ site_name: Bridge Between Engineers
 site_url: https://www.bridgezhang.com/
 site_author: Bridge Zhang
 site_description: >-
-  机械工程学习笔记、设计思考与实践经验，
-  连接理论与真实工程场景。
+  Mechanical engineering study notes, design thinking, and practical experience,
+  connecting theory with real-world engineering scenarios.
 
 repo_url: https://github.com/bridgezhang123/bridge-between-engineers
 repo_name: bridgezhang123/bridge-between-engineers
@@ -18,7 +18,7 @@ theme:
   custom_dir: overrides
   logo: images/logo.png
   favicon: images/favicon.ico
-  language: zh
+  language: en
   features:
     - navigation.tabs
     - navigation.top
