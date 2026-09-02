@@ -91,6 +91,7 @@ nav:
     - 提升效率(补充-3): modeling/improve-efficiency.md
   - 制造:
     - 导览: manufacturing/index.md
+    - 面向CNC加工的设计笔记: manufacturing/cnc-machining.md
     - 机加工基础: manufacturing/machining-basics.md
     - 工艺规划: manufacturing/process-planning.md
     - 表面处理概述: manufacturing/surface-finish.md
