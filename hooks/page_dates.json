@@ -83,6 +83,12 @@
     "updated": 1779712272,
     "updated_hash": "16e5eb91d7eec28ff70918e8429cb7bfb8c94856"
   },
+  "docs/manufacturing/cnc-machining.md": {
+    "created": 1788353076,
+    "created_hash": "3e77d88982d38fbf8cddbb5fdde114a8fa116922",
+    "updated": 1788353076,
+    "updated_hash": "3e77d88982d38fbf8cddbb5fdde114a8fa116922"
+  },
   "docs/manufacturing/heat-treatment-foundations.md": {
     "created": 1783767243,
     "created_hash": "12d1bfbe2ac6ecdd0418dba6449bc32e4f127af3",
@@ -218,8 +224,8 @@
   "docs/modeling/revision-control.md": {
     "created": 1775303720,
     "created_hash": "52679080dc39226c91bad8d3fb10fe42d80bf861",
-    "updated": 1777941610,
-    "updated_hash": "ff89994469594cabb1586207ff0c6b25f3972e51"
+    "updated": 1788353076,
+    "updated_hash": "3e77d88982d38fbf8cddbb5fdde114a8fa116922"
   },
   "docs/modeling/software-copyright.md": {
     "created": 1780797063,
