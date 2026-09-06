@@ -22,12 +22,15 @@
 
 ## 2. 尺寸限制
 
-材料毛坯尺寸
+- 原材料毛坯通常比零件成品尺寸稍大(通常毛坯尺寸大0.5 mm左右即可)，以切除原材料的粗糙面，下图左侧(来源：[xometry.asia](https://xometry.asia/zh-hans/guide/cnc-machining-design-guide-cn/))展示了毛坯与零件加工部分的关系。
+- 此外，应熟悉所选材质原材料的毛坯尺寸，以下图右侧的腔体盖板零件(来源：[szvmt.com](https://www.szvmt.com/articles/qtgbcn.html))举例，其材质为铝合金6061-T6，该材质的中厚板(6.0 - 100 mm)常见厚度系列有8, 10, 12, 15, 16, 18, 20, 22, 25等数值，若该腔体盖板零件的厚度设计值在11-13 mm均可，那选定11.5 mm的厚度值比较合适，适配12 mm原材料板材，并有0.5 mm的粗糙面切屑量；若选定13 mm的厚度值，需要适配15 mm的板材，并额外铣掉2 mm，增加加工成本。
 
-## 3. 零件复杂性
+<figure markdown="span">
+  ![Raw-Material-Blank](../images/docs_manufacturing/bbe_docs_manufacturing_cnc_Raw-Material-Blank.png){ width="720" }
+  <figcaption>Raw-Material-Blank </figcaption>
+</figure>
 
-
-## 4. 圆角
+## 3. 圆角
 
 由于CNC铣床(立式、卧式)是旋转的铣刀去除材料加工，当使用铣床加工内侧交汇壁面时，交汇处不能锋利，必须是圆角过渡。下图中，左侧图不能利于铣刀加工出来。
 
@@ -78,11 +81,9 @@
 
 3. 在铣削加工中，内侧圆角半径应大于所选铣刀半径（通常建议大0.5~1mm），以避免刀具没有<mark>合适的间隙转入铣削</mark>，此时刀具必须停止行进进行铣削，进而引发切削力突变、振动加剧及效率下降。遵循此设计原则，可确保切削路径的连续性，提升加工效率和表面质量，同时延长刀具寿命。常见的铣刀半径系列有3、4、5、6、8 mm等数值，若想用R4的铣刀，设计圆角为R4.5或R5比较合适。
 
-## 5. 孔加工
+## 4. 外螺纹和螺纹孔
 
-## 6. 外螺纹和螺纹孔
-
-### 6.1. 外螺纹 
+### 4.1. 外螺纹 
 
 对于外螺纹而言，应注意开始端的<mark>螺纹倒角</mark>和结束处的<mark>螺纹退刀槽</mark>的表示。如下图所示，左侧的3D图对于螺纹倒角、退刀槽都有清晰的表示，右侧的3D图则没有。此外，此处的M12×1.75为标准螺距，若为细牙螺纹等特殊情况更需要单独说明。
 
@@ -98,7 +99,7 @@
     <figcaption>Example-Of-External-Thread-Error </figcaption>
 </figure>
 
-### 6.2. 螺纹孔
+### 4.2. 螺纹孔
  
 创建螺纹孔时，以下几点值得考虑：
 
@@ -125,8 +126,18 @@
     <figcaption>Threaded-Blind-Hole </figcaption>
 </figure>
 
-## 7. 底切
+## 5. 底切
 
-https://www.rapiddirect.com/zh-CN/blog/undercut-in-machining/ 
-https://www.china-casting.com/zh-CN/%E5%BA%95%E5%88%87%E5%8A%A0%E5%B7%A5/
-可参考该公司及其文章
+普通铣刀难以加工底切(undercuts)特征，一般需要使用<mark>T型槽铣刀</mark>，如下图所示(来源：[rapiddirect.com](https://www.rapiddirect.com/zh-CN/blog/undercut-in-machining/))，显然底切的深度受制于铣刀的直径和容纳铣刀及刀柄的槽的空间。
+
+<figure markdown="span">
+  ![Schematic-Of-Undercuts](../images/docs_manufacturing/bbe_docs_manufacturing_cnc_Schematic-Of-Undercuts.png){ width="720" }
+  <figcaption>Schematic-Of-Undercuts </figcaption>
+</figure>
+
+下图的箱体中框零件中，侧面的装饰性棱槽(底切特征)的尾部为R50的圆弧过渡，此处使用T型槽铣刀加工比较合适。
+
+<figure markdown="span">
+  ![Undercuts-In-Frame-Case](../images/docs_manufacturing/bbe_docs_manufacturing_cnc_Undercuts-In-Frame-Case.png){ width="720" }
+  <figcaption>Undercuts-In-Frame-Case </figcaption>
+</figure>

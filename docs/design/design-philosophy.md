@@ -1,18 +1,6 @@
 # Design Philosophy / 设计方法
 
 本页整理一套可学习、可复用的专业思维模式，适用于工程设计、材料选择与复杂问题求解。
-下面的实现方式较为复杂，还是直接截图比较方便，多平台适用。
-<figure class="markmap-wrapper">
-  <object
-    class="markmap-container"
-    data="/images/docs_design/bbe_docs_design_design-philosophy_markmap.svg.svg"
-    type="image/svg+xml"
-    aria-label="Design philosophy markmap"
-  >
-    <a href="/images/docs_design/bbe_docs_design_design-philosophy_markmap.svg.svg">Open markmap</a>
-  </object>
-  <figcaption>markmap</figcaption>
-</figure>
 
 ## 背景介绍
 
