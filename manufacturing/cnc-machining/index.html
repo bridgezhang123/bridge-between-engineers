@@ -1274,7 +1274,7 @@
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 零件复杂性
+        3. 圆角
       
     </span>
   </a>
@@ -1285,41 +1285,19 @@
   <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 圆角
+        4. 外螺纹和螺纹孔
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. 孔加工
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. 外螺纹和螺纹孔
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. 外螺纹和螺纹孔">
+    <nav class="md-nav" aria-label="4. 外螺纹和螺纹孔">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61" class="md-nav__link">
+  <a href="#41" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1. 外螺纹
+        4.1. 外螺纹
       
     </span>
   </a>
@@ -1327,10 +1305,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62" class="md-nav__link">
+  <a href="#42" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2. 螺纹孔
+        4.2. 螺纹孔
       
     </span>
   </a>
@@ -1343,10 +1321,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
+  <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. 底切
+        5. 底切
       
     </span>
   </a>
@@ -2040,7 +2018,7 @@
   <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. 零件复杂性
+        3. 圆角
       
     </span>
   </a>
@@ -2051,41 +2029,19 @@
   <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. 圆角
+        4. 外螺纹和螺纹孔
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. 孔加工
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. 外螺纹和螺纹孔
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. 外螺纹和螺纹孔">
+    <nav class="md-nav" aria-label="4. 外螺纹和螺纹孔">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61" class="md-nav__link">
+  <a href="#41" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.1. 外螺纹
+        4.1. 外螺纹
       
     </span>
   </a>
@@ -2093,10 +2049,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#62" class="md-nav__link">
+  <a href="#42" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6.2. 螺纹孔
+        4.2. 螺纹孔
       
     </span>
   </a>
@@ -2109,10 +2065,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
+  <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7. 底切
+        5. 底切
       
     </span>
   </a>
@@ -2178,9 +2134,16 @@
 </li>
 </ul>
 <h2 id="2">2. 尺寸限制</h2>
-<p>材料毛坯尺寸</p>
-<h2 id="3">3. 零件复杂性</h2>
-<h2 id="4">4. 圆角</h2>
+<ul>
+<li>原材料毛坯通常比零件成品尺寸稍大(通常毛坯尺寸大0.5 mm左右即可)，以切除原材料的粗糙面，下图左侧(来源：<a href="https://xometry.asia/zh-hans/guide/cnc-machining-design-guide-cn/">xometry.asia</a>)展示了毛坯与零件加工部分的关系。</li>
+<li>此外，应熟悉所选材质原材料的毛坯尺寸，以下图右侧的腔体盖板零件(来源：<a href="https://www.szvmt.com/articles/qtgbcn.html">szvmt.com</a>)举例，其材质为铝合金6061-T6，该材质的中厚板(6.0 - 100 mm)常见厚度系列有8, 10, 12, 15, 16, 18, 20, 22, 25等数值，若该腔体盖板零件的厚度设计值在11-13 mm均可，那选定11.5 mm的厚度值比较合适，适配12 mm原材料板材，并有0.5 mm的粗糙面切屑量；若选定13 mm的厚度值，需要适配15 mm的板材，并额外铣掉2 mm，增加加工成本。</li>
+</ul>
+<figure>
+  <img alt="Raw-Material-Blank" src="../../images/docs_manufacturing/bbe_docs_manufacturing_cnc_Raw-Material-Blank.png" width="720" />
+<br />
+<figcaption>Raw-Material-Blank </figcaption>
+</figure>
+<h2 id="3">3. 圆角</h2>
 <p>由于CNC铣床(立式、卧式)是旋转的铣刀去除材料加工，当使用铣床加工内侧交汇壁面时，交汇处不能锋利，必须是圆角过渡。下图中，左侧图不能利于铣刀加工出来。</p>
 <figure>
     <img alt="Sharp-Transitions-And-Rounded-Transitions" src="../../images/docs_manufacturing/bbe_docs_manufacturing_cnc-machining_Sharp-Transitions-And-Rounded-Transitions.png" width="720" />
@@ -2221,9 +2184,8 @@
 <p>在铣削加工中，内侧圆角半径应大于所选铣刀半径（通常建议大0.5~1mm），以避免刀具没有<mark>合适的间隙转入铣削</mark>，此时刀具必须停止行进进行铣削，进而引发切削力突变、振动加剧及效率下降。遵循此设计原则，可确保切削路径的连续性，提升加工效率和表面质量，同时延长刀具寿命。常见的铣刀半径系列有3、4、5、6、8 mm等数值，若想用R4的铣刀，设计圆角为R4.5或R5比较合适。</p>
 </li>
 </ol>
-<h2 id="5">5. 孔加工</h2>
-<h2 id="6">6. 外螺纹和螺纹孔</h2>
-<h3 id="61">6.1. 外螺纹</h3>
+<h2 id="4">4. 外螺纹和螺纹孔</h2>
+<h3 id="41">4.1. 外螺纹</h3>
 <p>对于外螺纹而言，应注意开始端的<mark>螺纹倒角</mark>和结束处的<mark>螺纹退刀槽</mark>的表示。如下图所示，左侧的3D图对于螺纹倒角、退刀槽都有清晰的表示，右侧的3D图则没有。此外，此处的M12×1.75为标准螺距，若为细牙螺纹等特殊情况更需要单独说明。</p>
 <figure>
     <img alt="External-Thread" src="../../images/docs_manufacturing/bbe_docs_manufacturing_cnc-machining_External-Thread.png" width="720" />
@@ -2234,7 +2196,7 @@
     <img alt="Example-Of-External-Thread-Error" src="../../images/docs_manufacturing/bbe_docs_manufacturing_cnc-machining_Example-Of-External-Thread-Error.jpg" width="720" />
     <figcaption>Example-Of-External-Thread-Error </figcaption>
 </figure>
-<h3 id="62">6.2. 螺纹孔</h3>
+<h3 id="42">4.2. 螺纹孔</h3>
 <p>创建螺纹孔时，以下几点值得考虑：</p>
 <p>螺纹线不宜过长，通常而言，金属材质一般螺纹线不超过孔径的两倍，如下图所示，来源<a href="https://xometry.asia/zh-hans/guide/cnc-machining-design-guide-cn/">xometry.asia</a>。</p>
 <figure>
@@ -2253,10 +2215,19 @@
     <img alt="Threaded-Blind-Hole" src="../../images/docs_manufacturing/bbe_docs_manufacturing_cnc-machining_Threaded-Blind-Hole.png" width="720" />
     <figcaption>Threaded-Blind-Hole </figcaption>
 </figure>
-<h2 id="7">7. 底切</h2>
-<p>https://www.rapiddirect.com/zh-CN/blog/undercut-in-machining/ 
-https://www.china-casting.com/zh-CN/%E5%BA%95%E5%88%87%E5%8A%A0%E5%B7%A5/
-可参考该公司及其文章</p>
+<h2 id="5">5. 底切</h2>
+<p>普通铣刀难以加工底切(undercuts)特征，一般需要使用<mark>T型槽铣刀</mark>，如下图所示(来源：<a href="https://www.rapiddirect.com/zh-CN/blog/undercut-in-machining/">rapiddirect.com</a>)，显然底切的深度受制于铣刀的直径和容纳铣刀及刀柄的槽的空间。</p>
+<figure>
+  <img alt="Schematic-Of-Undercuts" src="../../images/docs_manufacturing/bbe_docs_manufacturing_cnc_Schematic-Of-Undercuts.png" width="720" />
+<br />
+<figcaption>Schematic-Of-Undercuts </figcaption>
+</figure>
+<p>下图的箱体中框零件中，侧面的装饰性棱槽(底切特征)的尾部为R50的圆弧过渡，此处使用T型槽铣刀加工比较合适。</p>
+<figure>
+  <img alt="Undercuts-In-Frame-Case" src="../../images/docs_manufacturing/bbe_docs_manufacturing_cnc_Undercuts-In-Frame-Case.png" width="720" />
+<br />
+<figcaption>Undercuts-In-Frame-Case </figcaption>
+</figure>
 
 
 
@@ -2279,7 +2250,7 @@ https://www.china-casting.com/zh-CN/%E5%BA%95%E5%88%87%E5%8A%A0%E5%B7%A5/
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 5, 2026 14:27:31 UTC">September 5, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 6, 2026 11:59:43 UTC">September 6, 2026</span>
   </span>
 
     
