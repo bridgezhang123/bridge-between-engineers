@@ -1,0 +1,45 @@
+{
+  "name": "highlight-mark",
+  "displayName": "Highlight Mark",
+  "description": "Wrap selected Markdown text with mark tags.",
+  "version": "0.0.1",
+  "publisher": "bridge-between-engineers",
+  "license": "UNLICENSED",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "highlightMark.toggle",
+        "title": "Highlight Mark: Toggle Selection"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "highlightMark.toggle",
+          "group": "1_modification@50",
+          "when": "editorLangId == markdown && editorHasSelection"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "highlightMark.toggle",
+          "when": "editorLangId == markdown && editorHasSelection"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "highlightMark.toggle",
+        "key": "ctrl+alt+h",
+        "when": "editorLangId == markdown && editorHasSelection"
+      }
+    ]
+  }
+}
