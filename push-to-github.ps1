@@ -13,7 +13,8 @@ function Get-PythonCommand {
 }
 
 function Get-DefaultCommitMessage {
-    $today = Get-Date -Format "yyyy-MM-dd"
+    $culture = [System.Globalization.CultureInfo]::GetCultureInfo("en-US")
+    $today = (Get-Date).ToString("dd MMM yyyy", $culture)
     return "## $today update manufacturing_cnc-machining.md"
 }
 
@@ -61,9 +62,9 @@ function Show-CommitDialog {
     $form.Controls.Add($combo)
 
     $labelEdit = New-Object System.Windows.Forms.Label
-    $labelEdit.Text = "Edit commit message before submitting:"
+    $labelEdit.Text = "Date is added automatically. Keep only the real content here."
     $labelEdit.Location = New-Object System.Drawing.Point(24, 94)
-    $labelEdit.Size = New-Object System.Drawing.Size(300, 28)
+    $labelEdit.Size = New-Object System.Drawing.Size(620, 28)
     $labelEdit.Font = New-Object System.Drawing.Font("Segoe UI", 10.5, [System.Drawing.FontStyle]::Bold)
     $labelEdit.ForeColor = [System.Drawing.Color]::FromArgb(34, 34, 34)
     $form.Controls.Add($labelEdit)
