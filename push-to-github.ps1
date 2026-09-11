@@ -14,7 +14,7 @@ function Get-PythonCommand {
 
 function Get-DefaultCommitMessage {
     $today = Get-Date -Format "yyyy-MM-dd"
-    return "## $today update project"
+    return "## $today update manufacturing_cnc-machining.md"
 }
 
 Set-Location $repoRoot
@@ -31,17 +31,49 @@ if ([string]::IsNullOrWhiteSpace($defaultMessage)) {
 
 if (-not $NoPrompt) {
     $recentText = "No history available"
-    if ($history.Count -gt 0) {
-        $items = @($history | Select-Object -First 5)
-        $recentText = "Recent commit messages:`n" + (($items | ForEach-Object { "  - $_" }) -join "`n")
-    }
+    $selectedMessage = $defaultMessage
 
-    Add-Type -AssemblyName Microsoft.VisualBasic
-    $message = [Microsoft.VisualBasic.Interaction]::InputBox(
-        "$recentText`n`nPress Enter to reuse the message, or type a new one.",
-        "Git Commit Message",
-        $defaultMessage
-    )
+    if ($history.Count -gt 0) {
+        $items = @($history | Select-Object -First 7)
+        $recentText = "Recent commit messages:`n"
+        for ($i = 0; $i -lt $items.Count; $i++) {
+            $recentText += "  [$($i + 1)] $($items[$i])`n"
+        }
+        $recentText += "`nType a number (1-$($items.Count)) to reuse a recent message, or press Enter to keep the default value."
+        $recentText += "`nYou can also type a new commit message directly.`n"
+
+        $choice = [Microsoft.VisualBasic.Interaction]::InputBox(
+            $recentText,
+            "Choose or edit commit message",
+            $defaultMessage
+        )
+
+        if ([string]::IsNullOrWhiteSpace($choice)) {
+            $message = $defaultMessage
+        } else {
+            $trimmed = $choice.Trim()
+            if ($trimmed -match '^[1-9][0-9]*$') {
+                $index = [int]$trimmed - 1
+                if ($index -ge 0 -and $index -lt $items.Count) {
+                    $message = $items[$index]
+                } else {
+                    $message = $trimmed
+                }
+            } else {
+                $message = $trimmed
+            }
+        }
+    } else {
+        $message = [Microsoft.VisualBasic.Interaction]::InputBox(
+            "No history available.`n`nType a new commit message or press Enter to keep the default value.",
+            "Git Commit Message",
+            $defaultMessage
+        )
+
+        if ([string]::IsNullOrWhiteSpace($message)) {
+            $message = $defaultMessage
+        }
+    }
 
     if ([string]::IsNullOrWhiteSpace($message)) {
         Write-Host "Commit cancelled."
