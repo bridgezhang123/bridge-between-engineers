@@ -33,21 +33,26 @@ function Show-CommitDialog {
 
     $form = New-Object System.Windows.Forms.Form
     $form.Text = "Git Commit Message"
-    $form.Size = New-Object System.Drawing.Size(620, 420)
+    $form.Size = New-Object System.Drawing.Size(700, 500)
     $form.StartPosition = "CenterScreen"
     $form.FormBorderStyle = "FixedDialog"
     $form.MinimizeBox = $false
     $form.MaximizeBox = $false
+    $form.Font = New-Object System.Drawing.Font("Segoe UI", 11, [System.Drawing.FontStyle]::Regular)
+    $form.BackColor = [System.Drawing.Color]::FromArgb(245, 247, 250)
 
     $labelHistory = New-Object System.Windows.Forms.Label
     $labelHistory.Text = "Recent commit messages:"
-    $labelHistory.Location = New-Object System.Drawing.Point(20, 20)
-    $labelHistory.Size = New-Object System.Drawing.Size(200, 24)
+    $labelHistory.Location = New-Object System.Drawing.Point(24, 22)
+    $labelHistory.Size = New-Object System.Drawing.Size(220, 28)
+    $labelHistory.Font = New-Object System.Drawing.Font("Segoe UI", 10.5, [System.Drawing.FontStyle]::Bold)
+    $labelHistory.ForeColor = [System.Drawing.Color]::FromArgb(34, 34, 34)
     $form.Controls.Add($labelHistory)
 
     $combo = New-Object System.Windows.Forms.ComboBox
-    $combo.Location = New-Object System.Drawing.Point(20, 45)
-    $combo.Size = New-Object System.Drawing.Size(560, 26)
+    $combo.Location = New-Object System.Drawing.Point(24, 52)
+    $combo.Size = New-Object System.Drawing.Size(640, 30)
+    $combo.Font = New-Object System.Drawing.Font("Segoe UI", 10.5, [System.Drawing.FontStyle]::Regular)
     $combo.DropDownStyle = "DropDown"
     foreach ($item in $items) {
         $combo.Items.Add($item) | Out-Null
@@ -57,16 +62,22 @@ function Show-CommitDialog {
 
     $labelEdit = New-Object System.Windows.Forms.Label
     $labelEdit.Text = "Edit commit message before submitting:"
-    $labelEdit.Location = New-Object System.Drawing.Point(20, 90)
-    $labelEdit.Size = New-Object System.Drawing.Size(260, 24)
+    $labelEdit.Location = New-Object System.Drawing.Point(24, 94)
+    $labelEdit.Size = New-Object System.Drawing.Size(300, 28)
+    $labelEdit.Font = New-Object System.Drawing.Font("Segoe UI", 10.5, [System.Drawing.FontStyle]::Bold)
+    $labelEdit.ForeColor = [System.Drawing.Color]::FromArgb(34, 34, 34)
     $form.Controls.Add($labelEdit)
 
     $textBox = New-Object System.Windows.Forms.TextBox
     $textBox.Multiline = $true
     $textBox.ScrollBars = "Vertical"
-    $textBox.Location = New-Object System.Drawing.Point(20, 115)
-    $textBox.Size = New-Object System.Drawing.Size(560, 190)
+    $textBox.Location = New-Object System.Drawing.Point(24, 124)
+    $textBox.Size = New-Object System.Drawing.Size(640, 260)
+    $textBox.Font = New-Object System.Drawing.Font("Consolas", 11, [System.Drawing.FontStyle]::Regular)
     $textBox.Text = $items[0]
+    $textBox.AcceptsReturn = $true
+    $textBox.AcceptsTab = $false
+    $textBox.BorderStyle = "Fixed3D"
     $form.Controls.Add($textBox)
 
     $combo.Add_SelectedIndexChanged({
@@ -78,15 +89,17 @@ function Show-CommitDialog {
     $okButton = New-Object System.Windows.Forms.Button
     $okButton.Text = "OK"
     $okButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
-    $okButton.Location = New-Object System.Drawing.Point(355, 325)
-    $okButton.Size = New-Object System.Drawing.Size(100, 30)
+    $okButton.Location = New-Object System.Drawing.Point(430, 405)
+    $okButton.Size = New-Object System.Drawing.Size(110, 36)
+    $okButton.Font = New-Object System.Drawing.Font("Segoe UI", 10.5, [System.Drawing.FontStyle]::Bold)
     $form.Controls.Add($okButton)
 
     $cancelButton = New-Object System.Windows.Forms.Button
     $cancelButton.Text = "Cancel"
     $cancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
-    $cancelButton.Location = New-Object System.Drawing.Point(470, 325)
-    $cancelButton.Size = New-Object System.Drawing.Size(100, 30)
+    $cancelButton.Location = New-Object System.Drawing.Point(552, 405)
+    $cancelButton.Size = New-Object System.Drawing.Size(110, 36)
+    $cancelButton.Font = New-Object System.Drawing.Font("Segoe UI", 10.5, [System.Drawing.FontStyle]::Regular)
     $form.Controls.Add($cancelButton)
 
     $form.AcceptButton = $okButton
