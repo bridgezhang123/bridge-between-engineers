@@ -17,6 +17,43 @@ function Get-DefaultCommitMessage {
     return "## $today update manufacturing_cnc-machining.md"
 }
 
+function Select-CommitMessage {
+    param(
+        [string[]]$History,
+        [string]$DefaultMessage
+    )
+
+    $items = @($History | Select-Object -First 7)
+
+    if ($items.Count -eq 0) {
+        $userInput = Read-Host "No history available. Press Enter to use the default message [$DefaultMessage], or type a new commit message"
+        if ([string]::IsNullOrWhiteSpace($userInput)) {
+            return $DefaultMessage
+        }
+        return $userInput.Trim()
+    }
+
+    Write-Host "Recent commit messages:"
+    for ($i = 0; $i -lt $items.Count; $i++) {
+        Write-Host ("  [{0}] {1}" -f ($i + 1), $items[$i])
+    }
+
+    $userInput = Read-Host "Choose a recent message by number (1-$($items.Count)), press Enter to use [$DefaultMessage], or type a new commit message"
+    if ([string]::IsNullOrWhiteSpace($userInput)) {
+        return $DefaultMessage
+    }
+
+    $trimmed = $userInput.Trim()
+    if ($trimmed -match '^[1-9][0-9]*$') {
+        $index = [int]$trimmed - 1
+        if ($index -ge 0 -and $index -lt $items.Count) {
+            return $items[$index]
+        }
+    }
+
+    return $trimmed
+}
+
 Set-Location $repoRoot
 
 $history = @()
@@ -30,50 +67,7 @@ if ([string]::IsNullOrWhiteSpace($defaultMessage)) {
 }
 
 if (-not $NoPrompt) {
-    $recentText = "No history available"
-    $selectedMessage = $defaultMessage
-
-    if ($history.Count -gt 0) {
-        $items = @($history | Select-Object -First 7)
-        $recentText = "Recent commit messages:`n"
-        for ($i = 0; $i -lt $items.Count; $i++) {
-            $recentText += "  [$($i + 1)] $($items[$i])`n"
-        }
-        $recentText += "`nType a number (1-$($items.Count)) to reuse a recent message, or press Enter to keep the default value."
-        $recentText += "`nYou can also type a new commit message directly.`n"
-
-        $choice = [Microsoft.VisualBasic.Interaction]::InputBox(
-            $recentText,
-            "Choose or edit commit message",
-            $defaultMessage
-        )
-
-        if ([string]::IsNullOrWhiteSpace($choice)) {
-            $message = $defaultMessage
-        } else {
-            $trimmed = $choice.Trim()
-            if ($trimmed -match '^[1-9][0-9]*$') {
-                $index = [int]$trimmed - 1
-                if ($index -ge 0 -and $index -lt $items.Count) {
-                    $message = $items[$index]
-                } else {
-                    $message = $trimmed
-                }
-            } else {
-                $message = $trimmed
-            }
-        }
-    } else {
-        $message = [Microsoft.VisualBasic.Interaction]::InputBox(
-            "No history available.`n`nType a new commit message or press Enter to keep the default value.",
-            "Git Commit Message",
-            $defaultMessage
-        )
-
-        if ([string]::IsNullOrWhiteSpace($message)) {
-            $message = $defaultMessage
-        }
-    }
+    $message = Select-CommitMessage -History $history -DefaultMessage $defaultMessage
 
     if ([string]::IsNullOrWhiteSpace($message)) {
         Write-Host "Commit cancelled."
