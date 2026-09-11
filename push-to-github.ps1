@@ -38,16 +38,22 @@ function Select-CommitMessage {
         Write-Host ("  [{0}] {1}" -f ($i + 1), $items[$i])
     }
 
-    $userInput = Read-Host "Choose a recent message by number (1-$($items.Count)), press Enter to use [$DefaultMessage], or type a new commit message"
-    if ([string]::IsNullOrWhiteSpace($userInput)) {
+    $selection = Read-Host "Choose a recent message by number (1-$($items.Count)), or press Enter to use [$DefaultMessage]"
+    if ([string]::IsNullOrWhiteSpace($selection)) {
         return $DefaultMessage
     }
 
-    $trimmed = $userInput.Trim()
+    $trimmed = $selection.Trim()
     if ($trimmed -match '^[1-9][0-9]*$') {
         $index = [int]$trimmed - 1
         if ($index -ge 0 -and $index -lt $items.Count) {
-            return $items[$index]
+            $selected = $items[$index]
+            Write-Host "Selected commit message: $selected"
+            $finalInput = Read-Host "Press Enter to use this message as-is, or type a modified version before submitting"
+            if ([string]::IsNullOrWhiteSpace($finalInput)) {
+                return $selected
+            }
+            return $finalInput.Trim()
         }
     }
 
