@@ -17,47 +17,87 @@ function Get-DefaultCommitMessage {
     return "## $today update manufacturing_cnc-machining.md"
 }
 
-function Select-CommitMessage {
+function Show-CommitDialog {
     param(
         [string[]]$History,
         [string]$DefaultMessage
     )
 
+    Add-Type -AssemblyName System.Windows.Forms
+    Add-Type -AssemblyName System.Drawing
+
     $items = @($History | Select-Object -First 7)
-
     if ($items.Count -eq 0) {
-        $userInput = Read-Host "No history available. Press Enter to use the default message [$DefaultMessage], or type a new commit message"
-        if ([string]::IsNullOrWhiteSpace($userInput)) {
-            return $DefaultMessage
+        $items = @($DefaultMessage)
+    }
+
+    $form = New-Object System.Windows.Forms.Form
+    $form.Text = "Git Commit Message"
+    $form.Size = New-Object System.Drawing.Size(620, 420)
+    $form.StartPosition = "CenterScreen"
+    $form.FormBorderStyle = "FixedDialog"
+    $form.MinimizeBox = $false
+    $form.MaximizeBox = $false
+
+    $labelHistory = New-Object System.Windows.Forms.Label
+    $labelHistory.Text = "Recent commit messages:"
+    $labelHistory.Location = New-Object System.Drawing.Point(20, 20)
+    $labelHistory.Size = New-Object System.Drawing.Size(200, 24)
+    $form.Controls.Add($labelHistory)
+
+    $combo = New-Object System.Windows.Forms.ComboBox
+    $combo.Location = New-Object System.Drawing.Point(20, 45)
+    $combo.Size = New-Object System.Drawing.Size(560, 26)
+    $combo.DropDownStyle = "DropDown"
+    foreach ($item in $items) {
+        $combo.Items.Add($item) | Out-Null
+    }
+    $combo.SelectedIndex = 0
+    $form.Controls.Add($combo)
+
+    $labelEdit = New-Object System.Windows.Forms.Label
+    $labelEdit.Text = "Edit commit message before submitting:"
+    $labelEdit.Location = New-Object System.Drawing.Point(20, 90)
+    $labelEdit.Size = New-Object System.Drawing.Size(260, 24)
+    $form.Controls.Add($labelEdit)
+
+    $textBox = New-Object System.Windows.Forms.TextBox
+    $textBox.Multiline = $true
+    $textBox.ScrollBars = "Vertical"
+    $textBox.Location = New-Object System.Drawing.Point(20, 115)
+    $textBox.Size = New-Object System.Drawing.Size(560, 190)
+    $textBox.Text = $items[0]
+    $form.Controls.Add($textBox)
+
+    $combo.Add_SelectedIndexChanged({
+        if ($combo.SelectedItem -ne $null) {
+            $textBox.Text = $combo.SelectedItem.ToString()
         }
-        return $userInput.Trim()
+    })
+
+    $okButton = New-Object System.Windows.Forms.Button
+    $okButton.Text = "OK"
+    $okButton.DialogResult = [System.Windows.Forms.DialogResult]::OK
+    $okButton.Location = New-Object System.Drawing.Point(355, 325)
+    $okButton.Size = New-Object System.Drawing.Size(100, 30)
+    $form.Controls.Add($okButton)
+
+    $cancelButton = New-Object System.Windows.Forms.Button
+    $cancelButton.Text = "Cancel"
+    $cancelButton.DialogResult = [System.Windows.Forms.DialogResult]::Cancel
+    $cancelButton.Location = New-Object System.Drawing.Point(470, 325)
+    $cancelButton.Size = New-Object System.Drawing.Size(100, 30)
+    $form.Controls.Add($cancelButton)
+
+    $form.AcceptButton = $okButton
+    $form.CancelButton = $cancelButton
+
+    $result = $form.ShowDialog()
+    if ($result -eq [System.Windows.Forms.DialogResult]::OK) {
+        return $textBox.Text.Trim()
     }
 
-    Write-Host "Recent commit messages:"
-    for ($i = 0; $i -lt $items.Count; $i++) {
-        Write-Host ("  [{0}] {1}" -f ($i + 1), $items[$i])
-    }
-
-    $selection = Read-Host "Choose a recent message by number (1-$($items.Count)), or press Enter to use [$DefaultMessage]"
-    if ([string]::IsNullOrWhiteSpace($selection)) {
-        return $DefaultMessage
-    }
-
-    $trimmed = $selection.Trim()
-    if ($trimmed -match '^[1-9][0-9]*$') {
-        $index = [int]$trimmed - 1
-        if ($index -ge 0 -and $index -lt $items.Count) {
-            $selected = $items[$index]
-            Write-Host "Selected commit message: $selected"
-            $finalInput = Read-Host "Press Enter to use this message as-is, or type a modified version before submitting"
-            if ([string]::IsNullOrWhiteSpace($finalInput)) {
-                return $selected
-            }
-            return $finalInput.Trim()
-        }
-    }
-
-    return $trimmed
+    return $null
 }
 
 Set-Location $repoRoot
@@ -73,9 +113,9 @@ if ([string]::IsNullOrWhiteSpace($defaultMessage)) {
 }
 
 if (-not $NoPrompt) {
-    $message = Select-CommitMessage -History $history -DefaultMessage $defaultMessage
+    $message = Show-CommitDialog -History $history -DefaultMessage $defaultMessage
 
-    if ([string]::IsNullOrWhiteSpace($message)) {
+    if ($null -eq $message -or [string]::IsNullOrWhiteSpace($message)) {
         Write-Host "Commit cancelled."
         exit 1
     }
