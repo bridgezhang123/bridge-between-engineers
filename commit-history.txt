@@ -1,4 +1,4 @@
 ﻿## 2026-09-11 test push-to-github.bat
 ## 2026-09-11 simplified some article of modeling
-## 2026-09-11 update manufacturing_cnc-machining.md
-## 2026-09-11 update project
+## 11 Sep 2026 update manufacturing_cnc-machining.md
+## 11 Sep 2026 update project

@@ -12,10 +12,41 @@ function Get-PythonCommand {
     return $null
 }
 
-function Get-DefaultCommitMessage {
+function Remove-DatePrefix {
+    param(
+        [string]$Text
+    )
+
+    if ([string]::IsNullOrWhiteSpace($Text)) {
+        return ""
+    }
+
+    $value = $Text.Trim()
+    $value = $value -replace '^##\s*', ''
+    $value = $value -replace '^(?:\d{4}-\d{2}-\d{2}|\d{1,2}\s+[A-Za-z]+\s+\d{4}|[A-Z][a-z]+\s+\d{1,2},\s+\d{4})\s*', ''
+    return $value.Trim()
+}
+
+function Get-EnglishDateText {
     $culture = [System.Globalization.CultureInfo]::GetCultureInfo("en-US")
-    $today = (Get-Date).ToString("dd MMM yyyy", $culture)
-    return "## $today update manufacturing_cnc-machining.md"
+    return (Get-Date).ToString("MMMM d, yyyy", $culture)
+}
+
+function Build-FinalCommitMessage {
+    param(
+        [string]$RealContent
+    )
+
+    $clean = Remove-DatePrefix -Text $RealContent
+    if ([string]::IsNullOrWhiteSpace($clean)) {
+        $clean = "update project"
+    }
+
+    return "## $(Get-EnglishDateText) $clean"
+}
+
+function Get-DefaultRealContent {
+    return "update manufacturing_cnc-machining.md"
 }
 
 function Show-CommitDialog {
@@ -121,22 +152,27 @@ if (Test-Path $historyPath) {
     $history = Get-Content $historyPath | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
 }
 
-$defaultMessage = $history[0]
-if ([string]::IsNullOrWhiteSpace($defaultMessage)) {
-    $defaultMessage = Get-DefaultCommitMessage
-}
+$history = $history | ForEach-Object { Remove-DatePrefix -Text $_ }
+    $history = $history | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
 
-if (-not $NoPrompt) {
-    $message = Show-CommitDialog -History $history -DefaultMessage $defaultMessage
-
-    if ($null -eq $message -or [string]::IsNullOrWhiteSpace($message)) {
-        Write-Host "Commit cancelled."
-        exit 1
+    $defaultMessage = $history[0]
+    if ([string]::IsNullOrWhiteSpace($defaultMessage)) {
+        $defaultMessage = Get-DefaultRealContent
     }
-} else {
-    $message = $defaultMessage
-    Write-Host "NoPrompt mode: using default commit message: $message"
-}
+
+    if (-not $NoPrompt) {
+        $realContent = Show-CommitDialog -History $history -DefaultMessage $defaultMessage
+
+        if ($null -eq $realContent -or [string]::IsNullOrWhiteSpace($realContent)) {
+            Write-Host "Commit cancelled."
+            exit 1
+        }
+    } else {
+        $realContent = $defaultMessage
+        Write-Host "NoPrompt mode: using default commit content: $realContent"
+    }
+
+    $message = Build-FinalCommitMessage -RealContent $realContent
 
 $pythonCmd = Get-PythonCommand
 if ($pythonCmd) {
@@ -156,9 +192,10 @@ if (-not $SkipPush) {
     Write-Host "Skipping push. Commit ready: $message"
 }
 
-$uniqueHistory = @($message) + @($history | Where-Object { $_ -ne $message })
-$uniqueHistory = $uniqueHistory | Select-Object -First 10
+$normalizedRealContent = Remove-DatePrefix -Text $realContent
+$uniqueHistory = @($normalizedRealContent) + @($history | Where-Object { $_ -ne $normalizedRealContent })
+$uniqueHistory = $uniqueHistory | Where-Object { -not [string]::IsNullOrWhiteSpace($_) } | Select-Object -First 10
 $uniqueHistory | Set-Content -Encoding UTF8 $historyPath
 
-Write-Host "Saved commit message history to: $historyPath"
+Write-Host "Saved commit history to: $historyPath"
 Write-Host "Current commit message: $message"
