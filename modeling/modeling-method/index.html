@@ -917,10 +917,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-vs" class="md-nav__link">
+  <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 自下而上 vs 自上而下
+        3.1 关于自上而下
       
     </span>
   </a>
@@ -931,30 +931,19 @@
   <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 关于自上而下
+        3.2 建模步骤
       
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 建模步骤
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.3 建模步骤">
+    <nav class="md-nav" aria-label="3.2 建模步骤">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#331" class="md-nav__link">
+  <a href="#321" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3.1 分析模型特点，确定建模方案
+        3.2.1 分析模型特点，确定建模方案
       
     </span>
   </a>
@@ -962,10 +951,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#332" class="md-nav__link">
+  <a href="#322" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3.2 软件设置
+        3.2.2 软件设置
       
     </span>
   </a>
@@ -973,10 +962,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#333" class="md-nav__link">
+  <a href="#323" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3.3 建模实现
+        3.2.3 建模实现
       
     </span>
   </a>
@@ -1036,18 +1025,7 @@
   <a href="#6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. 小结
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. 参考来源
+        6. 参考来源
       
     </span>
   </a>
@@ -2116,10 +2094,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-vs" class="md-nav__link">
+  <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 自下而上 vs 自上而下
+        3.1 关于自上而下
       
     </span>
   </a>
@@ -2130,30 +2108,19 @@
   <a href="#32" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 关于自上而下
+        3.2 建模步骤
       
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 建模步骤
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.3 建模步骤">
+    <nav class="md-nav" aria-label="3.2 建模步骤">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#331" class="md-nav__link">
+  <a href="#321" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3.1 分析模型特点，确定建模方案
+        3.2.1 分析模型特点，确定建模方案
       
     </span>
   </a>
@@ -2161,10 +2128,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#332" class="md-nav__link">
+  <a href="#322" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3.2 软件设置
+        3.2.2 软件设置
       
     </span>
   </a>
@@ -2172,10 +2139,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#333" class="md-nav__link">
+  <a href="#323" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.3.3 建模实现
+        3.2.3 建模实现
       
     </span>
   </a>
@@ -2235,18 +2202,7 @@
   <a href="#6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. 小结
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. 参考来源
+        6. 参考来源
       
     </span>
   </a>
@@ -2290,50 +2246,13 @@
 <h2 id="1">1. 范围与目标</h2>
 <p>本文讨论 <code>自下而上/Top-down</code> 与 <code>自上而下(关联设计)/Bottom-up</code> 两种常见建模方式：</p>
 <ul>
-<li>对两种建模方式适用范围的讨论，避免偏向于一种建模方式</li>
-<li>结合ADCP的建模例子进行讨论</li>
+<li>自下而上/Top-down：适用于模型结构简单、结构独立、依赖少、后期迁移容易的场景。</li>
+<li>自上而下/Bottom-up：适用于模型结构复杂、依赖多、后期迁移困难、需要结合尺寸强关联的零件。</li>
 </ul>
 <h2 id="2">2. 标准引用</h2>
 <p>暂无。</p>
 <h2 id="3">3. 实操与模板</h2>
-<h3 id="31-vs">3.1 自下而上 vs 自上而下</h3>
-<table>
-<thead>
-<tr>
-<th>对比项</th>
-<th>自下而上</th>
-<th>自上而下</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>适用对象</td>
-<td>标准件</td>
-<td>配合尺寸强关联的零件</td>
-</tr>
-<tr>
-<td></td>
-<td>外购件</td>
-<td>需要一起调整孔位、定位面和界面尺寸的结构</td>
-</tr>
-<tr>
-<td></td>
-<td>尺寸基本固定的成熟零件</td>
-<td>布局已较明确的核心装配</td>
-</tr>
-<tr>
-<td>优点</td>
-<td>结构独立、依赖少、后期迁移容易</td>
-<td>改一处可带动多处更新</td>
-</tr>
-<tr>
-<td>缺点</td>
-<td>联动修改成本较高</td>
-<td>依赖关系更复杂，层级不清时容易出错</td>
-</tr>
-</tbody>
-</table>
-<h3 id="32">3.2 关于自上而下</h3>
+<h3 id="31">3.1 关于自上而下</h3>
 <p><strong>两种实现方式</strong>：</p>
 <table>
 <thead>
@@ -2356,8 +2275,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="33">3.3 建模步骤</h3>
-<h4 id="331">3.3.1 分析模型特点，确定建模方案</h4>
+<h3 id="32">3.2 建模步骤</h3>
+<h4 id="321">3.2.1 分析模型特点，确定建模方案</h4>
 <p>针对ADCP而言，依次传递的联动关系，适合自上而下建模里的关联特征法构建。</p>
 <table>
 <thead>
@@ -2406,13 +2325,13 @@
 <li>自上而下的联动关系，带来更高效的建模。</li>
 <li>联动关系的更大作用，体现在对整个系列的建模进行规划。</li>
 </ul>
-<h4 id="332">3.3.2 软件设置</h4>
+<h4 id="322">3.2.2 软件设置</h4>
 <ul>
 <li>启用<code>选项/系统选项/Feature Manager/允许通过Feature Manager 设计树重命名零部件文件</code>，以方便在Feature Manager中重命名零件。</li>
 <li>启用<code>视图菜单/隐藏-显示/尺寸名称</code>，在重命名尺寸名称后可增强可读性，便于创建全局变量和方程式。</li>
 <li>启用<code>视图 菜单/用户界面/动态参考可视化(父级/子级)</code>，有助于观察零部件的参考情况。</li>
 </ul>
-<h4 id="333">3.3.3 建模实现</h4>
+<h4 id="323">3.2.3 建模实现</h4>
 <ol>
 <li>
 <p>自下而上建立第1个<code>ADCP_Sen_Ver0.1_S01_01_Transducer-Head.sldprt</code>零件：</p>
@@ -2582,9 +2501,7 @@
 <li>在装配体中编辑时，应始终留意当前处于哪个层级，是总装、子装配体，还是单个零件。层级判断错误时，外部参考与位置关系往往最容易混乱。</li>
 <li>子装配体中的零件若直接依赖总装层级，后续调整时容易发生引用混乱。</li>
 </ul>
-<h2 id="6">6. 小结</h2>
-<p>建模方式没有绝对优劣，关键在于是否与对象类型、层级关系和修改频率相匹配。对个人或小团队来说，通常是适度混用，而不是坚持单一方法。</p>
-<h2 id="7">7. 参考来源</h2>
+<h2 id="6">6. 参考来源</h2>
 <ul>
 <li><a href="https://help.solidworks.com/2018/chinese-simplified/SolidWorks/sldworks/c_Design_Methods.htm?id=5.2">SolidWorks Help 设计方法（自下而上设计和自上而下设计）</a>，另存档于互联网档案馆，<a href="https://web.archive.org/web/20260501121115/https://help.solidworks.com/2018/chinese-simplified/SolidWorks/sldworks/c_Design_Methods.htm?id=5.2">详见</a>。</li>
 </ul>
@@ -2610,7 +2527,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 12, 2026 13:42:27 UTC">May 12, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 12, 2026 08:06:10 UTC">September 12, 2026</span>
   </span>
 
     

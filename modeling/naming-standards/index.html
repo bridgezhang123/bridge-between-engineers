@@ -917,10 +917,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
+  <a href="#21" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 命名总则
+        2.1. 命名模板
       
     </span>
   </a>
@@ -928,21 +928,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
+  <a href="#22" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 命名模板
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 推荐目录结构
+        2.2. 推荐目录结构
       
     </span>
   </a>
@@ -967,7 +956,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31_1" class="md-nav__link">
+  <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
       
         3.1 同名文件冲突
@@ -2111,10 +2100,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
+  <a href="#21" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 命名总则
+        2.1. 命名模板
       
     </span>
   </a>
@@ -2122,21 +2111,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#32" class="md-nav__link">
+  <a href="#22" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 命名模板
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3.3 推荐目录结构
+        2.2. 推荐目录结构
       
     </span>
   </a>
@@ -2161,7 +2139,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31_1" class="md-nav__link">
+  <a href="#31" class="md-nav__link">
     <span class="md-ellipsis">
       
         3.1 同名文件冲突
@@ -2263,83 +2241,40 @@
 <li><code>GB-T-97.1-2002_5_Plain-Washer</code></li>
 </ul>
 <h2 id="2">2. 实操与模板</h2>
-<h3 id="31">3.1 命名总则</h3>
-<table>
-<thead>
-<tr>
-<th>Rule / 规则</th>
-<th>Recommendation / 建议</th>
-<th>Note / 说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>字符集</td>
-<td>使用 <code>A-Z</code>、<code>0-9</code>、<code>-</code>、<code>_</code>、<code>.</code></td>
-<td>兼容主流文件系统与交换格式</td>
-</tr>
-<tr>
-<td>语言</td>
-<td>文件名尽量不用中文</td>
-<td>降低 STEP、IGES 及第三方系统乱码风险</td>
-</tr>
-<tr>
-<td>分隔符</td>
-<td>统一使用 <code>_</code> 与 <code>-</code></td>
-<td><code>_</code> 用于层级字段分隔，<code>-</code> 用于字段内部复合描述；避免空格</td>
-</tr>
-<tr>
-<td>易混字符</td>
-<td>流水号字段避免 <code>O</code>、<code>I</code></td>
-<td>防止与 <code>0</code>、<code>1</code> 混淆</td>
-</tr>
-<tr>
-<td>版本表达</td>
-<td>不在文件名主体写 <code>v1</code>、<code>最终版</code></td>
-<td>版本信息更适合放在修订栏、属性或台账</td>
-</tr>
-</tbody>
-</table>
-<h3 id="32">3.2 命名模板</h3>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">自制件 / In-house Parts</label><label for="__tabbed_1_2">标准件 / Standard Parts</label><label for="__tabbed_1_3">外购件 / Commercial Parts</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p>模板：<code>&lt;Product&gt;_&lt;Version&gt;_&lt;System&gt;_&lt;Seq&gt;_&lt;Name&gt;</code></p>
-<p>示例：</p>
-<ul>
-<li><code>ADCP_Sen_Ver0.1_S01_01_Transducer-Head</code></li>
-<li><code>ADCP_Sen_Ver0.1_S02_01_Support-Plate</code></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<p>模板：<code>&lt;Standard&gt;_&lt;Spec&gt;_&lt;Type&gt;</code></p>
-<p>示例：</p>
-<ul>
-<li><code>GB-T-70.1-2000_M5x20_Hex-Socket-Cap-Screw</code></li>
-<li><code>GB-T-97.1-2002_5_Plain-Washer</code></li>
-</ul>
-<p>建议：</p>
-<ul>
-<li><code>_</code> 用于标准号与规格之间的层次分隔</li>
-<li><code>-</code> 用于类型名称内部的多词组合，如 <code>Hex-Socket-Cap-Screw</code></li>
-</ul>
-</div>
-<div class="tabbed-block">
-<p>模板：<code>CP_&lt;Type&gt;_&lt;Vendor&gt;_&lt;Model&gt;</code></p>
-<p>示例：</p>
-<ul>
-<li><code>CP_Connector_SubConn_BH3M</code></li>
-<li><code>CP_Transducer_Sonardyne_AT01</code></li>
-</ul>
-<p>建议：</p>
-<ul>
-<li><code>CP_</code> 固定前缀表示外购件</li>
-<li>供应商与型号之间使用 <code>_</code> 连接，保持层级关系清晰</li>
-</ul>
-</div>
-</div>
-</div>
-<h3 id="33">3.3 推荐目录结构</h3>
+<h3 id="21">2.1. 命名模板</h3>
+<p>命名时，对不同类型的零件进行分类处理，有助于后期维护。</p>
+<p>自制件 / In-house Parts
+    模板：<code>&lt;Product&gt;_&lt;Version&gt;_&lt;System&gt;_&lt;Seq&gt;_&lt;Name&gt;</code></p>
+<div class="highlight"><pre><span></span><code>示例：
+
+- `ADCP_Sen_Ver0.1_S01_01_Transducer-Head`
+- `ADCP_Sen_Ver0.1_S02_01_Support-Plate`
+</code></pre></div>
+<p>标准件 / Standard Parts
+    模板：<code>&lt;Standard&gt;_&lt;Spec&gt;_&lt;Type&gt;</code></p>
+<div class="highlight"><pre><span></span><code>示例：
+
+- `GB-T-70.1-2000_M5x20_Hex-Socket-Cap-Screw`
+- `GB-T-97.1-2002_5_Plain-Washer`
+
+建议：
+
+- `_` 用于标准号与规格之间的层次分隔
+- `-` 用于类型名称内部的多词组合，如 `Hex-Socket-Cap-Screw`
+</code></pre></div>
+<p>外购件 / Commercial Parts
+    模板：<code>CP_&lt;Type&gt;_&lt;Vendor&gt;_&lt;Model&gt;</code></p>
+<div class="highlight"><pre><span></span><code>示例：
+
+- `CP_Connector_SubConn_BH3M`
+- `CP_Transducer_Sonardyne_AT01`
+
+建议：
+
+- `CP_` 固定前缀表示外购件
+- 供应商与型号之间使用 `_` 连接，保持层级关系清晰
+</code></pre></div>
+<h3 id="22">2.2. 推荐目录结构</h3>
 <p>ADCP 示例</p>
 <div class="highlight"><pre><span></span><code>```text
 ADCP/
@@ -2374,7 +2309,8 @@ ADCP/
 <li><code>README.md</code> 作为该产品线根目录说明文件，说明目录结构与命名规则。</li>
 </ul>
 <h2 id="3">3. 其余要点</h2>
-<h3 id="31_1">3.1 同名文件冲突</h3>
+<h3 id="31">3.1 同名文件冲突</h3>
+<p>遵守命名的规范性，能避免如下的同名文件冲突的情况：</p>
 <ul>
 <li>你从某项目复制了一个名为“端盖”的零件到新项目，修改后继续使用。某天再打开旧装配体时，端盖形状异常。</li>
 <li>常见根因是：多路径下存在同名文件，而当前会话又已经加载了其中一个，最终导致引用解析混淆。会有<code>是否解除链接关系</code>的询问，如下图片的提示：</li>
@@ -2409,7 +2345,7 @@ ADCP/
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 11, 2026 12:28:09 UTC">September 11, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 12, 2026 08:06:10 UTC">September 12, 2026</span>
   </span>
 
     
