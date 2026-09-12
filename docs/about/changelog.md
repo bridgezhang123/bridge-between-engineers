@@ -2,9 +2,18 @@
 
 本页用于记录本站较重要的内容更新、结构调整与页面优化。
 
-## 2026-09-07(提升效率)
+## 2026-09-06(提升效率)
 
-- 由Copilot AI协助在VS code IDE中实现如下快捷键功能：Markdown 选中文本后，右键选择 Highlight Mark: Toggle Selection，即可快速在文档中高亮突出文本，即添加 `<mark>` 标签，如<mark>黄色背景强调内容</mark>。
+- September 6, 2026，在Vs code中编辑文档，图片仅需名称即可，而后交由AI完成特定路径下的图片的引用，当然只需要<mark>给出一个示例引用即可</mark>。
+- September 7, 2026，由Copilot AI协助在VS code IDE中实现如下快捷键功能：
+    - Markdown 选中文本后，右键选择 Highlight Mark: Toggle Selection，可实现<mark>黄色背景强调内容</mark>
+    - 快捷键：Ctrl+Alt+H
+    - 再次执行可移除已有的 <mark> 标签
+    - 仅在 Markdown 文件且存在选区时显示。
+- May 25, 2026，创建工具：建立了push-to-github.bat批处理文件，在修改commit的内容后，能自动截取日期+ commit，而后push到GitHub，提升了效率。每次需要输入新的commit。
+- September 11, 2026，创建工具：基于May 25的工作，利用AI制作一个简易的弹窗，能输入commit，并且能记录每次的commit，供后面复用。
+    - 在terminal里，相应文件夹下，运行 .\push-to-github.bat即可。
+    - 历史提交列表只显示“实质内容”，日期会由脚本自动补到最终提交信息里。
 
 ## 2026-08-29(关于栏目文章)
 

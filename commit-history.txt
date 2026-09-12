@@ -1,4 +1,5 @@
-﻿test push-to-github.bat
+﻿test push-to-github.bat -2
+test push-to-github.bat
 simplified some article of modeling
 update manufacturing_cnc-machining.md
 update project
