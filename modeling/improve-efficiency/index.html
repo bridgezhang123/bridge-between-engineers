@@ -1179,6 +1179,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#32-macro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. 批量处理文件的Macro(宏)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2048,6 +2059,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#32-macro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. 批量处理文件的Macro(宏)
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2159,6 +2181,28 @@
 <li>任务调度程序会在后台调用 SolidWorks 内核处理文件，尽量不要在运行时进行复杂的 3D 建模操作，以免占用资源导致转图失败或建模卡顿</li>
 <li>如果你所在的企业已经部署了 SolidWorks PDM （产品数据管理） 系统，PDM 的 “转换任务” 功能可以将工程图批量输出为 PDF。</li>
 </ul>
+<h3 id="32-macro">3.2. 批量处理文件的Macro(宏)</h3>
+<p>宏的背景：</p>
+<ul>
+<li>宏目标：批量将打开的slddrw导出为PDF文件<ul>
+<li>只打开 1 个工程图：导出当前 slddrw</li>
+<li>打开多个工程图：循环导出所有打开的 slddrw</li>
+<li>每个图纸都按“同目录 + 同文件名 + .pdf”生成</li>
+</ul>
+</li>
+<li>宏名称：save_slddrw_to_pdf.swp</li>
+<li>使用方式：菜单选择 Tools/工具 &gt; Macro/宏 &gt; Run/运行，而后选择相应的宏文件。</li>
+<li>宏的生成：宏由Microsoft的MAI-Code-1.1-Flash模型于September 15，2026生成，已由作者验证通过，但仍应谨慎、测试后使用；点击<a href="../../images/docs_modeling/save_slddrw_to_pdf.swp">此处</a>可获取宏原始文件。</li>
+</ul>
+<p>使用的快捷方式：把宏放到打开的图纸文件上方的工具栏上，方便选择</p>
+<ul>
+<li>菜单选择 Tools/工具 &gt; Customize/自定义</li>
+<li>进入 Commands/命令 选项卡</li>
+<li>左侧选择 “Macros/宏”</li>
+<li>将 “Run/运行” 按钮直接拖到标准工具栏、命令管理器，或者自定义工具栏上</li>
+<li>这样以后就可以直接点击，不必再进入 Tools/工具 &gt; Macro/宏 &gt; Run/运行。</li>
+</ul>
+<p>注意，若有其余需求，可用类似的方法创建sldprt导出为step文件的宏。</p>
 <h2 id="4">4. 其余要点</h2>
 <p>暂无。</p>
 <h2 id="5">5. 边界与风险</h2>
@@ -2191,7 +2235,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 7, 2026 01:51:03 UTC">June 7, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 15, 2026 12:49:49 UTC">September 15, 2026</span>
   </span>
 
     
