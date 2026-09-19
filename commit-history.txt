@@ -1,4 +1,5 @@
-﻿update docs/modeling/index.md
+﻿update docs/modeling/improve-efficiency.md
+update docs/modeling/index.md
 simplified some article of modeling
 test push-to-github.bat -2
 test push-to-github.bat
