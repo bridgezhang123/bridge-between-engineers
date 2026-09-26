@@ -1,3 +1,111 @@
+.cookie-consent {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.cookie-consent__panel {
+  width: min(68rem, 100%);
+  background: rgba(15, 23, 42, 0.96);
+  color: #f8fafc;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 0.9rem;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.35);
+  padding: 1.2rem 1.2rem 1rem;
+  pointer-events: auto;
+}
+
+.cookie-consent__title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.15rem, 1.3vw, 1.5rem);
+  color: #ffffff;
+}
+
+.cookie-consent__text {
+  margin: 0;
+  color: #e2e8f0;
+  line-height: 1.7;
+  font-size: 0.97rem;
+}
+
+.cookie-consent__text a {
+  color: #cbd5e1;
+  text-decoration: underline;
+}
+
+.cookie-consent__customize {
+  margin-top: 0.8rem;
+  display: grid;
+  gap: 0.45rem;
+  background: rgba(148, 163, 184, 0.08);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 0.7rem;
+  padding: 0.75rem 0.9rem;
+}
+
+.cookie-consent__option {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #f8fafc;
+  font-size: 0.95rem;
+}
+
+.cookie-consent__option input {
+  accent-color: #60a5fa;
+}
+
+.cookie-consent__actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.cookie-consent__button {
+  border: 0;
+  border-radius: 0.55rem;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.cookie-consent__button:hover {
+  transform: translateY(-1px);
+}
+
+.cookie-consent__button--primary {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.cookie-consent__button--secondary {
+  background: transparent;
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.38);
+}
+
+.cookie-consent__button--tertiary {
+  background: rgba(96, 165, 250, 0.15);
+  color: #dbeafe;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.cookie-consent__button--save {
+  display: none;
+}
+
+.cookie-consent__customize:not([hidden]) ~ .cookie-consent__actions .cookie-consent__button--save {
+  display: inline-block;
+}
+
 /* Home panels */
 .home-panel {
   position: relative;
