@@ -159,6 +159,7 @@ extra_javascript:
   - javascripts/print-button.js
   - javascripts/theme-toggle.js
   - javascripts/footer-link.js
+  - javascripts/cookie-consent.js
   - javascripts/pageviews.js
 
 hooks:

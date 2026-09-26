@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = document.createElement("button");
   button.type = "button";
   button.className = "site-print-button";
-  button.textContent = "打印";
+  button.textContent = "Print";
   button.setAttribute("aria-label", "Print this page");
   button.addEventListener("click", () => window.print());
 

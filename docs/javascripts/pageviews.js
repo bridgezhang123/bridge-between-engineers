@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
   try {
+    var consent = window.BridgeCookieConsent;
+    if (consent && typeof consent.isAnalyticsEnabled === "function" && !consent.isAnalyticsEnabled()) {
+      return;
+    }
+
     var sourceFile = document.querySelector(".md-source-file");
     if (!sourceFile) return;
 
