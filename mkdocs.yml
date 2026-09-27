@@ -109,6 +109,7 @@ nav:
   - 关于:
     - 导览: about/index.md
     - 建站说明: about/site-building.md
+    - Cookie 政策: about/cookies-policy.md
     - 协作说明: about/collaboration.md
     - 致谢: about/acknowledgements.md
     - 更新日志: about/changelog.md
