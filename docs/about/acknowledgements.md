@@ -4,7 +4,7 @@
 
 ## 2026-04-26
 
-- 感谢余吴建师兄提供的关于[Design Failure Mode, Effects and Criticality Analysis(DFMEA，故障模式、影响和危害性分析)](../design/dfmea.md)的讨论；关于[Design for Manufacturability(DFM，面向制造的设计)](../manufacturing/machining-basics.md)的讨论；对迈向更标准化的设计有很多启发。
+- 感谢余吴建师兄提供的关于[系统可靠性分析(FMEA)](../design/fmea.md)的讨论；关于[Design for Manufacturability(DFM，面向制造的设计)](../manufacturing/machining-basics.md)的讨论；对迈向更标准化的设计有很多启发。
 
 ## 2026-04-06
 

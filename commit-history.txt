@@ -1,4 +1,5 @@
-﻿add Cookie Consent notice.
+﻿update Cookie Consent notice.
+add Cookie Consent notice.
 update docs/modeling/improve-efficiency.md
 update docs/modeling/index.md
 simplified some article of modeling

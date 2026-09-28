@@ -71,7 +71,7 @@ nav:
   - 设计见解:
     - 导览: design/index.md
     - 设计方法: design/design-philosophy.md
-    - DFMEA: design/dfmea.md
+    - 系统可靠性分析(FMEA): design/fmea.md
     - AI 协作工作流: design/ai-workflow.md
     - 供应商背景: design/supplier-background.md
     - 设计案例: design/design-cases.md
