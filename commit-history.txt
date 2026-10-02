@@ -1,4 +1,5 @@
-﻿update Cookie Consent notice.
+﻿update docs/design/fmea.md
+update Cookie Consent notice.
 add Cookie Consent notice.
 update docs/modeling/improve-efficiency.md
 update docs/modeling/index.md
