@@ -91,3 +91,15 @@ python -m mkdocs --version    # 检查 MkDocs 是否可通过 Python 调用
 
 一句话理解就是：命令能不能直接使用，取决于它是否在 `PATH` 中，而不只是“是否安装过”。
 
+## 4. Cloudflare Access 路径控制简述
+
+在 Cloudflare Dashboard → Zero Trust → Access → Applications 中添加应用，并按分享范围设置 Destination：
+
+- **控制全站**：设置为 `bridgezhang.com`。
+- **控制一个栏目或文件夹及其内容**：使用带通配符的路径，例如 `bridgezhang.com/life/*`，覆盖该栏目下的 Markdown 页面、图片等文件。
+- **只分享一篇文章及其附属文件**：将文章和图片、视频等放在同一文件夹，再为该文件夹设置路径，例如 `bridgezhang.com/family/2026.10.04-for-test-people*`。
+- **更细路径的控制权限高于粗路径的控制权限**：例如 `bridgezhang.com/family/2026.10.04-for-test-people*` 的访问权限高于 `bridgezhang.com/family/*`。即前者的访问权限设置会覆盖后者，以此来达到只分享一篇文章及其附属文件等的目的。
+
+Access 会分别检查页面和页面引用的资源地址。未设置访问限制的样式、脚本等资源仍可被公开访问；若这些资源也需要限制，应为相应路径另行配置 Access 规则。此外：
+
+- 单个Applications的权限，只能控制一个路径。
