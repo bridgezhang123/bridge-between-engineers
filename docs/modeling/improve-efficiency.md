@@ -32,7 +32,7 @@
 
 ### 3.2. 批量处理文件的Macro(宏)
 
-宏的背景：
+宏的背景：save_slddrw_to_pdf.swp
 
 - 宏目标：批量将打开的slddrw导出为PDF文件
     - 只打开 1 个工程图：导出当前 slddrw
@@ -50,12 +50,26 @@
 - 将 “Run/运行” 按钮直接拖到标准工具栏、命令管理器，或者自定义工具栏上
 - 这样以后就可以直接点击，不必再进入 Tools/工具 > Macro/宏 > Run/运行。
 
-注意，若有其余需求，可用类似的方法创建sldprt导出为step文件的宏。
+注意，若有其余需求，可用类似的方法创建sldprt/sldasm导出为step文件的宏、slddrw导出为dwg的宏。
 
 - 宏名称：save_sldprt_sldasm_to_step.swp
-- 严格按“同目录 + 同文件名 + .step”生成。
-- 宏的生成：宏由Microsoft的MAI-Code-1.1-Flash模型于September 19，2026生成，已由作者验证通过，但仍应谨慎、测试后使用；点击[此处](../images/docs_modeling/save_sldprt_sldasm_to_step.swp)可获取宏原始文件。
-- 尽管运行完会出现如下警告提示，但都能成功导出step文件：在宏播放过程中发生严重错误，该宏可能无法在正确的前后关系中播放，系统现在可能正处于不稳定状态。
+- 宏名称：save_slddrw_to_dwg.swp
+- 严格按“同目录 + 同文件名 + .后缀”生成。
+- save_sldprt_sldasm_to_step.swp宏的生成：宏由Microsoft的MAI-Code-1.1-Flash模型于September 19，2026生成，已由作者验证通过，但仍应谨慎、测试后使用；点击[此处](../images/docs_modeling/save_sldprt_sldasm_to_step.swp)可获取宏原始文件。
+
+关于宏的产生过程：October 26，2026复盘
+
+- 若仅将save_slddrw_to_pdf.swp宏的代码段的扩展名等更改为dwg而希望形成save_slddrw_to_dwg.swp宏，则会出现：打开多张工程图批量导出时，DWG 文件名分别对应各自的 .slddrw，但导出内容却重复为当时活动工程图的内容。
+- PDF 宏与当前 DWG 宏的遍历框架相似：都是获取已打开文档、筛选工程图，再根据每张图纸的路径生成同名输出文件。关键差异在导出调用：
+    - PDF 宏对循环中的 swModel 调用 swModel.Extension.SaveAs。
+    - 录制的 DWG 宏先将 swApp.ActiveDoc 赋给 Part，再调用 Part.SaveAs3。当前 DWG 宏也使用 SaveAs3，但在每次调用前增加了激活目标图纸和路径核对。
+- 复盘
+    - 相同的批处理结构，不代表不同格式的导出行为相同。 应核对实际调用方式，并确认导出内容取自循环对象还是活动文档。
+    - 文件名正确不等于内容正确。 测试需要分别核对输出名称与图纸内容。
+    - 录制宏和实测应作为依据。
+- 说明：
+    - 录制宏，以slddrw_to_pdf为例，指：Tools/工具 > Macro/宏 > 录制，而后对打开的工程图进行保存为同目录、同文件名的PDF文件的操作，而后停止录制生成宏。再让AI对此宏进行针对多个打开的工程图批量导出的需求，进行针对性的遍历等代码段的补充。
+    - 可知，<mark>录制的宏是基础，AI负责扩展其功能</mark>。
 
 
 ## 4. 边界与风险

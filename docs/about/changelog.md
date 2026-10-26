@@ -10,8 +10,10 @@
     - 快捷键：Ctrl+Alt+H
     - 再次执行可移除已有的 <mark> 标签
     - 仅在 Markdown 文件且存在选区时显示。
+    - October 17, 2026，基于同样的逻辑，<mark>扩展右键菜单新增 Admonitions 子菜单</mark>，包含 note、abstract、info 等 12 种类型；选择 Markdown 文本和类型后，可自动生成相应的 Admonition 块。
+    - October 17, 2026，<mark>新增 Insert Figures 图片插入子菜单</mark>，支持 Single Figure 与 Two Parallel，后者需要选择2张图片用于并排；选择图片后，自动生成图片引用、相对路径和图注，并记住上次选择的图片文件夹。双图布局在宽屏下并排显示，在窄屏下自动切换为单列。注意：图片替代文本和题注仅保留文件名最后一个“ _ ”后的部分（不含扩展名），如 `bbe_docs_design_tolerances-on-linear-sizes_Fundamental-Deviation-Schematic-Figure.jpg` 显示为 `Fundamental-Deviation-Schematic-Figure`；图片引用路径仍保留完整文件名。若文件名没有“ _ ”或其后无内容，则使用完整文件名。
 - May 25, 2026，创建工具：建立了push-to-github.bat批处理文件，在修改commit的内容后，能自动截取日期+ commit，而后push到GitHub，提升了效率。每次需要输入新的commit。
-- September 11, 2026，创建工具：基于May 25的工作，利用AI制作一个简易的弹窗，能输入commit，并且能记录每次的commit，供后面复用。
+    - September 11, 2026，创建工具：基于May 25的工作，利用AI制作一个简易的弹窗，能输入commit，并且能记录每次的commit，供后面复用。
     - 在terminal里，相应文件夹下，运行 .\push-to-github.bat即可。
     - 历史提交列表只显示“实质内容”，日期会由脚本自动补到最终提交信息里。
 

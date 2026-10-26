@@ -93,7 +93,7 @@ python -m mkdocs --version    # 检查 MkDocs 是否可通过 Python 调用
 
 ## 4. Cloudflare Access 路径控制简述
 
-在 Cloudflare Dashboard → Zero Trust → Access → Applications 中添加应用，并按分享范围设置 Destination：
+在 Cloudflare Dashboard → Zero Trust → Access → Applications 中添加应用，并按分享范围设置 Destination，举例如下：
 
 - **控制全站**：设置为 `bridgezhang.com`。
 - **控制一个栏目或文件夹及其内容**：使用带通配符的路径，例如 `bridgezhang.com/life/*`，覆盖该栏目下的 Markdown 页面、图片等文件。
@@ -103,3 +103,5 @@ python -m mkdocs --version    # 检查 MkDocs 是否可通过 Python 调用
 Access 会分别检查页面和页面引用的资源地址。未设置访问限制的样式、脚本等资源仍可被公开访问；若这些资源也需要限制，应为相应路径另行配置 Access 规则。此外：
 
 - 单个Applications的权限，只能控制一个路径。
+- 避免在陌生设备登录自己的最高权限的邮箱，避免信息泄露。需要什么信息，就登录对应权限的邮箱即可。
+- 无痕模式/Incognito window，下登录邮箱权限，退出后需要再次登录；普通浏览模式，登录一次能覆盖的时间随cloud flare access Application设置的时间而定。

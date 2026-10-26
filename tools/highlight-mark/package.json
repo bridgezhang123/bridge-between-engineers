@@ -1,7 +1,7 @@
 {
   "name": "highlight-mark",
-  "displayName": "Highlight Mark",
-  "description": "Wrap selected Markdown text with mark tags.",
+  "displayName": "Markdown Editing Commands",
+  "description": "Add Markdown highlighting, admonitions, and figure insertion commands.",
   "version": "0.0.1",
   "publisher": "bridge-between-engineers",
   "license": "UNLICENSED",
@@ -17,6 +17,72 @@
       {
         "command": "highlightMark.toggle",
         "title": "Highlight Mark: Toggle Selection"
+      },
+      {
+        "command": "admonitions.note",
+        "title": "Admonitions: Note"
+      },
+      {
+        "command": "admonitions.abstract",
+        "title": "Admonitions: Abstract"
+      },
+      {
+        "command": "admonitions.info",
+        "title": "Admonitions: Info"
+      },
+      {
+        "command": "admonitions.tip",
+        "title": "Admonitions: Tip"
+      },
+      {
+        "command": "admonitions.success",
+        "title": "Admonitions: Success"
+      },
+      {
+        "command": "admonitions.question",
+        "title": "Admonitions: Question"
+      },
+      {
+        "command": "admonitions.warning",
+        "title": "Admonitions: Warning"
+      },
+      {
+        "command": "admonitions.failure",
+        "title": "Admonitions: Failure"
+      },
+      {
+        "command": "admonitions.danger",
+        "title": "Admonitions: Danger"
+      },
+      {
+        "command": "admonitions.bug",
+        "title": "Admonitions: Bug"
+      },
+      {
+        "command": "admonitions.example",
+        "title": "Admonitions: Example"
+      },
+      {
+        "command": "admonitions.quote",
+        "title": "Admonitions: Quote"
+      },
+      {
+        "command": "insertFigures.single",
+        "title": "Insert Figures: Single Figure"
+      },
+      {
+        "command": "insertFigures.twoParallel",
+        "title": "Insert Figures: Two Parallel"
+      }
+    ],
+    "submenus": [
+      {
+        "id": "admonitions.menu",
+        "label": "Admonitions"
+      },
+      {
+        "id": "insertFigures.menu",
+        "label": "Insert Figures"
       }
     ],
     "menus": {
@@ -25,6 +91,62 @@
           "command": "highlightMark.toggle",
           "group": "1_modification@50",
           "when": "editorLangId == markdown && editorHasSelection"
+        },
+        {
+          "submenu": "admonitions.menu",
+          "group": "1_modification@51",
+          "when": "editorLangId == markdown && editorHasSelection"
+        },
+        {
+          "submenu": "insertFigures.menu",
+          "group": "1_modification@52",
+          "when": "editorLangId == markdown"
+        }
+      ],
+      "admonitions.menu": [
+        {
+          "command": "admonitions.note"
+        },
+        {
+          "command": "admonitions.abstract"
+        },
+        {
+          "command": "admonitions.info"
+        },
+        {
+          "command": "admonitions.tip"
+        },
+        {
+          "command": "admonitions.success"
+        },
+        {
+          "command": "admonitions.question"
+        },
+        {
+          "command": "admonitions.warning"
+        },
+        {
+          "command": "admonitions.failure"
+        },
+        {
+          "command": "admonitions.danger"
+        },
+        {
+          "command": "admonitions.bug"
+        },
+        {
+          "command": "admonitions.example"
+        },
+        {
+          "command": "admonitions.quote"
+        }
+      ],
+      "insertFigures.menu": [
+        {
+          "command": "insertFigures.single"
+        },
+        {
+          "command": "insertFigures.twoParallel"
         }
       ],
       "commandPalette": [
