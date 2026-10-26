@@ -589,6 +589,23 @@
   line-height: 1;
 }
 
+.two-parallel-figures-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.two-parallel-figures-grid figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.two-parallel-figures-grid img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* Keep prev/next pagination on its own line above other footer content */
 .md-footer .md-pagination,
 .md-footer .md-footer-nav,
@@ -603,5 +620,9 @@
 @media screen and (max-width: 640px) {
   .md-footer {
     display: block;
+  }
+
+  .two-parallel-figures-grid {
+    grid-template-columns: 1fr;
   }
 }

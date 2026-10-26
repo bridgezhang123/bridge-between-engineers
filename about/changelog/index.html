@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -31,10 +31,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -469,6 +469,8 @@
       
         
       
+        
+      
     
     
     
@@ -564,6 +566,34 @@
     
   
     系统可靠性分析(FMEA)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/tolerances-on-linear-sizes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性尺寸公差入门
   
 
     
@@ -2186,10 +2216,12 @@
 <li>快捷键：Ctrl+Alt+H</li>
 <li>再次执行可移除已有的 <mark> 标签</li>
 <li>仅在 Markdown 文件且存在选区时显示。</li>
+<li>October 17, 2026，基于同样的逻辑，<mark>扩展右键菜单新增 Admonitions 子菜单</mark>，包含 note、abstract、info 等 12 种类型；选择 Markdown 文本和类型后，可自动生成相应的 Admonition 块。</li>
+<li>October 17, 2026，<mark>新增 Insert Figures 图片插入子菜单</mark>，支持 Single Figure 与 Two Parallel，后者需要选择2张图片用于并排；选择图片后，自动生成图片引用、相对路径和图注，并记住上次选择的图片文件夹。双图布局在宽屏下并排显示，在窄屏下自动切换为单列。注意：图片替代文本和题注仅保留文件名最后一个“ _ ”后的部分（不含扩展名），如 <code>bbe_docs_design_tolerances-on-linear-sizes_Fundamental-Deviation-Schematic-Figure.jpg</code> 显示为 <code>Fundamental-Deviation-Schematic-Figure</code>；图片引用路径仍保留完整文件名。若文件名没有“ _ ”或其后无内容，则使用完整文件名。</li>
 </ul>
 </li>
-<li>May 25, 2026，创建工具：建立了push-to-github.bat批处理文件，在修改commit的内容后，能自动截取日期+ commit，而后push到GitHub，提升了效率。每次需要输入新的commit。</li>
-<li>September 11, 2026，创建工具：基于May 25的工作，利用AI制作一个简易的弹窗，能输入commit，并且能记录每次的commit，供后面复用。<ul>
+<li>May 25, 2026，创建工具：建立了push-to-github.bat批处理文件，在修改commit的内容后，能自动截取日期+ commit，而后push到GitHub，提升了效率。每次需要输入新的commit。<ul>
+<li>September 11, 2026，创建工具：基于May 25的工作，利用AI制作一个简易的弹窗，能输入commit，并且能记录每次的commit，供后面复用。</li>
 <li>在terminal里，相应文件夹下，运行 .\push-to-github.bat即可。</li>
 <li>历史提交列表只显示“实质内容”，日期会由脚本自动补到最终提交信息里。</li>
 </ul>
@@ -2261,7 +2293,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 26, 2026 23:55:03 UTC">September 26, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 26, 2026 02:37:46 UTC">October 26, 2026</span>
   </span>
 
     
@@ -2436,10 +2468,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "search.highlight", "content.action.edit", "content.action.view", "content.code.copy", "content.tabs.link", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "search.highlight", "content.action.edit", "content.action.view", "content.code.copy", "content.tabs.link", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       

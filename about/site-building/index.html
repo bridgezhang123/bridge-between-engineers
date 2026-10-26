@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -471,6 +471,8 @@
       
         
       
+        
+      
     
     
     
@@ -566,6 +568,34 @@
     
   
     系统可靠性分析(FMEA)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../design/tolerances-on-linear-sizes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性尺寸公差入门
   
 
     
@@ -2328,7 +2358,7 @@
 </code></pre></div>
 <p>一句话理解就是：命令能不能直接使用，取决于它是否在 <code>PATH</code> 中，而不只是“是否安装过”。</p>
 <h2 id="4-cloudflare-access">4. Cloudflare Access 路径控制简述</h2>
-<p>在 Cloudflare Dashboard → Zero Trust → Access → Applications 中添加应用，并按分享范围设置 Destination：</p>
+<p>在 Cloudflare Dashboard → Zero Trust → Access → Applications 中添加应用，并按分享范围设置 Destination，举例如下：</p>
 <ul>
 <li><strong>控制全站</strong>：设置为 <code>bridgezhang.com</code>。</li>
 <li><strong>控制一个栏目或文件夹及其内容</strong>：使用带通配符的路径，例如 <code>bridgezhang.com/life/*</code>，覆盖该栏目下的 Markdown 页面、图片等文件。</li>
@@ -2338,6 +2368,8 @@
 <p>Access 会分别检查页面和页面引用的资源地址。未设置访问限制的样式、脚本等资源仍可被公开访问；若这些资源也需要限制，应为相应路径另行配置 Access 规则。此外：</p>
 <ul>
 <li>单个Applications的权限，只能控制一个路径。</li>
+<li>避免在陌生设备登录自己的最高权限的邮箱，避免信息泄露。需要什么信息，就登录对应权限的邮箱即可。</li>
+<li>无痕模式/Incognito window，下登录邮箱权限，退出后需要再次登录；普通浏览模式，登录一次能覆盖的时间随cloud flare access Application设置的时间而定。</li>
 </ul>
 
 
@@ -2361,7 +2393,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 7, 2026 09:09:35 UTC">October 7, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 26, 2026 02:37:46 UTC">October 26, 2026</span>
   </span>
 
     
@@ -2552,10 +2584,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "search.highlight", "content.action.edit", "content.action.view", "content.code.copy", "content.tabs.link", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "search.highlight", "content.action.edit", "content.action.view", "content.code.copy", "content.tabs.link", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
