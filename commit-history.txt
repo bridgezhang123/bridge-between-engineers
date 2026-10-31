@@ -1,4 +1,5 @@
-﻿add docs/design/standards-of-common-structural-features.md-3
+﻿update CI configuration(ci.yml).
+add docs/design/standards-of-common-structural-features.md-3
 add docs/design/standards-of-common-structural-features.md-2
 add docs/design/standards-of-common-structural-features.md
 update docs/modeling/improve-efficiency.md
@@ -7,4 +8,3 @@ update LICENSE file.
 add docs/design/college-courses.md
 update docs/design/fmea.md
 update Cookie Consent notice.
-add Cookie Consent notice.
