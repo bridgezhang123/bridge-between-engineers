@@ -1,4 +1,5 @@
-﻿add docs/design/standards-of-common-structural-features.md
+﻿add docs/design/standards-of-common-structural-features.md-2
+add docs/design/standards-of-common-structural-features.md
 update docs/modeling/improve-efficiency.md
 update docs/about/site-building.md
 update LICENSE file.
@@ -7,4 +8,3 @@ update docs/design/fmea.md
 update Cookie Consent notice.
 add Cookie Consent notice.
 update docs/modeling/index.md
-simplified some article of modeling
