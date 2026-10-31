@@ -8,8 +8,8 @@
   "docs/about/changelog.md": {
     "created": 1774174891,
     "created_hash": "8be4cb86fa876b696fef92ab7cc491eb0aa3ab6b",
-    "updated": 1790466903,
-    "updated_hash": "d5dce92a226bf1e84d1f8e494b32f82b6af79a1f"
+    "updated": 1792982266,
+    "updated_hash": "fa8839b28ddac35b5c67d8bb7477a6c44ab6dce2"
   },
   "docs/about/collaboration.md": {
     "created": 1774682351,
@@ -32,8 +32,8 @@
   "docs/about/site-building.md": {
     "created": 1773749768,
     "created_hash": "15007f39535f7ef4ba0971981661d16f76d9c7a5",
-    "updated": 1791364175,
-    "updated_hash": "4ccfc940c6c6bc9d0c42951c5993e23650edc344"
+    "updated": 1792982266,
+    "updated_hash": "fa8839b28ddac35b5c67d8bb7477a6c44ab6dce2"
   },
   "docs/design/ai-workflow.md": {
     "created": 1775559911,
@@ -82,6 +82,12 @@
     "created_hash": "81c70ada71ab6bf6b39c4bc461a934d3cc3c82cf",
     "updated": 1777086223,
     "updated_hash": "8428bdd288e7bcac2ef6c3c74b6733a95b2387e7"
+  },
+  "docs/design/tolerances-on-linear-sizes.md": {
+    "created": 1792982266,
+    "created_hash": "fa8839b28ddac35b5c67d8bb7477a6c44ab6dce2",
+    "updated": 1792982266,
+    "updated_hash": "fa8839b28ddac35b5c67d8bb7477a6c44ab6dce2"
   },
   "docs/index.md": {
     "created": 1773549045,
@@ -200,8 +206,8 @@
   "docs/modeling/improve-efficiency.md": {
     "created": 1778593347,
     "created_hash": "e0f7526cb1051574323ff07a115f50971844460c",
-    "updated": 1790466903,
-    "updated_hash": "d5dce92a226bf1e84d1f8e494b32f82b6af79a1f"
+    "updated": 1792982266,
+    "updated_hash": "fa8839b28ddac35b5c67d8bb7477a6c44ab6dce2"
   },
   "docs/modeling/index.md": {
     "created": 1773749768,

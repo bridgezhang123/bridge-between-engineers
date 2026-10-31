@@ -1,10 +1,10 @@
-﻿update docs/about/site-building.md
+﻿update docs/modeling/improve-efficiency.md
+update docs/about/site-building.md
 update LICENSE file.
 add docs/design/college-courses.md
 update docs/design/fmea.md
 update Cookie Consent notice.
 add Cookie Consent notice.
-update docs/modeling/improve-efficiency.md
 update docs/modeling/index.md
 simplified some article of modeling
 test push-to-github.bat -2

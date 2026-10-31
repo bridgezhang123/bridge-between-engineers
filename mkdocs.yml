@@ -71,6 +71,7 @@ nav:
   - 设计见解:
     - 导览: design/index.md
     - 设计方法: design/design-philosophy.md
+    - 常见结构特征的标准: design/standards-of-common-structural-features.md
     - 系统可靠性分析(FMEA): design/fmea.md
     - 线性尺寸公差入门: design/tolerances-on-linear-sizes.md
     - AI 协作工作流: design/ai-workflow.md

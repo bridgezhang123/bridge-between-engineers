@@ -87,6 +87,8 @@
 
 对于外螺纹而言，应注意开始端的<mark>螺纹倒角</mark>和结束处的<mark>螺纹退刀槽</mark>的表示。如下图所示，左侧的3D图对于螺纹倒角、退刀槽都有清晰的表示，右侧的3D图则没有。此外，此处的M12×1.75为标准螺距，若为细牙螺纹等特殊情况更需要单独说明。
 
+注：此部分关于螺纹特征的描述，不够严谨，建议参考：[常见结构特征的相关标准理解](www.bridgezhang.com/design/standards-of-common-structural-features/)。
+
 <figure markdown="span">
     ![External-Thread](../images/docs_manufacturing/bbe_docs_manufacturing_cnc-machining_External-Thread.png){ width="720" }
     <figcaption>External-Thread </figcaption>
