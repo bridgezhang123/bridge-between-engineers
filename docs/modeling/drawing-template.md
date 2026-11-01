@@ -11,7 +11,7 @@
 以A4竖版的图纸模板举例，可以包含如下信息，如下图所示：
 
 <figure markdown="span">
-  ![Drawing-Template](../images/docs_modeling/bbe_docs_modeling_drawing-template_Drawing-Template.png){ width="720" }
+  ![Drawing-Template](../images/docs_modeling/drawing-template_Drawing-Template.png){ width="720" }
   <figcaption>Drawing-Template </figcaption>
 </figure>
 
@@ -63,7 +63,7 @@
     - 可以对某些零件的属性与图纸模板进行链接，一边自动更新，以零件的材质举例，`双击材质字符/链接到属性/此处发现的模型/属性名称选择 material`，其余属性可酌情添加，如下图所示:
 
     <figure markdown="span">
-      ![Link-To-Model-Properties](../images/docs_modeling/bbe_docs_modeling_drawing-template_Link-To-Model-Properties.png){ width="720" }
+      ![Link-To-Model-Properties](../images/docs_modeling/drawing-template_Link-To-Model-Properties.png){ width="720" }
       <figcaption>Link-To-Model-Properties </figcaption>
     </figure>
 

@@ -42,7 +42,7 @@ GB/T 4458.1-2002 机械制图 图样画法 视图，部分内容如下：
     - 局部视图，一般默认为圆形视图形式；若先利用草图绘制一个形状(如矩形)，随后直接点击`局部视图/轮廓`，可实现该形状的`局部视图`。如下图所示：
 
     <figure markdown="span">
-      ![Detail-View](../images/docs_modeling/bbe_docs_modeling_dimensioning_Detail-View.png){ width="720" }
+      ![Detail-View](../images/docs_modeling/dimensioning_Detail-View.png){ width="720" }
       <figcaption>Detail-View </figcaption>
     </figure>
 
@@ -61,7 +61,7 @@ GB/T 4458.1-2002 机械制图 图样画法 视图，部分内容如下：
     - 由于在[建模方式](../modeling/modeling-method.md)中已经说明，统一采用了`异形孔向导`生成，因此标注时选择`注解/孔标注`，能自动生成孔径和数量，如下图所示：
 
     <figure markdown="span">
-      ![Annotation-Of-Hole-Thread-Callout](../images/docs_modeling/bbe_docs_modeling_dimensioning_Annotation-Of-Hole-Thread-Callout.png){ width="720" }
+      ![Annotation-Of-Hole-Thread-Callout](../images/docs_modeling/dimensioning_Annotation-Of-Hole-Thread-Callout.png){ width="720" }
       <figcaption>Annotation-Of-Hole-Thread-Callout </figcaption>
     </figure>
 
@@ -70,7 +70,7 @@ GB/T 4458.1-2002 机械制图 图样画法 视图，部分内容如下：
     - 以O形圈凹槽内径为例，在数值一栏，公差类型选择`与公差套合`，在孔套合选择`H11`；在其它一栏，`公差字体大小/字体比例`输入0.75，整体会协调一些，如下图所示：
 
     <figure markdown="span">
-      ![Dimension-Of-Tolerance-And-Precision](../images/docs_modeling/bbe_docs_modeling_dimensioning_Dimension-Of-Tolerance-And-Precision.png){ width="720" }
+      ![Dimension-Of-Tolerance-And-Precision](../images/docs_modeling/dimensioning_Dimension-Of-Tolerance-And-Precision.png){ width="720" }
       <figcaption>Dimension-Of-Tolerance-And-Precision </figcaption>
     </figure>
 
@@ -83,7 +83,7 @@ GB/T 4458.1-2002 机械制图 图样画法 视图，部分内容如下：
     - 检查加工要求、检验要求等信息。完成后如下图所示：
 
     <figure markdown="span">
-      ![Drawing-Annotation-Example](../images/docs_modeling/bbe_docs_modeling_dimensioning_Drawing-Annotation-Example.png){ width="720" }
+      ![Drawing-Annotation-Example](../images/docs_modeling/dimensioning_Drawing-Annotation-Example.png){ width="720" }
       <figcaption>Drawing-Annotation-Example </figcaption>
     </figure>
     

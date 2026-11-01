@@ -34,7 +34,7 @@
     - 激活`ADCP-Exploded-View`配置，`鼠标右击该配置/新爆炸视图`，如下图所示：
 
     <figure markdown="span">
-      ![Create-Exploded-View](../images/docs_modeling/bbe_docs_modeling_configurations_Create-Exploded-View.png){ width="720" }
+      ![Create-Exploded-View](../images/docs_modeling/configurations_Create-Exploded-View.png){ width="720" }
       <figcaption>Create-Exploded-View </figcaption>
     </figure>
 
@@ -43,7 +43,7 @@
     - 在爆炸界面，`设定区选择End-Cap及相关的零部件/拖动竖直向上的箭头/形成爆炸步骤1`，同样的操作可创建更多的`爆炸步骤`，如下图所示：
 
     <figure markdown="span">
-      ![Create-Exploded-Steps](../images/docs_modeling/bbe_docs_modeling_configurations_Create-Exploded-Steps.png){ width="720" }
+      ![Create-Exploded-Steps](../images/docs_modeling/configurations_Create-Exploded-Steps.png){ width="720" }
       <figcaption>Create-Exploded-Steps </figcaption>
     </figure>
 
@@ -52,7 +52,7 @@
     - 整体爆炸完成后，双击不同的配置，可以激活相应的配置，如下图所示：
 
     <figure markdown="span">
-      ![Switch-Between-Different-Configurations](../images/docs_modeling/bbe_docs_modeling_configurations_Switch-Between-Different-Configurations.png){ width="720" }
+      ![Switch-Between-Different-Configurations](../images/docs_modeling/configurations_Switch-Between-Different-Configurations.png){ width="720" }
       <figcaption>Switch-Between-Different-Configurations </figcaption>
     </figure>
 

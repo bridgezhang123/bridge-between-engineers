@@ -31,7 +31,7 @@ GB/T 5277-85，紧固件 螺栓和螺钉通孔，等效采用ISO 273-1979，要�
 下图为标准局部截图，来自GB/T 5277-85。
 
 <figure markdown="span">
-    ![GB-T-5277-85-Screenshot](../images/docs_design/bbe_docs_design_standards-of-common-structural-features_GB-T-5277-85-Screenshot.jpg){ width="720" }
+    ![GB-T-5277-85-Screenshot](../images/docs_design/standards-of-common-structural-features_GB-T-5277-85-Screenshot.jpg){ width="720" }
     <figcaption>GB-T-5277-85-Screenshot</figcaption>
 </figure>
 
@@ -40,7 +40,7 @@ GB/T 5277-85，紧固件 螺栓和螺钉通孔，等效采用ISO 273-1979，要�
 下图为M5螺钉过孔(此处假设非精密设备)，执行粗装配时的标注示例，通孔直径数据参考国标。
 
 <figure markdown="span">
-    ![M5-Screw-Clearance-Hole-Dimensioning-Example](../images/docs_design/bbe_docs_design_standards-of-common-structural-features_M5-Screw-Clearance-Hole-Dimensioning-Example.jpg){ width="720" }
+    ![M5-Screw-Clearance-Hole-Dimensioning-Example](../images/docs_design/standards-of-common-structural-features_M5-Screw-Clearance-Hole-Dimensioning-Example.jpg){ width="720" }
     <figcaption>M5-Screw-Clearance-Hole-Dimensioning-Example</figcaption>
 </figure>
 
@@ -62,14 +62,14 @@ GB/T 3-1997，普通螺纹收尾、肩距、退刀槽和倒角，等效采用ISO
 - 下图为外螺纹收尾形式的国标截图：
 
 <figure markdown="span">
-    ![External-Thread-Runout-Form-Schematic](../images/docs_design/bbe_docs_design_standards-of-common-structural-features_External-Thread-Runout-Form-Schematic.png){ width="720" }
+    ![External-Thread-Runout-Form-Schematic](../images/docs_design/standards-of-common-structural-features_External-Thread-Runout-Form-Schematic.png){ width="720" }
     <figcaption>External-Thread-Runout-Form-Schematic</figcaption>
 </figure>
 
 - 下图为外螺纹退刀槽形式的国标截图：
 
 <figure markdown="span">
-    ![External-Thread-Relief-Groove-Form-Schematic](../images/docs_design/bbe_docs_design_standards-of-common-structural-features_External-Thread-Relief-Groove-Form-Schematic.png){ width="720" }
+    ![External-Thread-Relief-Groove-Form-Schematic](../images/docs_design/standards-of-common-structural-features_External-Thread-Relief-Groove-Form-Schematic.png){ width="720" }
     <figcaption>External-Thread-Relief-Groove-Form-Schematic</figcaption>
 </figure>
 
@@ -83,14 +83,14 @@ GB/T 3-1997，普通螺纹收尾、肩距、退刀槽和倒角，等效采用ISO
 - 以螺距/P = 1.5 的退刀槽的尺寸参数举例，下图为想当然的错误建模(标注)方式。此处的标注仅显示退刀槽及螺纹相关参数，不涉及密封凹槽的参数，对于零件的实际耐压等核心参数更没有透露，因此展示实际零件图片作者认为是合适的。
 
 <figure markdown="span">
-    ![External-Thread-Relief-Groove-Incorrect-Dimensioning-Example](../images/docs_design/bbe_docs_design_standards-of-common-structural-features_External-Thread-Relief-Groove-Incorrect-Dimensioning-Example.JPG){ width="720" }
+    ![External-Thread-Relief-Groove-Incorrect-Dimensioning-Example](../images/docs_design/standards-of-common-structural-features_External-Thread-Relief-Groove-Incorrect-Dimensioning-Example.JPG){ width="720" }
     <figcaption>External-Thread-Relief-Groove-Incorrect-Dimensioning-Example</figcaption>
 </figure>
 
 - 以螺距/P = 1.5 的退刀槽的尺寸参数举例，下图为遵守国标的标注方式，图中红色框内的为螺纹相关参数；注意，针对任意螺距，无论收尾还是退刀槽形式，相关参数在该标准中都有规定，可查阅获取，此处不一一举例(显然我们也无法获得公开这些数据的授权)。
 
 <figure markdown="span">
-    ![External-Thread-Relief-Groove-Correct-Dimensioning-Example](../images/docs_design/bbe_docs_design_standards-of-common-structural-features_External-Thread-Relief-Groove-Correct-Dimensioning-Example.png){ width="720" }
+    ![External-Thread-Relief-Groove-Correct-Dimensioning-Example](../images/docs_design/standards-of-common-structural-features_External-Thread-Relief-Groove-Correct-Dimensioning-Example.png){ width="720" }
     <figcaption>External-Thread-Relief-Groove-Correct-Dimensioning-Example</figcaption>
 </figure>
 
@@ -107,7 +107,7 @@ GB/T 3-1997，普通螺纹收尾、肩距、退刀槽和倒角，等效采用ISO
     - 入口端面的倒角一般为120°，也可采用90°倒角；端面倒角直径为：(1.05~1)D，D为螺纹公称直径代号。此处取入口端面的倒角为120°。
 
 <figure markdown="span">
-    ![M6-Threaded-Hole-Dimensioning-Example](../images/docs_design/bbe_docs_design_standards-of-common-structural-features_M6-Threaded-Hole-Dimensioning-Example.png){ width="720" }
+    ![M6-Threaded-Hole-Dimensioning-Example](../images/docs_design/standards-of-common-structural-features_M6-Threaded-Hole-Dimensioning-Example.png){ width="720" }
     <figcaption>M6-Threaded-Hole-Dimensioning-Example</figcaption>
 </figure>
 
@@ -127,7 +127,7 @@ GB/T 6403.4-2008，零件倒圆与倒角，要点如下：
 - 倒圆、倒角型式：倒角定义为直角边长度及斜边夹角，如下图国标所示。
 
 <figure markdown="span">
-    ![Rounding-and-Chamfering-Forms](../images/docs_design/bbe_docs_design_standards-of-common-structural-features_Rounding-and-Chamfering-Forms.jpg){ width="720" }
+    ![Rounding-and-Chamfering-Forms](../images/docs_design/standards-of-common-structural-features_Rounding-and-Chamfering-Forms.jpg){ width="720" }
     <figcaption>Rounding-and-Chamfering-Forms</figcaption>
 </figure>
 
@@ -136,14 +136,14 @@ GB/T 6403.4-2008，零件倒圆与倒角，要点如下：
     - 内角与外角取值要适当，外角的倒圆或倒角过大会影响零件工作面，内角的倒圆或倒角过小会产生应力集中。
 
 <figure markdown="span">
-    ![Internal-Chamfer-External-Rounding-Assembly-Requirements](../images/docs_design/bbe_docs_design_standards-of-common-structural-features_Internal-Chamfer-External-Rounding-Assembly-Requirements.jpg){ width="720" }
+    ![Internal-Chamfer-External-Rounding-Assembly-Requirements](../images/docs_design/standards-of-common-structural-features_Internal-Chamfer-External-Rounding-Assembly-Requirements.jpg){ width="720" }
     <figcaption>Internal-Chamfer-External-Rounding-Assembly-Requirements</figcaption>
 </figure>
 
 - 与直径Φ相应的倒角C、倒圆R 的推荐值如下图国标所示。
 
 <figure markdown="span">
-    ![Recommended-Chamfer-and-Rounding-Values](../images/docs_design/bbe_docs_design_standards-of-common-structural-features_Recommended-Chamfer-and-Rounding-Values.jpg){ width="720" }
+    ![Recommended-Chamfer-and-Rounding-Values](../images/docs_design/standards-of-common-structural-features_Recommended-Chamfer-and-Rounding-Values.jpg){ width="720" }
     <figcaption>Recommended-Chamfer-and-Rounding-Values</figcaption>
 </figure>
 
@@ -161,6 +161,6 @@ GB/T 6403.4-2008，零件倒圆与倒角，要点如下：
 下图为一水下舱体设备的倒圆倒角实际举例。
 
 <figure markdown="span">
-    ![Flange-Assembly-Chamfer-and-External-Rounding-Examples](../images/docs_design/bbe_docs_design_standards-of-common-structural-features_Flange-Assembly-Chamfer-and-External-Rounding-Examples.jpg){ width="720" }
+    ![Flange-Assembly-Chamfer-and-External-Rounding-Examples](../images/docs_design/standards-of-common-structural-features_Flange-Assembly-Chamfer-and-External-Rounding-Examples.jpg){ width="720" }
     <figcaption>Flange-Assembly-Chamfer-and-External-Rounding-Examples</figcaption>
 </figure>

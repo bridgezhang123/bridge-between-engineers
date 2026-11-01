@@ -26,7 +26,7 @@
 - 下图(图形进行了裁剪)展示了换能器凹槽处的壁厚情况。
 
     <figure markdown="span">
-      ![Section-View](../images/docs_modeling/bbe_docs_modeling_model-checking_Section-View.png){ width="720" }
+      ![Section-View](../images/docs_modeling/model-checking_Section-View.png){ width="720" }
       <figcaption>Section-View </figcaption>
     </figure>
 

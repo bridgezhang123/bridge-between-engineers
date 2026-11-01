@@ -39,7 +39,7 @@ flowchart LR
 - 具体外观尺寸见官方文档P150-151(是PDF的页数，而非文档的页数，下同)，爆炸视图在P67中给出。该设备的官方文档详见公开资料：[Operation Manual](https://www.teledynemarine.com/en-us/support/SiteAssets/RDI/Manuals%20and%20Guides/Workhorse%20II/WH2_Operation_Manual.pdf)，另存档于互联网档案馆[Operation Manual](http://web.archive.org/web/20260321082212/https:/www.teledynemarine.com/en-us/support/SiteAssets/RDI/Manuals%20and%20Guides/Workhorse%20II/WH2_Operation_Manual.pdf)。
 
 <figure markdown="span">
-  ![Workhorse II Sentinel ADCP 外观](../images/docs_modeling/bbe_docs_modeling_index_Workhorse2-Sentinel-ADCP.png){ width="720" }
+  ![Workhorse II Sentinel ADCP 外观](../images/docs_modeling/index_Workhorse2-Sentinel-ADCP.png){ width="720" }
   <figcaption>Workhorse II Sentinel ADCP 外观（来自官方文档）</figcaption>
 </figure>
 
@@ -47,7 +47,7 @@ flowchart LR
 
 - 本文对具体的建模软件描述，针对的是SolidWorks premium 2018。尽管各种建模软件在建模流程上有所差异，但对如`参数化`建模等思想的理解是一样的，也可作为参考。
 - Solidworks的官方帮助文档，可作为重要参考：[SolidWorks Help](https://help.solidworks.com/2018/chinese-simplified/solidworks/sldworks/r_help.htm)。
-- 建模与图纸系列文章的示例文件，可点击[ADCP-sample-file-2026.05.05-rar](../images/docs_modeling/bbe_docs_modeling_index_ADCP-sample-file-2026.05.05-rar.rar)下载。
+- 建模与图纸系列文章的示例文件，可点击[ADCP-sample-file-2026.05.05-rar](../images/docs_modeling/index_ADCP-sample-file-2026.05.05-rar.rar)下载。
 
 
 ## 2. 边界与风险

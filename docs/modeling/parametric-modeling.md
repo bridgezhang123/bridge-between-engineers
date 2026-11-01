@@ -63,14 +63,14 @@
     - 取消勾选`链接至外部文件`，由于`Housing`零件使用的O形圈截面直径为3.55，因此先选择`O_ring_sectional_diam_1`而后修改为3.55，其余相应的变量(如`GIF_groove_width_1`)自动联动。如下图所示:
 
     <figure markdown="span">
-      ![Equation-Settings](../images/docs_modeling/bbe_docs_modeling_parametric-modeling_Equation-Settings.png){ width="720" }
+      ![Equation-Settings](../images/docs_modeling/parametric-modeling_Equation-Settings.png){ width="720" }
       <figcaption>Equation-Settings </figcaption>
     </figure>
 
     - 在`Housing`零件大口端面上，创建有同心圆的草图，内径为165.5，圆间距(对应凹槽宽度)在输入数据时选择`输入等号/全局变量/GIF_groove_width_1`，如下图所示：
     
     <figure markdown="span">
-      ![Referencing-Global-Variables](../images/docs_modeling/bbe_docs_modeling_parametric-modeling_Referencing-Global-Variables.png){ width="720" }
+      ![Referencing-Global-Variables](../images/docs_modeling/parametric-modeling_Referencing-Global-Variables.png){ width="720" }
       <figcaption>Referencing-Global-Variables </figcaption>
     </figure>
 
@@ -78,7 +78,7 @@
     - 在`Housing`零件小口端面上，使用`GIF_groove_width_2`，能对两侧凹槽分别控制；其余有类似描述，不再赘述。完成后如下图所示：
     
     <figure markdown="span">
-      ![GB-O-Ring-Example](../images/docs_modeling/bbe_docs_modeling_parametric-modeling_GB-O-Ring-Example.png){ width="720" }
+      ![GB-O-Ring-Example](../images/docs_modeling/parametric-modeling_GB-O-Ring-Example.png){ width="720" }
       <figcaption>GB-O-Ring-Example </figcaption>
     </figure>
 

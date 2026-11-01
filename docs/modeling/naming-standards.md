@@ -138,7 +138,7 @@ ADCP 示例
 - 常见根因是：多路径下存在同名文件，而当前会话又已经加载了其中一个，最终导致引用解析混淆。会有`是否解除链接关系`的询问，如下图片的提示：
 
 <figure markdown="span">
-    ![File-Name-Conflict](../images/docs_modeling/bbe_docs_modeling_naming-standards_File-Name-Conflict.png){ width="720" }
+    ![File-Name-Conflict](../images/docs_modeling/naming-standards_File-Name-Conflict.png){ width="720" }
     <figcaption>File-Name-Conflict </figcaption>
 </figure>
 

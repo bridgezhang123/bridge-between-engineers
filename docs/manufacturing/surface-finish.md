@@ -103,12 +103,12 @@ flowchart LR
 说明：此处的两张图片，应Misumi工程师的要求，仅限于此文章中使用，未经许可不用于其他地方或商业用途。
 
 <figure markdown="span">
-  ![Surface-Finish-Sample-Card](../images/docs_manufacturing/bbe_docs_manufacturing_Surface-Finish-Sample-Card-watermarked.jpeg){ width="720" }
+  ![Surface-Finish-Sample-Card](../images/docs_manufacturing/surface-finish_Sample-Card-watermarked.jpeg){ width="720" }
   <figcaption>Surface-Finish-Sample-Card</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Surface-Finish-Sample-Card-2](../images/docs_manufacturing/bbe_docs_manufacturing_Surface-Finish-Sample-Card-2.png){ width="720" }
+  ![Surface-Finish-Sample-Card-2](../images/docs_manufacturing/surface-finish_Sample-Card-2.png){ width="720" }
   <figcaption>Surface-Finish-Sample-Card-2</figcaption>
 </figure>
 
@@ -131,4 +131,3 @@ flowchart LR
 
 - 黎震，谢燕琴. 机械制造基础 [M]. 5版. 北京：高等教育出版社，2021.
 - 在本文有关国家标准的内容方面，整理了AI、搜索引擎反馈等的资料。
-

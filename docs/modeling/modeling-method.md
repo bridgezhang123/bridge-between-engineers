@@ -56,14 +56,14 @@
     - 在创建`Transducer-Head`与`Housing`零件连接的螺钉过孔时，首先在草图中设置定位位置，并且该位置与`Transducer-Head`零件外径关联，当`Transducer-Head`零件外径发生变化时，该位置也会跟着发生变化。如下图所示：
 
     <figure markdown="span">
-      ![M8-Screw-Through-Hole-Positioning](../images/docs_modeling/bbe_docs_modeling_modeling-method_M8-Screw-Through-Hole-Positioning.png){ width="720" }
+      ![M8-Screw-Through-Hole-Positioning](../images/docs_modeling/modeling-method_M8-Screw-Through-Hole-Positioning.png){ width="720" }
       <figcaption>M8-Screw-Through-Hole-Positioning </figcaption>
     </figure>
 
     - 其次，对于M8的螺钉过孔(Solidwork称之为间隙孔),利用`异形孔向导`生成。如下图所示：
 
     <figure markdown="span">
-      ![M8-Screw-Through-Hole-Setting](../images/docs_modeling/bbe_docs_modeling_modeling-method_M8-Screw-Through-Hole-Setting.png){ width="720" }
+      ![M8-Screw-Through-Hole-Setting](../images/docs_modeling/modeling-method_M8-Screw-Through-Hole-Setting.png){ width="720" }
       <figcaption>M8-Screw-Through-Hole-Setting </figcaption>
     </figure>
 
@@ -77,7 +77,7 @@
     - 以该零件为基础建立装配体`ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm`。如下图所示。注意：在装配体中才能运用自上而下建模。
 
     <figure markdown="span">
-     ![Building-Adcp-Instrument.sldasm](../images/docs_modeling/bbe_docs_modeling_modeling-method_Building-Adcp-Instrument.sldasm.png){ width="720" }
+     ![Building-Adcp-Instrument.sldasm](../images/docs_modeling/modeling-method_Building-Adcp-Instrument.sldasm.png){ width="720" }
      <figcaption>Building-Adcp-Instrument.sldasm </figcaption>
     </figure>
 
@@ -86,26 +86,26 @@
     - 选择`工具栏/插入零部件/新零件/gb_part 模板`，弹出`请选择放置新零件的面或基准面`时，选择`Transducer-Head`零件的下端面，而后如下图所示；右上角的返回箭头、蓝色显示的`零件1`，均意味着我们在`ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm`装配体层级编辑`零件1`。
 
     <figure markdown="span">
-      ![Building-Housing.sldprt](../images/docs_modeling/bbe_docs_modeling_modeling-method_Building-Housing.sldprt.png){ width="720" }
+      ![Building-Housing.sldprt](../images/docs_modeling/modeling-method_Building-Housing.sldprt.png){ width="720" }
       <figcaption>Building-Housing.sldprt </figcaption>
     </figure>
 
     - 草图画出同心圆，并标注依附于`Transducer-Head`外径的关联尺寸，如下图所示。因此，当我们修改`Transducer-Head`的外径时，`Housing`的尺寸也会随之变化。
 
     <figure markdown="span">
-      ![Building-Associated-Dimensions](../images/docs_modeling/bbe_docs_modeling_modeling-method_Building-Associated-Dimensions.png){ width="720" }
+      ![Building-Associated-Dimensions](../images/docs_modeling/modeling-method_Building-Associated-Dimensions.png){ width="720" }
       <figcaption>Building-Associated-Dimensions </figcaption>
     </figure>
 
     - 拉伸上述草图292 mm生成凸台轮廓，鼠标右击重命名为  `ADCP_Sen_Ver0.1_S01_02_Housing.sldprt`，保存，弹出如下对话框，选择`(外部保存(指定路径))`，点击确定；鼠标右击`Housing`零件，选择`保存文件(在外部文件中)`，弹出如下对话框，选择`与装配体相同`。即自动在`ADCP_Sen_S01_Adcp-Instrument`文件夹下生成`ADCP_Sen_Ver0.1_S01_02_Housing.sldprt`。
 
     <figure markdown="span">
-      ![Save-Housing.sldprt-1](../images/docs_modeling/bbe_docs_modeling_modeling-method_Save-Housing.sldprt-1.png){ width="720" }
+      ![Save-Housing.sldprt-1](../images/docs_modeling/modeling-method_Save-Housing.sldprt-1.png){ width="720" }
       <figcaption>Save-Housing.sldprt-1 </figcaption>
     </figure>
 
     <figure markdown="span">
-      ![Save-Housing.sldprt-2](../images/docs_modeling/bbe_docs_modeling_modeling-method_Save-Housing.sldprt-2.png){ width="720" }
+      ![Save-Housing.sldprt-2](../images/docs_modeling/modeling-method_Save-Housing.sldprt-2.png){ width="720" }
       <figcaption>Save-Housing.sldprt-2 </figcaption>
     </figure>
 
@@ -117,7 +117,7 @@
     注：此处的尺寸关联，局限于`Housing`零件内部，属于参数化建模的范围。
 
     <figure markdown="span">
-     ![Housing-Part-Contour-Definition](../images/docs_modeling/bbe_docs_modeling_modeling-method_Housing-Part-Contour-Definition.png){ width="720" }
+     ![Housing-Part-Contour-Definition](../images/docs_modeling/modeling-method_Housing-Part-Contour-Definition.png){ width="720" }
      <figcaption>Housing-Part-Contour-Definition </figcaption>
     </figure>
 
@@ -126,7 +126,7 @@
     - 大口端面，其螺钉过孔联动于`Transducer-Head`的螺钉过孔，在定位草图中，创建一个`圆(构造线)`，而后创建与`Transducer-Head`的螺钉过孔的`同心`关系(`草图/显示-删除几何关系/添加几何关系/同心`)，以此实现螺钉过孔的尺寸联动。如下图所示:
 
     <figure markdown="span">
-      ![Concentric-Link-Relationship](../images/docs_modeling/bbe_docs_modeling_modeling-method_Concentric-Link-Relationship.png){ width="720" }
+      ![Concentric-Link-Relationship](../images/docs_modeling/modeling-method_Concentric-Link-Relationship.png){ width="720" }
       <figcaption>Concentric-Link-Relationship </figcaption>
     </figure>
 
@@ -155,14 +155,14 @@
     - 注意：在插入水密插座后，其配套的弹平垫、螺母在添加配合关系时，以插座为基础，选择`多配合模式/生成多配合文件夹`的`同心`关系，有助于装配模型的简洁性。其余有多配合模式的地方，均可类似操作。如下图所示：
 
     <figure markdown="span">
-      ![Multiple-Part-Fit-Modes](../images/docs_modeling/bbe_docs_modeling_modeling-method_Multiple-Part-Fit-Modes.png){ width="720" }
+      ![Multiple-Part-Fit-Modes](../images/docs_modeling/modeling-method_Multiple-Part-Fit-Modes.png){ width="720" }
       <figcaption>Multiple-Part-Fit-Modes </figcaption>
     </figure>
 
     - 装配完成后，在`Feature Manager`中将`水密接插件相关`零部件统一放入一个文件夹，有助于装配模型的简洁性，如下图所示：
 
     <figure markdown="span">
-      ![Folders-In-Feature-Manager](../images/docs_modeling/bbe_docs_modeling_modeling-method_Folders-In-Feature-Manager.png){ width="720" }
+      ![Folders-In-Feature-Manager](../images/docs_modeling/modeling-method_Folders-In-Feature-Manager.png){ width="720" }
       <figcaption>Folders-In-Feature-Manager </figcaption>
     </figure>
 
@@ -171,7 +171,7 @@
     - 根据官方文档  P36，`Mounting the Instrument`的要求，创建夹持零件及相应装配体，如下图所示：
 
     <figure markdown="span">
-      ![Create-Instrument-Fixture-Assembly](../images/docs_modeling/bbe_docs_modeling_modeling-method_Create-Instrument-Fixture-Assembly.png){ width="720" }
+      ![Create-Instrument-Fixture-Assembly](../images/docs_modeling/modeling-method_Create-Instrument-Fixture-Assembly.png){ width="720" }
       <figcaption>Create-Instrument-Fixture-Assembly </figcaption>
     </figure>
 
@@ -181,12 +181,12 @@
     - 参考官方文档，将所有紧固件赋予钛合金(最可能为Ti-6Al-4V)材质，此处选中所有的紧固件，然后`鼠标右击/材料/编辑材料`，方便统一赋予材质，如下图所示。无法确认材质的零部件，暂时不赋予材质。完成后，如下图所示：
 
     <figure markdown="span">
-      ![Assign-Material-To-Parts](../images/docs_modeling/bbe_docs_modeling_modeling-method_Assign-Material-To-Parts.png){ width="720" }
+      ![Assign-Material-To-Parts](../images/docs_modeling/modeling-method_Assign-Material-To-Parts.png){ width="720" }
       <figcaption>Assign-Material-To-Parts </figcaption>
     </figure>
 
     <figure markdown="span">
-      ![ADCP_Sen_Total-Assembly](../images/docs_modeling/bbe_docs_modeling_modeling-method_ADCP_Sen_Total-Assembly.png){ width="720" }
+      ![ADCP_Sen_Total-Assembly](../images/docs_modeling/modeling-method_ADCP_Sen_Total-Assembly.png){ width="720" }
       <figcaption>ADCP_Sen_Total-Assembly </figcaption>
     </figure>
 

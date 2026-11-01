@@ -53,7 +53,7 @@
 公差带(基本偏差)相对于公称尺寸位置的示意图，如下图所示：对于孔而言，H代表下偏差为0，即所谓的基孔制；JS代表对称分布。
 
 <figure markdown="span">
-    ![Fundamental-Deviation-Schematic-Figure](../images/docs_design/bbe_docs_design_tolerances-on-linear-sizes_Fundamental-Deviation-Schematic-Figure.jpg){ width="520" }
+    ![Fundamental-Deviation-Schematic-Figure](../images/docs_design/tolerances-on-linear-sizes_Fundamental-Deviation-Schematic-Figure.jpg){ width="520" }
     <figcaption>Fundamental-Deviation-Schematic-Figure(取自GB/T 1800.1-2020，4.3.3部分)</figcaption>
 </figure>
 
@@ -72,7 +72,7 @@
     - 当采用由公差带代号确定的公差标注时，为提供辅助信息目的等，可以括号的形式增加公差带代号，反之亦然。(GB/T 1800.1-2020，4.2.2部分)。如下图一端盖零件的凸台外径所示。
 
 <figure markdown="span">
-    ![Example-Of-Tolerance-Class](../images/docs_design/bbe_docs_design_tolerances-on-linear-sizes_Example-Of-Tolerance-Class.jpg){ width="320" }
+    ![Example-Of-Tolerance-Class](../images/docs_design/tolerances-on-linear-sizes_Example-Of-Tolerance-Class.jpg){ width="320" }
     <figcaption>Example-Of-Tolerance-Class</figcaption>
 </figure>
 

@@ -56,7 +56,7 @@
     - 市场研究显示，Dassault Systèmes 产品组合中的部分产品存在未经授权使用，以及超出许可证条款的使用。
 - 补充[官网链接](https://www.3ds.com/zh-hans/products/solidworks)及截图如下：
     <figure markdown="span">
-      ![Solidworks-Official-Website-Screenshot](../images/docs_modeling/bbe_docs_modeling_software-copyright_Solidworks-Official-Website-Screenshot.png){ width="720" }
+      ![Solidworks-Official-Website-Screenshot](../images/docs_modeling/software-copyright_Solidworks-Official-Website-Screenshot.png){ width="720" }
       <figcaption>Solidworks-Official-Website-Screenshot </figcaption>
     </figure>
 

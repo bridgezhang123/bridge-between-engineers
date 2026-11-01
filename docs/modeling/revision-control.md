@@ -59,7 +59,7 @@
     - 尝试将`ADCP_Sen_Ver0.1_S01_01_Transducer-Head`零件的直径扩大一些，可以看到`Housing`零件的直径并没有随之变化，而且`Housing`零件的凸台拉伸等有联动关系的特征均出现了`问号`，因此我们创建的自上而下的建模联动关系被破坏，如下图所示:
 
     <figure markdown="span">
-      ![Incorrect-Iteration-Demonstration](../images/docs_modeling/bbe_docs_modeling_revision-control_Incorrect-Iteration-Demonstration.png){ width="720" }
+      ![Incorrect-Iteration-Demonstration](../images/docs_modeling/revision-control_Incorrect-Iteration-Demonstration.png){ width="720" }
       <figcaption>Incorrect-Iteration-Demonstration </figcaption>
     </figure>
 
@@ -72,7 +72,7 @@
     - 勾选`包括工程图`、将Ver0.1相关的装配体、零件、图纸统一更名为Ver1.0，保存到文件夹路径修改到Ver1.0的文件夹，显然CP开头的外购商用件和GB标准件在专用文件夹，无需操作。如下图所示：
 
     <figure markdown="span">
-      ![Pack-And-Go-Function](../images/docs_modeling/bbe_docs_modeling_revision-control_Pack-And-Go-Function.png){ width="720" }
+      ![Pack-And-Go-Function](../images/docs_modeling/revision-control_Pack-And-Go-Function.png){ width="720" }
       <figcaption>Pack-And-Go-Function </figcaption>
     </figure>
 
@@ -83,7 +83,7 @@
     - 回到`ADCP_Sen_Ver1.0_TA.sldasm`装配体，鼠标右击`ADCP_Sen_Ver0.1_S01_TA_Adcp-Instrument.sldasm`，选择`替换零部件`，浏览到对应文件夹下的`ADCP_Sen_Ver1.0_S01_TA_Adcp-Instrument.sldasm`，进行替换，如下图所示：
 
     <figure markdown="span">
-      ![Replace-Assembly](../images/docs_modeling/bbe_docs_modeling_revision-control_Replace-Assembly.png){ width="720" }
+      ![Replace-Assembly](../images/docs_modeling/revision-control_Replace-Assembly.png){ width="720" }
       <figcaption>Replace-Assembly </figcaption>
     </figure>
 
@@ -91,7 +91,7 @@
     - 保存`ADCP_Sen_Ver1.0_TA.sldasm`装配体，即得到了链接关系正常、名称修订完整的`ADCP_Sen_Ver1.0_TA.sldasm`文件，如下图所示：
 
     <figure markdown="span">
-      ![Situation-After-Completion](../images/docs_modeling/bbe_docs_modeling_revision-control_Situation-After-Completion.png){ width="720" }
+      ![Situation-After-Completion](../images/docs_modeling/revision-control_Situation-After-Completion.png){ width="720" }
       <figcaption>Situation-After-Completion </figcaption>
     </figure>
 

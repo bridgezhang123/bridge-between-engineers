@@ -21,12 +21,12 @@
 - ADCP设备的官方文档详见公开资料：[Operation Manual](https://www.teledynemarine.com/en-us/support/SiteAssets/RDI/Manuals%20and%20Guides/Workhorse%20II/WH2_Operation_Manual.pdf)，另存档于互联网档案馆[Operation Manual](http://web.archive.org/web/20260321082212/https:/www.teledynemarine.com/en-us/support/SiteAssets/RDI/Manuals%20and%20Guides/Workhorse%20II/WH2_Operation_Manual.pdf)。其外观及爆炸图如下图所示，第二图[来源](../modeling/exploded-view.md)。
 
 <figure markdown="span">
-  ![Workhorse II Sentinel ADCP 外观](../images/docs_modeling/bbe_docs_modeling_index_Workhorse2-Sentinel-ADCP.png){ width="720" }
+  ![Workhorse II Sentinel ADCP 外观](../images/docs_modeling/index_Workhorse2-Sentinel-ADCP.png){ width="720" }
   <figcaption>Workhorse II Sentinel ADCP 外观（来自官方文档）</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Exploded-View-Example](../images/docs_modeling/bbe_docs_modeling_exploded-view_Exploded-View-Example.png){ width="720" }
+  ![Exploded-View-Example](../images/docs_modeling/exploded-view_Exploded-View-Example.png){ width="720" }
   <figcaption>Exploded-View-Example </figcaption>
 </figure>
 
@@ -35,7 +35,7 @@
 FMEA一个重要的先决条件，是定义和确定ADCP系统中完整的失效影响严酷度和等级，此处引用GB/T 7826-2012 表2的分级示例，如下图所示。
 
 <figure markdown="span">
-  ![GB-T-7826-2012-Harshness-Classification-Table](../images/docs_design/bbe_docs_design_fmea_GB-T-7826-2012-Harshness-Classification-Table.png){ width="720" }
+  ![GB-T-7826-2012-Harshness-Classification-Table](../images/docs_design/fmea_GB-T-7826-2012-Harshness-Classification-Table.png){ width="720" }
   <figcaption>GB-T-7826-2012-Harshness-Classification-Table</figcaption>
 </figure>
 

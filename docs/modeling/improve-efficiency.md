@@ -20,7 +20,7 @@
 - 选择 输出文件，控制 输出文件类型，添加文件/文件夹(遍历并选中该文件夹内所有的.SLDDRW) ，控制 输出位置， 点击 完成。如下图所示：
 
     <figure markdown="span">
-      ![Solidworks-Task-Scheduler](../images/docs_modeling/bbe_docs_modeling_improve-efficiency_Solidworks-Task-Scheduler.png){ width="720" }
+      ![Solidworks-Task-Scheduler](../images/docs_modeling/improve-efficiency_Solidworks-Task-Scheduler.png){ width="720" }
       <figcaption>Solidworks-Task-Scheduler </figcaption>
     </figure>
 
