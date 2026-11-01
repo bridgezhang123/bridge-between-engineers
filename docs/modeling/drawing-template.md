@@ -71,6 +71,9 @@
 
     - 在创建工程图时，选择创建的相应模板即可。
 
+3. BOM(Bill of material)/材料明细表
+
+    - 在SolidWorks2018里，默认的国标BOM表存放于：软件安装路径\SOLIDWORKS\lang\chinese-simplified，名称为gb-bom-material.sldbomtbt；可以在此基础上进行针对性适配修改，而后另存为上述扩展名的BOM模板(比如命名为gb(DIY)-bom-material.sldbomtbt)，以供复用。
 
 ## 4. 其余要点
 

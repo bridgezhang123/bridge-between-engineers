@@ -1,5 +1,5 @@
-﻿update: Simplify image naming structure
-update docs/design/standards-of-common-structural-features.md
+﻿update docs/design/standards-of-common-structural-features.md
+update: Simplify image naming structure
 update CI configuration(ci.yml).
 add docs/design/standards-of-common-structural-features.md-3
 add docs/design/standards-of-common-structural-features.md-2
