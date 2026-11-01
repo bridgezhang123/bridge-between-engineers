@@ -44,6 +44,7 @@ GB/T 5277-85，紧固件 螺栓和螺钉通孔，等效采用ISO 273-1979，要�
     <figcaption>M5-Screw-Clearance-Hole-Dimensioning-Example</figcaption>
 </figure>
 
+注：由于螺钉通孔的数据已经标准化，在建模软件中(如SolidWorks)一般可以直接利用相关功能直接选型装配系列，孔径可直接生成，详见：[建模方式对比：自下而上/Top-down vs 自上而下/Bottom-up](https://www.bridgezhang.com/modeling/modeling-method/)。
 
 ## 2. 普通螺纹的收尾、肩距、退刀槽和倒角尺寸
 
