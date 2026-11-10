@@ -22,13 +22,12 @@
     <p>{{ meta.get("hero_description", "") }}</p>
     <div class="home-hero__actions">
       {% if primary_button.get("text") and primary_button.get("link") %}
-      <a class="home-btn home-btn--primary" href="{{ primary_button.get("link") }}">{{ primary_button.get("text") }}</a>
+      <a class="home-btn" href="{{ primary_button.get("link") }}">{{ primary_button.get("text") }}</a>
       {% endif %}
       {% if secondary_button.get("text") and secondary_button.get("link") %}
-      <a class="home-btn home-btn--ghost" href="{{ secondary_button.get("link") }}">{{ secondary_button.get("text") }}</a>
+      <a class="home-btn" href="{{ secondary_button.get("link") }}">{{ secondary_button.get("text") }}</a>
       {% endif %}
     </div>
-    <a class="home-hero__scroll" href="#home-cards">{{ meta.get("scroll_text", "向下阅读") }}</a>
   </div>
 </section>
 
@@ -55,7 +54,7 @@
       <h2>{{ about.get("title", "关于站点") }}</h2>
       <p>{{ about.get("description", "") }}</p>
       {% if about.get("button_text") and about.get("button_link") %}
-      <a class="home-btn home-btn--dark" href="{{ about.get("button_link") }}">{{ about.get("button_text") }}</a>
+      <a class="home-btn" href="{{ about.get("button_link") }}">{{ about.get("button_text") }}</a>
       {% endif %}
     </div>
 
