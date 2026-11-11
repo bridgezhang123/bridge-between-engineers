@@ -1,4 +1,5 @@
-﻿update docs/modeling/drawing-template.md
+﻿update docs/design/tolerances-on-linear-sizes.md
+update docs/modeling/drawing-template.md
 update docs/design/standards-of-common-structural-features.md
 update: Simplify image naming structure
 update CI configuration(ci.yml).
@@ -7,4 +8,3 @@ add docs/design/standards-of-common-structural-features.md-2
 add docs/design/standards-of-common-structural-features.md
 update docs/modeling/improve-efficiency.md
 update docs/about/site-building.md
-update LICENSE file.
