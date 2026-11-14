@@ -165,6 +165,7 @@ extra_javascript:
   - javascripts/footer-link.js
   - javascripts/cookie-consent.js
   - javascripts/pageviews.js
+  - javascripts/giscus.js
 
 hooks:
   - hooks/search_worker.py

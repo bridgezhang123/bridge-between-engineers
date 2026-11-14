@@ -587,6 +587,20 @@
   height: auto;
 }
 
+.site-comments {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.site-comments__description {
+  color: var(--md-default-fg-color--light);
+}
+
+.site-comments__error {
+  color: var(--md-default-fg-color--light);
+}
+
 /* Keep prev/next pagination on its own line above other footer content */
 .md-footer .md-pagination,
 .md-footer .md-footer-nav,
