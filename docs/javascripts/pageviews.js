@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+function loadPageViews() {
   try {
     var consent = window.BridgeCookieConsent;
     if (consent && typeof consent.isAnalyticsEnabled === "function" && !consent.isAnalyticsEnabled()) {
@@ -6,11 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     var sourceFile = document.querySelector(".md-source-file");
-    if (!sourceFile) return;
+    var target = sourceFile || document.querySelector(".md-content__inner");
+    if (!target || target.querySelector(".site-pageviews")) return;
 
     var path = window.location.pathname || "/";
     var pageView = document.createElement("span");
-    pageView.className = "md-source-file__fact";
+    pageView.className = sourceFile
+      ? "md-source-file__fact site-pageviews"
+      : "site-pageviews site-pageviews--fallback";
     pageView.setAttribute("aria-live", "polite");
     pageView.hidden = true;
 
@@ -23,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     pageView.appendChild(icon);
     pageView.appendChild(text);
-    sourceFile.appendChild(pageView);
+    target.appendChild(pageView);
 
     fetch("/api/pageview", {
       method: "POST",
@@ -51,4 +54,12 @@ document.addEventListener("DOMContentLoaded", function() {
   } catch (e) {
     console && console.warn && console.warn("pageviews failed", e);
   }
-});
+}
+
+window.addEventListener("bridge-analytics-consent-changed", loadPageViews);
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", loadPageViews, { once: true });
+} else {
+  loadPageViews();
+}
